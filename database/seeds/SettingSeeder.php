@@ -45,5 +45,12 @@ class SettingSeeder extends Seeder
         ];
 
         DB::table('setting')->insert($settingData);
+
+        $userData = [
+            'name' => 'ADMIN',
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('123456')
+        ];
+        DB::table('users')->insert($userData);
     }
 }

@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
+
+Route::get('/admin_mushie', 'Admin\AdminController@admin_login')->name('admin.login.view');
+Route::post('/admin/login', 'Admin\AdminController@admin_login_action')->name('admin.login.action');
+Route::get('/admin/logout', 'Admin\AdminController@logout')->name('admin.logout');
