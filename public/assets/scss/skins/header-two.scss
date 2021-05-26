@@ -1,0 +1,129 @@
+// Bootstrap variable overrides
+@import "../bootstrap/variables";
+@import "../variables";
+
+@import "../../bower_components/bootstrap/scss/functions";
+@import "../../bower_components/bootstrap/scss/variables";
+@import "../../bower_components/bootstrap/scss/mixins";
+
+// Custom mixins for bootstrap
+@import "../bootstrap/mixins";
+
+.slim-header {
+  background-color: $gray-900;
+  border-bottom-width: 0;
+
+  &.with-sidebar {
+    .slim-sidebar-menu {
+      border-color: rgba(#fff, .5);
+
+      span {
+        &,&::before,&::after { background-color: rgba(#fff, .5); }
+      }
+
+      &:hover,
+      &:focus {
+        border-color: rgba(#fff, .75);
+        background-color: transparent;
+        span {
+          &,&::before,&::after { background-color: rgba(#fff, .75); }
+        }
+      }
+    }
+  }
+}
+
+.slim-logo a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.search-box {
+  border-width: 0;
+  background-color: #fff;
+
+  .btn {
+    background-color: $gray-900;
+  }
+}
+
+.logged-user {
+  color: rgba(#fff,.75);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  img { border-color: rgba(#fff, .5); }
+}
+
+.header-notification {
+  color: rgba(#fff, .75);
+
+  .indicator { background-color: $red; }
+
+  &:hover,
+  &:focus {
+    background-color: darken($gray-900, 5%);
+    color: #fff;
+  }
+}
+
+.slim-header-right {
+  .dropdown-a,
+  .dropdown-b {
+    &.show > a {
+      background-color: darken($gray-900, 5%);
+    }
+  }
+
+  .dropdown-c.show {
+    > a { color: #fff; }
+  }
+
+  .dropdown-menu { margin-top: 17px; }
+}
+
+.slim-navbar {
+  .nav-item {
+    .nav-link {
+      .icon { color: $body-color; }
+    }
+
+    &.active {
+      .nav-link {
+        background-image: none;
+        background-color: transparent;
+        color: $green;
+        border-width: 1px;
+
+        .icon { color: $green; }
+      }
+    }
+  }
+}
+
+
+// Sidebar
+.sidebar-label { margin-bottom: 15px; }
+.sidebar-nav-link {
+  i { color: $body-color; }
+
+  &.active {
+    color: $green;
+    background-image: none;
+    background-color: transparent;
+    border-bottom-width: 1px;
+
+    i { color: $green; }
+  }
+}
+
+.sidebar-nav-item:first-child .sidebar-nav-link {
+  &.active { border-top-width: 1px; }
+}
+
+.sidebar-nav-sub {
+  .nav-sub-link.active { color: $green; }
+}

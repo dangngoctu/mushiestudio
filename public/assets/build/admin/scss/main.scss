@@ -1,0 +1,162 @@
+/* -------------------------------------- */
+/* ############### MAIN ############### */
+/* -------------------------------------- */
+.table {
+  .ckbox,
+  .rdiobox {
+    span {
+      &::before {
+        border-color: #adb5bd;
+      }
+    }
+  }
+}
+
+.dataTables_length .select2-container {
+  width: 60px !important;
+}
+
+table .btn-action {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.select2-dropdown {
+  z-index: 2000;
+}
+
+.ui-datepicker {
+  z-index: 1051 !important;
+}
+
+.select2-container--default {
+  .select2-selection--single {
+    .select2-selection__clear {
+      margin-right: 5px;
+    }
+  }
+  .select2-search--inline {
+    .select2-search__field {
+      width: auto !important;
+    }
+  }
+}
+
+.fileuploader {
+  margin: 0;
+  padding-left: 0;
+}
+
+.iradio_minimal-blue {
+  width: 58px;
+  height: 58px;
+  background-size: 58px 58px;
+  background-position: 0 0;
+  &.hover {
+    background-position: 0 0;
+  }
+}
+
+.excellent {
+  .iradio_minimal-blue {
+    background-image: url("/assets/app/img/Excellent.png");
+    &.checked {
+      background-position: 0 0;
+      background-image: url("/assets/app/img/Excellent_1.png");
+    }
+  }
+}
+
+.good {
+  .iradio_minimal-blue {
+    background-image: url("/assets/app/img/good.png");
+    &.checked {
+      background-position: 0 0;
+      background-image: url("/assets/app/img/good_1.png");
+    }
+  }
+}
+
+.average {
+  .iradio_minimal-blue {
+    background-image: url("/assets/app/img/Average.png");
+    &.checked {
+      background-position: 0 0;
+      background-image: url("/assets/app/img/Average_1.png");
+    }
+  }
+}
+
+.poor {
+  .iradio_minimal-blue {
+    background-image: url("/assets/app/img/Poor.png");
+    &.checked {
+      background-position: 0 0;
+      background-image: url("/assets/app/img/Poor_1.png");
+    }
+  }
+}
+
+.very_poor {
+  .iradio_minimal-blue {
+    background-image: url("/assets/app/img/Verypoor.png");
+    &.checked {
+      background-position: 0 0;
+      background-image: url("/assets/app/img/Verypoor_1.png");
+    }
+  }
+}
+
+.dataTables_wrapper {
+  .dataTables_filter {
+    padding-right: 0;
+    input {
+      margin-left: 0;
+    }
+  }
+}
+
+table.dataTable {
+  margin-bottom: 0;
+}
+
+.dataTables_wrapper.no-footer {
+  .dataTables_scrollBody {
+    border-color: #dee2e6;
+    margin-bottom: 15px;
+
+    table.dataTable thead th.sorting::before,
+    table.dataTable thead th.sorting_asc::before,
+    table.dataTable thead th.sorting_desc::before,
+    table.dataTable thead th.sorting::after,
+    table.dataTable thead th.sorting_asc::after,
+    table.dataTable thead th.sorting_desc::after {
+      display: none;
+    }
+  }
+}
+
+.table.dataTable {
+  thead {
+    th,
+    td {
+      padding-right: 1.4rem;
+    }
+  }
+}
+
+.btn-status {
+  border-width: 2px;
+  font-size: 1.2rem;
+  color: #000;
+
+  &.btn-oblong {
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    max-width: 900px;
+  }
+}

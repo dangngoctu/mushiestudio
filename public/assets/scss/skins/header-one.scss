@@ -1,0 +1,223 @@
+// Bootstrap variable overrides
+@import "../bootstrap/variables";
+@import "../variables";
+
+@import "../../bower_components/bootstrap/scss/functions";
+@import "../../bower_components/bootstrap/scss/variables";
+@import "../../bower_components/bootstrap/scss/mixins";
+
+// Custom mixins for bootstrap
+@import "../bootstrap/mixins";
+
+// Variables
+$color-primary:   #367EC1;
+$color-secondary: #191F25;
+
+.slim-header {
+  background-color: $color-primary;
+  border-bottom-width: 0;
+
+  &.with-sidebar {
+    .slim-sidebar-menu {
+      background-color: transparent;
+      border-color: rgba(#fff,.5);
+
+      span {
+        &,
+        &::before,
+        &::after { background-color: rgba(#fff, .75); }
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-color: #fff;
+
+        span {
+          &,
+          &::before,
+          &::after { background-color: #fff; }
+        }
+      }
+    }
+  }
+}
+
+.slim-logo a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.search-box {
+  border-width: 0;
+  background-color: #fff;
+
+  .btn {
+    background-color: $color-primary;
+  }
+}
+
+.logged-user {
+  color: rgba(#fff,.75);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  img { border-color: rgba(#fff, .5); }
+}
+
+.header-notification {
+  color: rgba(#fff, .75);
+
+  .indicator { background-color: $red; }
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-primary, 5%);
+    color: #fff;
+  }
+}
+
+.slim-header-right {
+  .dropdown-a,
+  .dropdown-b {
+    &.show > a {
+      background-color: darken($color-primary, 5%);
+    }
+  }
+
+  .dropdown-c.show {
+    > a { color: #fff; }
+  }
+
+  .dropdown-menu { margin-top: 17px; }
+}
+
+.slim-navbar {
+  background-color: $color-secondary;
+  border-bottom-width: 0;
+
+  .nav-item {
+    &:hover,
+    &:focus {
+      background-color: darken($color-secondary, 2%);
+    }
+
+    &.active {
+      .nav-link {
+        background-color: darken($color-secondary, 2%);
+        background-image: none;
+        border-width: 1px;
+        color: $color-primary;
+
+        .icon { color: $color-primary; }
+      }
+    }
+  }
+
+  .nav-link {
+    background-color: transparent;
+    border-color: rgba(#fff,.1);
+    color: $body-color;
+
+    .icon { color: $body-color; }
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-secondary, 2%);
+      color: $body-color;
+    }
+  }
+
+  .sub-item {
+    background-color: $color-secondary;
+    border-width: 0;
+    box-shadow: none;
+
+    ul a {
+      color: $body-color;
+      &:hover,
+      &:focus {
+        background-color: $color-secondary;
+        color: $green;
+      }
+    }
+
+    .sub-with-sub ul {
+      background-color: $color-secondary;
+      border-width: 0;
+      box-shadow: none;
+    }
+  }
+
+  .mega-dropdown .sub-item .section-label {
+    color: $body-color;
+    border-bottom-color: rgba(#fff,.08);
+  }
+}
+
+.slim-sidebar {
+  background-color: $color-secondary;
+  border-right-width: 0;
+}
+
+.sidebar-label {
+  color: rgba(#fff, .5);
+  margin-bottom: 15px;
+}
+
+.sidebar-nav-item:first-child .sidebar-nav-link {
+  border-top-color: rgba(#fff, .08);
+  &.active { border-top-width: 1px; }
+}
+
+.sidebar-nav-link {
+  border-bottom-color: rgba(#fff, .08);
+  color: rgba(#fff, .5);
+
+  .icon { color: rgba(#fff, .5); }
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-secondary, 2%);
+    color: rgba(#fff, .6);
+    .icon { color: rgba(#fff, .6); }
+  }
+
+  &.active {
+    background-image: none;
+    background-color: darken($color-secondary, 2%);
+    color: $color-primary;
+    border-bottom-width: 1px;
+
+    .icon { color: $color-primary; }
+  }
+}
+
+.sidebar-nav-sub {
+  border-bottom-color: rgba(#fff, .08);
+  padding: 8px 0;
+}
+
+.sidebar-nav-sub {
+  .nav-sub-link {
+    color: rgba(#fff, .4);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $color-primary;
+    }
+
+    &.active {
+      background-color: transparent;
+      color: $color-primary;
+    }
+  }
+}
+
+[dir="rtl"] {
+  .sidebar-nav-sub { padding: 8px 0; }
+}
