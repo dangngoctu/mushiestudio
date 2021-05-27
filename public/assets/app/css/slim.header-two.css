@@ -52,10 +52,10 @@
 .slim-navbar .nav-item.active .nav-link {
   background-image: none;
   background-color: transparent;
-  color: #005d1f;
+  color: #1b84e7;
   border-width: 1px; }
   .slim-navbar .nav-item.active .nav-link .icon {
-    color: #005d1f; }
+    color: #1b84e7; }
 
 .sidebar-label {
   margin-bottom: 15px; }
@@ -64,12 +64,12 @@
   color: #868ba1; }
 
 .sidebar-nav-link.active {
-  color: #005d1f;
+  color: #1b84e7;
   background-image: none;
   background-color: transparent;
   border-bottom-width: 1px; }
   .sidebar-nav-link.active i {
-    color: #005d1f; }
+    color: #1b84e7; }
 
 .sidebar-nav-item:first-child .sidebar-nav-link.active {
   border-top-width: 1px; }
@@ -78,5 +78,5 @@
 <<<<<<< Updated upstream
   color: #1b84e7; }
 =======
-  color: #005d1f; }
+  color: #1b84e7; }
 >>>>>>> Stashed changes

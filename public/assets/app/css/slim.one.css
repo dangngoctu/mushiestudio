@@ -16,13 +16,13 @@ body {
         background-color: rgba(255, 255, 255, 0.72); }
 
 .slim-logo a {
-  color: #005d1f; }
+  color: #1b84e7; }
 
 .slim-logo span {
   color: #868ba1; }
 
 .search-box .btn {
-  background-color: #005d1f;
+  background-color: #1b84e7;
   background-image: none; }
 
 .slim-header-right .dropdown-menu {
@@ -87,10 +87,10 @@ body {
   .slim-navbar .nav-item.active .nav-link {
     background-color: #262a2f;
     background-image: none;
-    color: #005d1f;
+    color: #1b84e7;
     border-width: 1px; }
     .slim-navbar .nav-item.active .nav-link .icon {
-      color: #005d1f; }
+      color: #1b84e7; }
   .slim-navbar .sub-item {
     background-color: #1a1d21;
     border-width: 0;
@@ -98,7 +98,7 @@ body {
     .slim-navbar .sub-item ul a {
       color: #868ba1; }
       .slim-navbar .sub-item ul a:hover, .slim-navbar .sub-item ul a:focus {
-        color: #005d1f;
+        color: #1b84e7;
         background-color: transparent; }
     .slim-navbar .sub-item .sub-with-sub ul {
       background-color: #1a1d21;
@@ -184,7 +184,7 @@ hr {
     color: #fff;
     font-weight: 400; }
   .dash-headline-item-one .earning-label {
-    color: #005d1f; }
+    color: #1b84e7; }
 
 .dash-headline-item-two {
   background-color: #212529;
@@ -193,7 +193,7 @@ hr {
     color: #fff;
     font-weight: 400; }
   .dash-headline-item-two .item-label {
-    color: #005d1f; }
+    color: #1b84e7; }
 
 .dash-headline-item-three,
 .dash-headline-item-four {
@@ -205,7 +205,7 @@ hr {
     font-weight: 400; }
   .dash-headline-item-three .item-label,
   .dash-headline-item-four .item-label {
-    color: #005d1f; }
+    color: #1b84e7; }
 
 .card-dash-one {
   border-color: #343a40; }
@@ -253,9 +253,9 @@ hr {
 .nav-statistics-wrapper {
   border-color: #343a40; }
   .nav-statistics-wrapper .nav-link.active {
-    color: #005d1f; }
+    color: #1b84e7; }
   .nav-statistics-wrapper .nav:first-child .nav-link::before {
-    border-color: #005d1f; }
+    border-color: #1b84e7; }
 
 .dashboard-chart-one .card-total h1 {
   color: #fff;
@@ -337,12 +337,12 @@ hr {
     color: #dee2e6; }
   .card-header-tabs .nav-link.active {
     background-color: #212529;
-    color: #005d1f;
+    color: #1b84e7;
     border-color: #343a40;
     border-bottom-color: #212529; }
 
 .card-header-tabs.nav-tabs-for-dark .nav-link.active, .card-header-tabs.nav-tabs-for-dark .nav-link.active:focus {
-  color: #005d1f; }
+  color: #1b84e7; }
 
 /******************** ACCORDION ********************/
 .accordion-one .card-header a {
@@ -472,7 +472,7 @@ hr {
   .nav-link:hover, .nav-link:focus {
     color: #dee2e6; }
   .nav-link.active {
-    color: #005d1f; }
+    color: #1b84e7; }
 
 .nav-gray-600 .nav-link.active {
   color: #212529; }
@@ -485,10 +485,10 @@ hr {
     color: #fff; }
 
 .nav-underline .nav-link::before {
-  background-color: #005d1f; }
+  background-color: #1b84e7; }
 
 .nav-underline .nav-link.active {
-  color: #005d1f; }
+  color: #1b84e7; }
 
 /******************** PAGINATION ********************/
 .pagination-wrapper {
@@ -503,7 +503,7 @@ hr {
     border-color: #495057; }
 
 .pagination:not([class*=" pagination-"]) .page-item.active .page-link {
-  background-color: #005d1f;
+  background-color: #1b84e7;
   border-color: transparent;
   color: #fff; }
 
@@ -519,7 +519,7 @@ hr {
 .pagination-dark:not([class*=" pagination-"]) .page-item.active .page-link {
   background-color: #fff;
   border-color: transparent;
-  color: #005d1f; }
+  color: #1b84e7; }
 
 [class*=" pagination-"]:not(.pagination-dark) .page-item:not(.active) .page-link {
   background-color: transparent;
@@ -600,7 +600,7 @@ hr {
   color: #fff; }
 
 .card-experience .position-company {
-  color: #005d1f; }
+  color: #1b84e7; }
 
 .card-experience .card-footer {
   border-color: #343a40; }
@@ -1049,20 +1049,20 @@ hr {
     background-image: none;
     background-color: #282d31;
     border-bottom-width: 1px;
-    color: #005d1f; }
+    color: #1b84e7; }
     .sidebar-nav-link.active i {
-      color: #005d1f; }
+      color: #1b84e7; }
 
 .sidebar-nav-sub {
   border-bottom-color: #343a40;
   padding: 8px 0;
   background-color: #1c2023; }
   .sidebar-nav-sub .nav-sub-link:hover, .sidebar-nav-sub .nav-sub-link:focus {
-    color: #005d1f;
+    color: #1b84e7;
     background-color: transparent; }
   .sidebar-nav-sub .nav-sub-link.active {
     background-color: transparent;
-    color: #005d1f; }
+    color: #1b84e7; }
 
 /******************** RTL SUPPORT *********************/
 [dir="rtl"] .card-dash-one .row > div + div {

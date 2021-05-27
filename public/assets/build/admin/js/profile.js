@@ -18,8 +18,7 @@ $(function(){
             {"data": "sex"},
             {"data": "job"},
             {"data": "url_image"},
-            {"data": "url_facebook"},
-            {"data": "url_landing"},
+            {"data": "created"},
             {"data": "status"},
 			{"data": "action", "searchable": false}
 		],
@@ -27,10 +26,14 @@ $(function(){
             {
 				targets: [0],
 				class: 'text-center'
-			},
+            },
             {
                 orderable: false,
-                targets: [1, 2, 3, 4, 5, 6],
+                targets: [1],
+            },
+            {
+                orderable: false,
+                targets: [2, 3, 4, 5, 6],
                 class: 'text-center'
             },
 			{
@@ -101,7 +104,7 @@ var fileuploader = function (element) {
     if($(element).length > 0) {
         $(element).fileuploader({
             limit: 1,
-            fileMaxSize: 3,
+            fileMaxSize: 10,
             extensions: ['jpg', 'jpeg', 'png'],
             changeInput: ' ',
             theme: 'thumbnails',
@@ -335,13 +338,13 @@ var ClearFormProfile = function(lang, type) {
     }
     fileuploader('input#logo');
     if (type == "add") {
-        $('#modal-profile #ttlModal').html('Add Image Profile');
+        $('#modal-profile #ttlModal').html('Thêm đại lý');
         $('#modal-profile #action').val('insert');
         $('#ProfileForm').each(function() {
             $(this).data('serialized', $(this).serialize())
         });
     } else {
-        $('#modal-profile #ttlModal').html('Update Image Profile');
+        $('#modal-profile #ttlModal').html('Cập nhật đại lý');
         $('#modal-profile #action').val('update');
     }
     $('#modal-profile').find('button.btn-primary').prop('disabled', true);

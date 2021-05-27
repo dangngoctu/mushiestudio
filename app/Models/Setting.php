@@ -23,6 +23,7 @@ class Setting extends Model
 {
 	protected $table = 'setting';
 	public $incrementing = false;
+	protected $primaryKey = 'key';
 
 	protected $fillable = [
 		'key',

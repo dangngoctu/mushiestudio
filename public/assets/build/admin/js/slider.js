@@ -16,6 +16,7 @@ $(function(){
 			{"data": "id"},
 			{"data": "url"},
             {"data": "place"},
+            {"data": "created"},
             {"data": "status"},
 			{"data": "action", "searchable": false}
 		],
@@ -97,7 +98,7 @@ var fileuploader = function (element) {
     if($(element).length > 0) {
         $(element).fileuploader({
             limit: 1,
-            fileMaxSize: 3,
+            fileMaxSize: 10,
             extensions: ['jpg', 'jpeg', 'png'],
             changeInput: ' ',
             theme: 'thumbnails',
@@ -329,13 +330,13 @@ var ClearFormSlider = function(lang, type) {
     }
     fileuploader('input#logo');
     if (type == "add") {
-        $('#modal-slider #ttlModal').html('Add Image Slider');
+        $('#modal-slider #ttlModal').html('Thêm slider');
         $('#modal-slider #action').val('insert');
         $('#SliderForm').each(function() {
             $(this).data('serialized', $(this).serialize())
         });
     } else {
-        $('#modal-slider #ttlModal').html('Update Image Slider');
+        $('#modal-slider #ttlModal').html('Cập nhật slider');
         $('#modal-slider #action').val('update');
     }
     $('#modal-slider').find('button.btn-primary').prop('disabled', true);

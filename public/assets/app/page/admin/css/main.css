@@ -98,4 +98,7 @@ table.dataTable {
 
 @media (min-width: 992px) {
   .modal-lg {
-    max-width: 900px; } }
+    max-width: 900px; }
+    .modal-lg-edit {
+      max-width: 1200px; }
+}

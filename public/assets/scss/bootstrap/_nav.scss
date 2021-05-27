@@ -31,7 +31,7 @@
 
 .nav-pills-for-dark { @include nav-color-variant(rgba(#fff,.7), #fff, #fff, transparent, theme-color('primary')); }
 
-.nav.active-primary .nav-link.active { color: #005d1f; }
+.nav.active-primary .nav-link.active { color: #1b84e7; }
 .nav.active-success .nav-link.active { color: theme-color('success'); }
 .nav.active-warning .nav-link.active { color: theme-color('warning'); }
 .nav.active-danger .nav-link.active { color: theme-color('danger'); }

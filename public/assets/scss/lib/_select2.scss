@@ -57,7 +57,7 @@
       padding: 3px 10px 3px 20px;
       border-color: transparent;
       border-radius: 0; //2px;
-      background-color: #005d1f;
+      background-color: #1b84e7;
       color: #fff;
       line-height: 1.45;
     }
@@ -87,7 +87,7 @@
   }
 
   .select2-results__option--highlighted[aria-selected] {
-    background-color: #005d1f;
+    background-color: #1b84e7;
   }
 
   .select2-results > .select2-results__options {
@@ -194,7 +194,7 @@
     .select2-selection__arrow b { border-top-color: rgba(#fff, 0.6); }
   }
 
-  &.select2-primary { background-color: #005d1f; }
+  &.select2-primary { background-color: #1b84e7; }
   &.select2-success { background-color: theme-color('success'); }
   &.select2-warning { background-color: theme-color('warning'); }
   &.select2-danger { background-color: theme-color('danger'); }
@@ -210,7 +210,7 @@
 
 // Arrow color for outline
 .select2-container--default.select2-container--open {
-  .select2-outline-primary { .select2-selection__arrow b { border-bottom-color: #005d1f; }}
+  .select2-outline-primary { .select2-selection__arrow b { border-bottom-color: #1b84e7; }}
   .select2-outline-success { .select2-selection__arrow b { border-bottom-color: theme-color('success'); }}
   .select2-outline-warning { .select2-selection__arrow b { border-bottom-color: theme-color('warning'); }}
   .select2-outline-danger  { .select2-selection__arrow b { border-bottom-color: theme-color('danger'); }}
@@ -248,7 +248,7 @@
   .select2-results__option[aria-selected="true"] { background-color: rgba(#000, 0.08); }
 }
 
-.select2-drop-primary { background-color: #005d1f; }
+.select2-drop-primary { background-color: #1b84e7; }
 .select2-drop-success { background-color: theme-color('success'); }
 .select2-drop-warning { background-color: theme-color('warning'); }
 .select2-drop-danger { background-color: theme-color('danger'); }

@@ -57,7 +57,7 @@
 
     .current a {
       &,&:hover,&:active {
-        background-color: #005d1f;
+        background-color: #1b84e7;
         .number { border-color: #fff; }
       }
     }
@@ -104,7 +104,7 @@
     a,
     a:hover,
     a:active {
-      background-color: #005d1f;
+      background-color: #1b84e7;
       padding: 9px 20px;
       line-height: 1.6;
       @include border-radius(0);
@@ -278,8 +278,8 @@
       .current a {
         &,&:hover,&:active {
           .number {
-            border-color: #005d1f;
-            color: #005d1f;
+            border-color: #1b84e7;
+            color: #1b84e7;
           }
         }
       }

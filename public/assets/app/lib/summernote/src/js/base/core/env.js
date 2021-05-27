@@ -7,19 +7,25 @@ const isSupportAmd = typeof define === 'function' && define.amd; // eslint-disab
  * @param {String} fontName
  * @return {Boolean}
  */
+const genericFontFamilies = ['sans-serif', 'serif', 'monospace', 'cursive', 'fantasy'];
+
+function validFontName(fontName) {
+  return ($.inArray(fontName.toLowerCase(), genericFontFamilies) === -1) ? `'${fontName}'` : fontName;
+}
+
 function isFontInstalled(fontName) {
   const testFontName = fontName === 'Comic Sans MS' ? 'Courier New' : 'Comic Sans MS';
-  const $tester = $('<div>').css({
-    position: 'absolute',
-    left: '-9999px',
-    top: '-9999px',
-    fontSize: '200px'
-  }).text('mmmmmmmmmwwwwwww').appendTo(document.body);
+  const testText = 'mmmmmmmmmmwwwww';
+  const testSize = '200px';
 
-  const originalWidth = $tester.css('fontFamily', testFontName).width();
-  const width = $tester.css('fontFamily', fontName + ',' + testFontName).width();
+  var canvas = document.createElement('canvas');
+  var context = canvas.getContext('2d');
 
-  $tester.remove();
+  context.font = testSize + " '" + testFontName + "'";
+  const originalWidth = context.measureText(testText).width;
+
+  context.font = testSize + ' ' + validFontName(fontName) + ', "' + testFontName + '"';
+  const width = context.measureText(testText).width;
 
   return originalWidth !== width;
 }
@@ -41,34 +47,6 @@ if (isMSIE) {
 const isEdge = /Edge\/\d+/.test(userAgent);
 
 let hasCodeMirror = !!window.CodeMirror;
-if (!hasCodeMirror && isSupportAmd) {
-  // Webpack
-  if (typeof __webpack_require__ === 'function') { // eslint-disable-line
-    try {
-      // If CodeMirror can't be resolved, `require.resolve` will throw an
-      // exception and `hasCodeMirror` won't be set to `true`.
-      require.resolve('codemirror');
-      hasCodeMirror = true;
-    } catch (e) {
-      // do nothing
-    }
-  } else if (typeof require !== 'undefined') {
-    // Browserify
-    if (typeof require.resolve !== 'undefined') {
-      try {
-        // If CodeMirror can't be resolved, `require.resolve` will throw an
-        // exception and `hasCodeMirror` won't be set to `true`.
-        require.resolve('codemirror');
-        hasCodeMirror = true;
-      } catch (e) {
-        // do nothing
-      }
-    // Almond/Require
-    } else if (typeof require.specified !== 'undefined') {
-      hasCodeMirror = require.specified('codemirror');
-    }
-  }
-}
 
 const isSupportTouch =
   (('ontouchstart' in window) ||
@@ -103,5 +81,7 @@ export default {
   hasCodeMirror,
   isFontInstalled,
   isW3CRangeSupport: !!document.createRange,
-  inputEventName
+  inputEventName,
+  genericFontFamilies,
+  validFontName,
 };

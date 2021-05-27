@@ -40,7 +40,7 @@
       font-size: 9px;
       text-align: center;
       color: #fff;
-      background-color: #005d1f;
+      background-color: #1b84e7;
       line-height: 17px;
       display: none;
     }
@@ -125,7 +125,7 @@
     &:checked {
       + span:before {
         border-color: transparent;
-        background-color: #005d1f;
+        background-color: #1b84e7;
       }
       + span:after { display: block; }
     }
@@ -170,7 +170,7 @@
   &,&::after { border-radius: 0; }
 }
 .custom-file-label-primary::after {
-  background-color: #005d1f;
+  background-color: #1b84e7;
   border-color: transparent;
   color: #fff;
 }

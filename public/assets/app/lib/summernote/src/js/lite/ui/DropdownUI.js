@@ -1,8 +1,10 @@
+import $ from 'jquery';
+
 class DropdownUI {
   constructor($node, options) {
     this.$button = $node;
     this.options = $.extend({}, {
-      target: options.container
+      target: options.container,
     }, options);
     this.setEvent();
   }

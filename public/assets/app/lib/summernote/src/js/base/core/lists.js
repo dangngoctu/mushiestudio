@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import func from './func';
 
 /**
@@ -62,17 +61,18 @@ function all(array, pred) {
 }
 
 /**
- * returns index of item
- */
-function indexOf(array, item) {
-  return $.inArray(item, array);
-}
-
-/**
  * returns true if the value is present in the list.
  */
 function contains(array, item) {
-  return indexOf(array, item) !== -1;
+  if (array && array.length && item) {
+    if (array.indexOf) {
+      return array.indexOf(item) !== -1;
+    } else if (array.contains) {
+      // `DOMTokenList` doesn't implement `.indexOf`, but it implements `.contains`
+      return array.contains(item);
+    }
+  }
+  return false;
 }
 
 /**
@@ -166,10 +166,11 @@ function unique(array) {
  * @param {Array} array
  */
 function next(array, item) {
-  const idx = indexOf(array, item);
-  if (idx === -1) { return null; }
-
-  return array[idx + 1];
+  if (array && array.length && item) {
+    const idx = array.indexOf(item);
+    return idx === -1 ? null : array[idx + 1];
+  }
+  return null;
 }
 
 /**
@@ -177,10 +178,11 @@ function next(array, item) {
  * @param {Array} array
  */
 function prev(array, item) {
-  const idx = indexOf(array, item);
-  if (idx === -1) { return null; }
-
-  return array[idx - 1];
+  if (array && array.length && item) {
+    const idx = array.indexOf(item);
+    return idx === -1 ? null : array[idx - 1];
+  }
+  return null;
 }
 
 /**
@@ -206,5 +208,5 @@ export default {
   isEmpty,
   clusterBy,
   compact,
-  unique
+  unique,
 };
