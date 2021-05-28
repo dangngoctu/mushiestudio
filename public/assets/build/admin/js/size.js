@@ -16,7 +16,6 @@ $(function(){
 		"columns": [
 			{"data": "id"},
             {"data": "name"},
-            {"data": "size"},
 			{"data": "action", "searchable": false}
 		],
 		"columnDefs": [
@@ -27,7 +26,7 @@ $(function(){
             },
             {
                 orderable: false,
-                targets: [1,2],
+                targets: [1],
                 class: 'text-center'
             },
 			{
@@ -134,11 +133,6 @@ var UpdateSize = function(id) {
             if (response.code == '200') {
                 $('#modal-size #id').val(response.data.id);
                 $('#modal-size #name').val(response.data.name);
-                $('#modal-size #size_code').val(response.data.size_code);
-                $("#sizepicker").spectrum({
-                    preferredFormat: "hex",
-                    size: response.data.size_code
-                });
                 $('#modal-size').modal('show');
             } else {
                 Lobibox.notify("warning", {
@@ -213,10 +207,6 @@ var DeleteSize = function(id, table) {
 var ClearFormSize = function(type) {
     $('#SizeForm')[0].reset();
     $('#SizeForm').parsley().reset();
-    $("#sizepicker").spectrum({
-        preferredFormat: "hex",
-        size: '#000000'
-    });
     if (type == "add") {
         $('#modal-size #ttlModal').html('Add size');
         $('#modal-size #action').val('insert');

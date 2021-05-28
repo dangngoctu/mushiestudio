@@ -34,6 +34,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
 
         Route::get('ajax_color', 'Admin\AdminController@admin_color_ajax')->name('admin.color.ajax');
         Route::post('ajax_color', 'Admin\AdminController@admin_post_color_ajax')->name('admin.post.color.ajax');
+
+        Route::get('ajax_size', 'Admin\AdminController@admin_size_ajax')->name('admin.size.ajax');
+        Route::post('ajax_size', 'Admin\AdminController@admin_post_size_ajax')->name('admin.post.size.ajax');
     });
 
     
