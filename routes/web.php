@@ -24,9 +24,17 @@ Route::get('/admin/logout', 'Admin\AdminController@logout')->name('admin.logout'
 Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
     Route::get('index', 'Admin\AdminController@index')->name('admin.index');
     Route::get('setting','Admin\AdminController@admin_setting')->name('admin.setting');
+    Route::get('size','Admin\AdminController@admin_size')->name('admin.size');
+    Route::get('material','Admin\AdminController@admin_material')->name('admin.material');
+    Route::get('color','Admin\AdminController@admin_color')->name('admin.color');
 
     Route::group(['prefix' => 'ajax'], function () {
         Route::get('ajax_setting', 'Admin\AdminController@admin_setting_ajax')->name('admin.setting.ajax');
         Route::post('ajax_setting', 'Admin\AdminController@admin_post_setting_ajax')->name('admin.post.setting.ajax');
+
+        Route::get('ajax_color', 'Admin\AdminController@admin_color_ajax')->name('admin.color.ajax');
+        Route::post('ajax_color', 'Admin\AdminController@admin_post_color_ajax')->name('admin.post.color.ajax');
     });
+
+    
 });

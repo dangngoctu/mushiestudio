@@ -10,7 +10,7 @@
             <li class="breadcrumb-item"><a href="{{route('admin.index')}}">HomePage</a></li>
             <li class="breadcrumb-item active" aria-current="page">Setting</li>
         </ol>
-        <h6 class="slim-pagetitle">Thiết lập</h6>
+        <h6 class="slim-pagetitle">Setting</h6>
     </div><!-- slim-pageheader -->
 @endsection
 
