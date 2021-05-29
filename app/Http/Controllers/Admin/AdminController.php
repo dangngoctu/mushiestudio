@@ -82,6 +82,43 @@ class AdminController extends Controller
 		}
 	}
 
+	public function change_pass(Request $request){
+		$rules = array(
+			'oldPassword' => 'required|min:1|max:255',
+			'newPassword' => 'required|min:6|max:255',
+			'renewPassword' => 'required|min:6|max:255|same:newPassword'
+		);
+		$validator = Validator::make($request->all(), $rules);
+		if ($validator->fails()) {
+			return self::JsonExport(403, 'Error');
+		} else {
+			try{
+				DB::beginTransaction();
+				$account = Models\User::find(Auth::user()->id);
+				if($account){
+					if(Hash::check($request->oldPassword, $account->password)){
+						$account->update(['password' =>  Hash::make($request->newPassword)]);
+						if(!$account){
+							DB::rollback();
+							return self::JsonExport(403, 'Error');
+						}
+					} else {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				} else {
+					DB::rollback();
+					return self::JsonExport(403, 'Error');
+				}
+				DB::commit();
+				return self::JsonExport(200, 'Success');
+			} catch (\Exception $e) {
+				DB::rollback();
+				return self::JsonExport(500, 'Error');
+			}
+		}
+	}
+
 	public function index(){
         try {
 			$user = Auth::user();
@@ -736,6 +773,174 @@ class AdminController extends Controller
 					}
 				} else {
 					$insert = Models\Menu::insert($data);
+					if(!$insert) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				}
+				DB::commit();
+				switch ($request->action) {
+					case 'update':
+						return self::JsonExport(200, 'Update success');
+					case 'insert':
+						return self::JsonExport(200, 'Insert success');
+					default:
+						return self::JsonExport(200, 'Delete success');
+				}
+			} catch (\Exception $e) {
+				DB::rollback();
+				return self::JsonExport(500, 'Error');
+			}	
+		}
+	}
+
+	//User
+	public function admin_user(Request $request)
+	{
+		try {
+			if(Auth::user()) {
+				return view('Web.Admin.Page.user');
+			} else {
+				return redirect()->route('admin.login.view');
+			}
+		} catch (\Exception $e) {
+			return redirect()->route('admin.login.view');
+		}
+	}
+
+	public function admin_user_ajax(Request $request)
+	{
+		try {
+			if($request->has('id') && !empty($request->id)) {
+				$data = self::getUser($request->id);
+			} else {
+				$data = self::getDTUser();
+			}
+			if($data == false){
+				return self::JsonExport(500, 'Error');
+			} else {
+				return $data;
+			}
+		} catch (\Exception $e) {
+			return self::JsonExport(500, 'Error');
+		}
+	}
+
+	public function getDTUser(){
+        try {
+            $data = Models\User::all();
+			if(!$data){
+				return false;
+			}
+			$result =  Datatables::of($data)
+			->addColumn('action', function ($v) {
+                $action = '';
+                if(1==1) {
+                    $action .= '<span class="btn-action table-action-edit cursor-pointer tx-success" data-id="'.$v->id.'"><i class="fa fa-edit"></i></span>';
+                }
+				if(1==1) {
+                    $action .= '<span class="btn-action table-action-delete cursor-pointer tx-danger mg-l-5" data-id="'.$v->id.'"><i class="fa fa-trash"></i></span>';
+                }
+                return $action;
+			})
+			->addIndexColumn()
+			->rawColumns(['action'])
+			->make(true);
+			return $result;
+        } catch (\Exception $e) {
+			return self::JsonExport(500, 'Error');
+        }  
+	}
+
+	public function getUser($id){
+		try{
+			$data = Models\User::where('id', $id)->first();
+			if($data){
+				$result = self::JsonExport(200, trans('app.success'), $data);
+			} else {
+				$result = self::JsonExport(404, 'Error');
+			}
+			return $result;
+		} catch (\Exception $e) {
+			return false;
+		}
+	}
+
+	public function admin_post_user_ajax(Request $request)
+	{
+		$rules = array(
+			'name' => 'required',
+			'email' => 'required'
+		);
+		if($request->action == 'update') {
+			$rules['id'] = 'required|digits_between:1,10';
+		} else if($request->action == 'delete') {
+			$rules = array('id' => 'required|digits_between:1,10');
+		}
+		$validator = Validator::make($request->all(), $rules);
+		if ($validator->fails()) {
+			return self::JsonExport(403, $validator->errors());
+		} else {
+			try {
+				DB::beginTransaction();
+				if($request->action == 'update' || $request->action == 'delete') {
+					$query = Models\User::where('id', $request->id)->first();
+					if(!$query) {
+						DB::rollback();
+						return false;
+					}
+				}
+				$data = [];
+				if($request->has('name') && !empty($request->name)) {
+					$data['name'] = $request->name;
+				}
+
+				if($request->action == 'update'){
+					$check_user = Models\User::where('id', '!=', $request->id)->where('email', $request->email)->first();
+					if($check_user){
+						DB::rollback();
+						return self::JsonExport(403, 'User existed');
+					}
+
+					if($request->has('email') && !empty($request->email)) {
+						$data['email'] = $request->email;
+					}
+
+					if($request->has('password') && !empty($request->password)) {
+						$data['password'] = Hash::make($request->password);
+					}
+				} else if ($request->action == 'insert'){
+					$check_user = Models\User::where('email', $request->email)->first();
+					if($check_user){
+						DB::rollback();
+						return self::JsonExport(403, 'User existed');
+					}
+
+					if($request->has('email') && !empty($request->email)) {
+						$data['email'] = $request->email;
+					}
+
+					if($request->has('password') && !empty($request->password)) {
+						$data['password'] = Hash::make($request->password);
+					} else {
+						$data['password'] = Hash::make(123456);
+					}
+				}
+
+				if($request->action == 'update') {
+					$query->update($data);
+					if (!$query) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				} else if($request->action == 'delete') {
+					$query->delete();
+					if(!$query) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				} else {
+					$insert = Models\User::insert($data);
 					if(!$insert) {
 						DB::rollback();
 						return self::JsonExport(403, 'Error');

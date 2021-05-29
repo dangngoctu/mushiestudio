@@ -31,6 +31,12 @@
             </ul>
           </div><!-- dropdown-menu -->
         </li>
+        <li class="nav-item {{ (strpos($route, 'admin.user') !== false)  ? 'active' : '' }}">
+          <a class="nav-link cursor-pointer" href="{{route('admin.user')}}">
+              <i class="icon ion-ios-gear-outline"> </i>
+              <span>User</span>
+          </a>
+        </li>
         <li class="nav-item {{ (strpos($route, 'admin.setting') !== false || strcmp($route, 'admin.index') == 0 || strcmp($route, 'admin.login.view') == 0) ? 'active' : '' }}">
           <a class="nav-link cursor-pointer" href="{{route('admin.setting')}}">
               <i class="icon ion-ios-gear-outline"> </i>
