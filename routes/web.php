@@ -27,6 +27,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
     Route::get('size','Admin\AdminController@admin_size')->name('admin.size');
     Route::get('material','Admin\AdminController@admin_material')->name('admin.material');
     Route::get('color','Admin\AdminController@admin_color')->name('admin.color');
+    Route::get('menu','Admin\AdminController@admin_menu')->name('admin.menu');
 
     Route::group(['prefix' => 'ajax'], function () {
         Route::get('ajax_setting', 'Admin\AdminController@admin_setting_ajax')->name('admin.setting.ajax');
@@ -40,6 +41,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
 
         Route::get('ajax_material', 'Admin\AdminController@admin_material_ajax')->name('admin.material.ajax');
         Route::post('ajax_material', 'Admin\AdminController@admin_post_material_ajax')->name('admin.post.material.ajax');
+
+        Route::get('ajax_menu', 'Admin\AdminController@admin_menu_ajax')->name('admin.menu.ajax');
+        Route::post('ajax_menu', 'Admin\AdminController@admin_post_menu_ajax')->name('admin.post.menu.ajax');
     });
 
     

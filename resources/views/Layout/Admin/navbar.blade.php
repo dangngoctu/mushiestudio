@@ -7,7 +7,18 @@
 <div class="slim-navbar">
     <div class="container">
       <ul class="nav">
-        <li class="nav-item with-sub {{ (strpos($route, 'admin.title') !== false || strcmp($route, 'admin.content') == 0) ? 'active' : '' }}">
+        <li class="nav-item with-sub {{ (strpos($route, 'admin.menu') !== false) ? 'active' : '' }}">
+          <a class="nav-link cursor-pointer" href="#">
+            <i class="icon ion-clipboard"></i>
+            <span>Menu</span>
+          </a>
+          <div class="sub-item">
+            <ul>
+              <li><a href="{{route('admin.menu')}}">Menu</a></li>
+            </ul>
+          </div><!-- dropdown-menu -->
+        </li>
+        <li class="nav-item with-sub {{ (strpos($route, 'admin.size') !== false || strcmp($route, 'admin.color') == 0 || strcmp($route, 'admin.material') == 0) ? 'active' : '' }}">
           <a class="nav-link cursor-pointer" href="#">
             <i class="icon ion-clipboard"></i>
             <span>Addon</span>

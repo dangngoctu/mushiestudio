@@ -617,4 +617,143 @@ class AdminController extends Controller
 			}	
 		}
 	}
+
+	//Menu
+	public function admin_menu(Request $request)
+	{
+		try {
+			if(Auth::user()) {
+				return view('Web.Admin.Page.menu');
+			} else {
+				return redirect()->route('admin.login.view');
+			}
+		} catch (\Exception $e) {
+			return redirect()->route('admin.login.view');
+		}
+	}
+
+	public function admin_menu_ajax(Request $request)
+	{
+		try {
+			if($request->has('id') && !empty($request->id)) {
+				$data = self::getMenu($request->id);
+			} else {
+				$data = self::getDTMenu();
+			}
+			if($data == false){
+				return self::JsonExport(500, 'Error');
+			} else {
+				return $data;
+			}
+		} catch (\Exception $e) {
+			return self::JsonExport(500, 'Error');
+		}
+	}
+
+	public function getDTMenu(){
+        try {
+            $data = Models\Menu::all();
+			if(!$data){
+				return false;
+			}
+			$result =  Datatables::of($data)
+			->addColumn('action', function ($v) {
+                $action = '';
+                if(1==1) {
+                    $action .= '<span class="btn-action table-action-edit cursor-pointer tx-success" data-id="'.$v->id.'"><i class="fa fa-edit"></i></span>';
+                }
+				if(1==1) {
+                    $action .= '<span class="btn-action table-action-delete cursor-pointer tx-danger mg-l-5" data-id="'.$v->id.'"><i class="fa fa-trash"></i></span>';
+                }
+                return $action;
+			})
+			->addIndexColumn()
+			->rawColumns(['action'])
+			->make(true);
+			return $result;
+        } catch (\Exception $e) {
+			return self::JsonExport(500, 'Error');
+        }  
+	}
+
+	public function getMenu($id){
+		try{
+			$data = Models\Menu::where('id', $id)->first();
+			if($data){
+				$result = self::JsonExport(200, trans('app.success'), $data);
+			} else {
+				$result = self::JsonExport(404, 'Error');
+			}
+			return $result;
+		} catch (\Exception $e) {
+			return false;
+		}
+	}
+
+	public function admin_post_menu_ajax(Request $request)
+	{
+		$rules = array(
+			'name' => 'required'
+		);
+		if($request->action == 'update') {
+			$rules['id'] = 'required|digits_between:1,10';
+		} else if($request->action == 'delete') {
+			$rules = array('id' => 'required|digits_between:1,10');
+		}
+		$validator = Validator::make($request->all(), $rules);
+		if ($validator->fails()) {
+			return self::JsonExport(403, $validator->errors());
+		} else {
+			try {
+				DB::beginTransaction();
+				if($request->action == 'update' || $request->action == 'delete') {
+					$query = Models\Menu::where('id', $request->id)->first();
+					if(!$query) {
+						DB::rollback();
+						return false;
+					}
+				}
+				$data = [];
+				if($request->has('name') && !empty($request->name)) {
+					$data['name'] = $request->name;
+				}
+
+				if($request->has('url') && !empty($request->url)) {
+					$data['url'] = $request->url;
+				}
+
+				if($request->action == 'update') {
+					$query->update($data);
+					if (!$query) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				} else if($request->action == 'delete') {
+					$query->delete();
+					if(!$query) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				} else {
+					$insert = Models\Menu::insert($data);
+					if(!$insert) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				}
+				DB::commit();
+				switch ($request->action) {
+					case 'update':
+						return self::JsonExport(200, 'Update success');
+					case 'insert':
+						return self::JsonExport(200, 'Insert success');
+					default:
+						return self::JsonExport(200, 'Delete success');
+				}
+			} catch (\Exception $e) {
+				DB::rollback();
+				return self::JsonExport(500, 'Error');
+			}	
+		}
+	}
 }
