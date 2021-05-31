@@ -1,0 +1,14 @@
+.main-img-seaction{
+    height: 500px;
+}
+.product-details .h4{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.password-table .password-cell:first-child {
+    background: url('../images/153143551_149794660297892_1368277022498166510_n.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50% !important;
+    background-size: cover;
+}
