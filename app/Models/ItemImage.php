@@ -32,4 +32,9 @@ class ItemImage extends Model
 		'url',
 		'item_id'
 	];
+
+	public function item()
+	{
+		return $this->belongsTo(Item::class);
+	}
 }

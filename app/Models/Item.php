@@ -53,4 +53,14 @@ class Item extends Model
 		'size',
 		'category_id'
 	];
+
+	public function itemImages()
+	{
+		return $this->hasMany(ItemImage::class);
+	}
+
+	public function category()
+	{
+		return $this->belongsTo(Category::class);
+	}
 }

@@ -7,7 +7,7 @@
 <div class="slim-navbar">
     <div class="container">
       <ul class="nav">
-        <li class="nav-item with-sub {{ (strpos($route, 'admin.menu') !== false) ? 'active' : '' }}">
+        <li class="nav-item with-sub {{ (strpos($route, 'admin.menu') !== false || strcmp($route, 'admin.category') == 0) ? 'active' : '' }}">
           <a class="nav-link cursor-pointer" href="#">
             <i class="icon ion-clipboard"></i>
             <span>Menu</span>
@@ -15,12 +15,13 @@
           <div class="sub-item">
             <ul>
               <li><a href="{{route('admin.menu')}}">Menu</a></li>
+              <li><a href="{{route('admin.category')}}">Category</a></li>
             </ul>
           </div><!-- dropdown-menu -->
         </li>
         <li class="nav-item with-sub {{ (strpos($route, 'admin.size') !== false || strcmp($route, 'admin.color') == 0 || strcmp($route, 'admin.material') == 0) ? 'active' : '' }}">
           <a class="nav-link cursor-pointer" href="#">
-            <i class="icon ion-clipboard"></i>
+            <i class="icon ion-paintbucket"></i>
             <span>Addon</span>
           </a>
           <div class="sub-item">
@@ -33,7 +34,7 @@
         </li>
         <li class="nav-item {{ (strpos($route, 'admin.user') !== false)  ? 'active' : '' }}">
           <a class="nav-link cursor-pointer" href="{{route('admin.user')}}">
-              <i class="icon ion-ios-gear-outline"> </i>
+              <i class="icon ion-person"> </i>
               <span>User</span>
           </a>
         </li>

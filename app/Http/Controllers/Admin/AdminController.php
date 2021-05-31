@@ -128,6 +128,54 @@ class AdminController extends Controller
 		}
 	}
 
+	public function admin_post_file_uploader_ajax(Request $request){
+		$rules = array(
+			'id' => 'required|digits_between:1,10',
+			'action' => 'required'
+		);
+		$validator = Validator::make($request->all(), $rules);
+		if ($validator->fails()) {
+			self::JsonExport(403, $validator->errors()->first());
+		} else {
+			try{
+				DB::begintransaction();
+				if($request->action == 'deletecategory'){
+					$img = Models\CategoryImage::find($request->id);
+					if(!$img){
+						DB::rollback();
+						return self::JsonExport(404, 'Data wrong');
+					}
+					$img->delete();
+					if(!$img){
+						DB::rollback();
+						return self::JsonExport(500, 'Error');
+					}else{
+						DB::commit();
+						@unlink(public_path('img/item/'.$img->url));
+						return self::JsonExport(200, 'Delete success');
+					}
+				}else if($request->action == 'deleteitem'){
+					$img = Models\ItemImage::find($request->id);
+					if(!$img){
+						DB::rollback();
+						return self::JsonExport(404, 'Data wrong');
+					}
+					$img->delete();
+					if(!$img){
+						DB::rollback();
+						return self::JsonExport(500, 'Error');
+					}else{
+						DB::commit();
+						@unlink(public_path('img/item/'.$img->url));
+						return self::JsonExport(200, 'Delete success');
+					}
+				}
+			} catch (\Exception $e) {
+				return self::JsonExport(500, 'Error');
+			}
+		}
+	}
+
 	//Setting
 	public function admin_setting(Request $request)
 	{
@@ -959,6 +1007,210 @@ class AdminController extends Controller
 				DB::rollback();
 				return self::JsonExport(500, 'Error');
 			}	
+		}
+	}
+
+	//Category
+	public function admin_category(Request $request)
+	{
+		try {
+			if(Auth::user()) {
+				$menu = Models\Menu::all();
+				return view('Web.Admin.Page.category', [
+					'menu' => $menu
+				]);
+			} else {
+				return redirect()->route('admin.login.view');
+			}
+		} catch (\Exception $e) {
+			return redirect()->route('admin.login.view');
+		}
+	}
+
+	public function admin_category_ajax(Request $request)
+	{
+		try {
+			if($request->has('id') && !empty($request->id)) {
+				$data = self::getCategory($request->id);
+			} else {
+				$data = self::getDTCategory();
+			}
+			if($data == false){
+				return self::JsonExport(500, 'Error');
+			} else {
+				return $data;
+			}
+		} catch (\Exception $e) {
+			return self::JsonExport(500, 'Error');
+		}
+	}
+
+	public function getDTCategory(){
+        try {
+            $data = Models\Category::all();
+			if(!$data){
+				return false;
+			}
+			$result =  Datatables::of($data)
+			->addColumn('menu_id', function ($v) {
+				if(!empty($v->menu_id)){
+					return $v->menu->name;
+				} else {
+					return '';
+				}
+			})
+			->addColumn('action', function ($v) {
+                $action = '';
+                if(1==1) {
+                    $action .= '<span class="btn-action table-action-edit cursor-pointer tx-success" data-id="'.$v->id.'"><i class="fa fa-edit"></i></span>';
+                }
+				if(1==1) {
+                    $action .= '<span class="btn-action table-action-delete cursor-pointer tx-danger mg-l-5" data-id="'.$v->id.'"><i class="fa fa-trash"></i></span>';
+                }
+                return $action;
+			})
+			->addIndexColumn()
+			->rawColumns(['action'])
+			->make(true);
+			return $result;
+        } catch (\Exception $e) {
+			return self::JsonExport(500, 'Error');
+        }  
+	}
+
+	public function getCategory($id){
+		try{
+			$data = Models\Category::with('categoryImages')->where('id', $id)->first();
+			if($data){
+				$result = self::JsonExport(200, trans('app.success'), $data);
+			} else {
+				$result = self::JsonExport(404, 'Error');
+			}
+			return $result;
+		} catch (\Exception $e) {
+			return false;
+		}
+	}
+
+	public function admin_post_category_ajax(Request $request)
+	{
+		$rules = array(
+			'name' => 'required',
+			'url' => 'required',
+			'menu_id' => 'required',
+			'type' => 'required',
+			// 'video' => 'max:20000|mimes:mp4',
+			// 'img' => 'max:10000|mimes:png,jpg,jpeg',
+		);
+		if($request->action == 'update') {
+			$rules['id'] = 'required|digits_between:1,10';
+		} else if($request->action == 'delete') {
+			$rules = array('id' => 'required|digits_between:1,10');
+		}
+		$validator = Validator::make($request->all(), $rules);
+		if ($validator->fails()) {
+			return self::JsonExport(403, $validator->errors());
+		} else {
+			// try {
+				DB::beginTransaction();
+				if($request->action == 'update' || $request->action == 'delete') {
+					$query = Models\Category::where('id', $request->id)->first();
+					if(!$query) {
+						DB::rollback();
+						return false;
+					}
+				}
+				$data = [];
+				$array_img = [];
+				if($request->has('name') && !empty($request->name)) {
+					$data['name'] = $request->name;
+				}
+
+				if($request->has('url') && !empty($request->url)) {
+					$data['url'] = $request->url;
+				}
+
+				if($request->has('type') && !empty($request->type)) {
+					$data['type'] = $request->type;
+				}
+
+				if($request->has('menu_id') && !empty($request->menu_id)) {
+					$data['menu_id'] = $request->menu_id;
+				}
+
+				if($request->type == 2){
+					$data['video'] = $request->video;
+				} else {
+					$data['video'] = '';
+				}
+
+				if($request->action == 'update') {
+					$query->update($data);
+					if (!$query) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+					if($request->has('img') && !empty($request->video)){
+						$dir = public_path('img/item');
+						if (!File::exists($dir)) {
+							File::makeDirectory($dir, 0777, true, true);
+						}
+						foreach($request->img as $key => $val){
+							$name_image_img = 'img_'.$key.'_'.time().'.'.$val->getClientOriginalExtension();
+							$insert_category_img = Models\CategoryImage::insert([
+								'category_id' => $query->id,
+								'url' => 'img/item/'.$name_image_img
+							]);
+							array_push($array_img, ['name' => $name_image_img]);
+						}
+					}
+				} else if($request->action == 'delete') {
+					$query->delete();
+					if(!$query) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+				} else {
+					$insert = Models\Category::create($data);
+					if(!$insert) {
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
+
+					if($request->has('img') && !empty($request->video)){
+						$dir = public_path('img/item');
+						if (!File::exists($dir)) {
+							File::makeDirectory($dir, 0777, true, true);
+						}
+						foreach($request->img as $key => $val){
+							$name_image_img = 'img_'.$key.'_'.time().'.'.$val->getClientOriginalExtension();
+							$insert_category_img = Models\CategoryImage::create([
+								'category_id' => $insert->id,
+								'url' => 'img/item/'.$name_image_img
+							]);
+							array_push($array_img, ['name' => $name_image_img]);
+						}
+					}
+				}
+				DB::commit();
+				if($request->has('img') && !empty($request->img)) {
+					foreach($request->img as $key => $val){
+						Uploader::uploadFile($val, 'img/item', 'item', false, $array_img[$key]['name']);
+					}
+				}
+
+				switch ($request->action) {
+					case 'update':
+						return self::JsonExport(200, 'Update success');
+					case 'insert':
+						return self::JsonExport(200, 'Insert success');
+					default:
+						return self::JsonExport(200, 'Delete success');
+				}
+			// } catch (\Exception $e) {
+			// 	DB::rollback();
+			// 	return self::JsonExport(500, 'Error');
+			// }	
 		}
 	}
 }

@@ -31,4 +31,9 @@ class Menu extends Model
 		'name',
 		'url'
 	];
+
+	public function categorys()
+	{
+		return $this->hasMany(Category::class);
+	}
 }

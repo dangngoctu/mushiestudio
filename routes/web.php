@@ -30,8 +30,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
     Route::get('color','Admin\AdminController@admin_color')->name('admin.color');
     Route::get('menu','Admin\AdminController@admin_menu')->name('admin.menu');
     Route::get('user','Admin\AdminController@admin_user')->name('admin.user');
+    Route::get('category','Admin\AdminController@admin_category')->name('admin.category');
 
     Route::group(['prefix' => 'ajax'], function () {
+        Route::post('fileuploader', 'Admin\AdminController@admin_post_file_uploader_ajax')->name('admin.ajax.delete_img');
         Route::get('ajax_setting', 'Admin\AdminController@admin_setting_ajax')->name('admin.setting.ajax');
         Route::post('ajax_setting', 'Admin\AdminController@admin_post_setting_ajax')->name('admin.post.setting.ajax');
 
@@ -49,6 +51,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
 
         Route::get('ajax_menu', 'Admin\AdminController@admin_menu_ajax')->name('admin.menu.ajax');
         Route::post('ajax_menu', 'Admin\AdminController@admin_post_menu_ajax')->name('admin.post.menu.ajax');
+
+        Route::get('ajax_category', 'Admin\AdminController@admin_category_ajax')->name('admin.category.ajax');
+        Route::post('ajax_category', 'Admin\AdminController@admin_post_category_ajax')->name('admin.post.category.ajax');
     });
 
     

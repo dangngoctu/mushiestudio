@@ -27,7 +27,7 @@ class CreateMenu extends Migration
             $table->string('url');
             $table->bigInteger('menu_id');
             $table->tinyInteger('type')->comment('1:item, 2:blog');
-            $table->string('video');
+            $table->string('video')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
