@@ -16,6 +16,7 @@
         "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
+        "vmorozov/laravel-file-uploads": "^1.1",
         "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {

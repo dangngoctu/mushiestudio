@@ -17,6 +17,7 @@ class CreateItem extends Migration
             $table->bigInteger('id', true)->unsigned();
             $table->string('name')->nullable();
             $table->string('sub_name')->default('');
+            $table->string('slug')->nullable();
             $table->string('price')->default(0);
             $table->longtext('description')->nullable();
             $table->longtext('farbrics')->nullable();

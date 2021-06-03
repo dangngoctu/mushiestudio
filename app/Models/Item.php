@@ -43,6 +43,7 @@ class Item extends Model
 		'name',
 		'sub_name',
 		'price',
+		'slug',
 		'description',
 		'farbrics',
 		'detail',

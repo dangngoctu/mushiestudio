@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
     Route::get('menu','Admin\AdminController@admin_menu')->name('admin.menu');
     Route::get('user','Admin\AdminController@admin_user')->name('admin.user');
     Route::get('category','Admin\AdminController@admin_category')->name('admin.category');
+    Route::get('item','Admin\AdminController@admin_item')->name('admin.item');
 
     Route::group(['prefix' => 'ajax'], function () {
         Route::post('fileuploader', 'Admin\AdminController@admin_post_file_uploader_ajax')->name('admin.ajax.delete_img');
@@ -54,6 +55,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth.api'], function () {
 
         Route::get('ajax_category', 'Admin\AdminController@admin_category_ajax')->name('admin.category.ajax');
         Route::post('ajax_category', 'Admin\AdminController@admin_post_category_ajax')->name('admin.post.category.ajax');
+
+        Route::get('ajax_item', 'Admin\AdminController@admin_item_ajax')->name('admin.item.ajax');
+        Route::post('ajax_item', 'Admin\AdminController@admin_post_item_ajax')->name('admin.post.item.ajax');
     });
 
     

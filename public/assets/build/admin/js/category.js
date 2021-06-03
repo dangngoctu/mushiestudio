@@ -212,7 +212,6 @@ var fileuploader1 = function (element, number, size, array_type) {
     } 
 }
 
-
 var CategoryFormSubmit = function(table) {
     var form_data = new FormData($('#CategoryForm')[0]);
     $('#btnCategory').attr('disabled', true);
