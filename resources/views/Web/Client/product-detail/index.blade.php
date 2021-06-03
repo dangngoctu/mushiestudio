@@ -1,84 +1,56 @@
 <!--MainContent-->
-<div id="MainContent" class="main-content" role="main">
-    <!--Breadcrumb-->
-    <div class="bredcrumbWrap">
-        <div class="container breadcrumbs"><a href="index.html" title="Back to the home page">Home</a><span aria-hidden="true">›</span><span>Product With Left Thumbs</span></div>
-    </div>
-    <!--End Breadcrumb-->
+<div id="MainContent" class="main-content template-product" role="main">
     <div id="ProductSection-product-template" class="product-template__container prstyle1 container">
         <!--product-single-->
         <div class="product-single">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="product-details-img">
-                        <div class="product-thumb">
-                            <div id="gallery" class="product-dec-slider-2 product-tab-left">
-                                <a
-                                    data-image="{{asset('assets/app/page/user/images/detail/141976580_752076075727867_1124984733528928848_n.jpg')}}"
-                                    data-zoom-image="{{asset('assets/app/page/user/images/detail/141976580_752076075727867_1124984733528928848_n.jpg')}}"
-                                    class="slick-slide slick-cloned"
-                                    data-slick-index="0"
-                                    aria-hidden="true"
-                                    tabindex="-1"
-                                >
-                                    <img class="blur-up lazyload" src="{{asset('assets/app/page/user/images/detail/141976580_752076075727867_1124984733528928848_n.jpg')}}" alt="" />
-                                </a>
-                                <a
-                                    data-image="{{asset('assets/app/page/user/images/detail/142105821_746604809569024_6127853813014377399_n.jpg')}}"
-                                    data-zoom-image="{{asset('assets/app/page/user/images/detail/142105821_746604809569024_6127853813014377399_n.jpg')}}"
-                                    class="slick-slide slick-cloned"
-                                    data-slick-index="1"
-                                    aria-hidden="true"
-                                    tabindex="-1"
-                                >
-                                    <img class="blur-up lazyload" src="{{asset('assets/app/page/user/images/detail/142105821_746604809569024_6127853813014377399_n.jpg')}}" alt="" />
-                                </a>
-                                <a
-                                    data-image="{{asset('assets/app/page/user/images/detail/142177245_451427166046080_7101098079257717925_n.jpg')}}"
-                                    data-zoom-image="{{asset('assets/app/page/user/images/detail/142177245_451427166046080_7101098079257717925_n.jpg')}}"
-                                    class="slick-slide slick-cloned"
-                                    data-slick-index="2"
-                                    aria-hidden="true"
-                                    tabindex="-1"
-                                >
-                                    <img class="blur-up lazyload" src="{{asset('assets/app/page/user/images/detail/142177245_451427166046080_7101098079257717925_n.jpg')}}" alt="" />
-                                </a>
-                                <a
-                                    data-image="{{asset('assets/app/page/user/images/detail/143319362_425241898725890_8996681326086124128_n.jpg')}}"
-                                    data-zoom-image="{{asset('assets/app/page/user/images/detail/143319362_425241898725890_8996681326086124128_n.jpg')}}"
-                                    class="slick-slide slick-cloned"
-                                    data-slick-index="3"
-                                    aria-hidden="true"
-                                    tabindex="-1"
-                                >
-                                    <img class="blur-up lazyload" src="{{asset('assets/app/page/user/images/detail/143319362_425241898725890_8996681326086124128_n.jpg')}}" alt="" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="zoompro-wrap product-zoom-right pl-20">
-                            <div class="zoompro-span">
-                                <img
-                                    class="blur-up lazyload zoompro"
-                                    data-zoom-image="{{asset('assets/app/page/user/images/detail/142105821_746604809569024_6127853813014377399_n.jpg')}}"
-                                    alt=""
-                                    src="{{asset('assets/app/page/user/images/detail/142105821_746604809569024_6127853813014377399_n.jpg')}}"
-                                />
-                            </div>
-                            <div class="product-buttons">
-                                <a href="https://www.youtube.com/watch?v=93A2jOW5Mog" class="btn popup-video" title="View Video"><i class="icon anm anm-play-r" aria-hidden="true"></i></a>
-                                <a href="#" class="btn prlightbox" title="Zoom"><i class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="lightboximages">
-                            <a href="{{asset('assets/app/page/user/images/detail/141976580_752076075727867_1124984733528928848_n.jpg')}}" data-size="1462x2048"></a>
-                            <a href="{{asset('assets/app/page/user/images/detail/142105821_746604809569024_6127853813014377399_n.jpg')}}" data-size="1462x2048"></a>
-                            <a href="{{asset('assets/app/page/user/images/detail/142177245_451427166046080_7101098079257717925_n.jpg')}}" data-size="1462x2048"></a>
-                            <a href="{{asset('assets/app/page/user/images/detail/143319362_425241898725890_8996681326086124128_n.jpg')}}" data-size="1462x2048"></a>
-                        </div>
-                    </div>
+                <!--Featured Item-->
+                <div id="lightgallery" class="col-12 col-sm-6 col-md-6 col-lg-6 text-center sc2-item">
+                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
+                        <img
+                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            alt="New in !"
+                            class="blur-up lazyload main-img-seaction"
+                        />
+                    </a>
+
+                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
+                        <img
+                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            alt="New in !"
+                            class="blur-up lazyload main-img-seaction"
+                        />
+                    </a>
+
+
+                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
+                        <img
+                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            alt="New in !"
+                            class="blur-up lazyload main-img-seaction"
+                        />
+                    </a>
+
+
+
+                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
+                        <img
+                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            alt="New in !"
+                            class="blur-up lazyload main-img-seaction"
+                        />
+                    </a>
+                   
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="product-single__meta">
+                <!--End Featured Item-->
+
+         
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12 info-item">
+                    <div class="product-single__meta sticky">
                         <h1 class="product-single__title">Beautiful Nana in our Cocoon Silhouette Set</h1>
                         <p class="product-single__price product-single__price-product-template">
                             <span class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
@@ -86,6 +58,23 @@
                             </span>
                         </p>
                         <form method="post" action="http://annimexweb.com/cart/add" id="product_form_10508262282" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
+                            <div class="swatch clearfix swatch-0 option1" data-option-index="0">
+                                <div class="product-form__item">
+                                    <label class="header">Color: <span class="slVariant">Red</span></label>
+                                    <div data-value="Black" class="swatch-element color black available">
+                                    <input class="swatchInput" id="swatch-0-black" type="radio" name="option-0" value="Black"><label class="swatchLbl color small rounded" for="swatch-0-black" style="background-color:black;" title="Black"></label>
+                                    </div>
+                                    <div data-value="Maroon" class="swatch-element color maroon available">
+                                    <input class="swatchInput" id="swatch-0-maroon" type="radio" name="option-0" value="Maroon"><label class="swatchLbl color small rounded" for="swatch-0-maroon" style="background-color:maroon;" title="Maroon"></label>
+                                    </div>
+                                    <div data-value="Blue" class="swatch-element color blue available">
+                                    <input class="swatchInput" id="swatch-0-blue" type="radio" name="option-0" value="Blue"><label class="swatchLbl color small rounded" for="swatch-0-blue" style="background-color:blue;" title="Blue"></label>
+                                    </div>
+                                    <div data-value="Dark Green" class="swatch-element color dark-green available">
+                                    <input class="swatchInput" id="swatch-0-dark-green" type="radio" name="option-0" value="Dark Green"><label class="swatchLbl color small rounded" for="swatch-0-dark-green" style="background-color:darkgreen;" title="Dark Green"></label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                 <div class="product-form__item">
                                     <label class="header">Size: <span class="slVariant">XS</span></label>
@@ -112,8 +101,9 @@
                         <!--Product Tabs-->
                         <div class="tabs-listing">
                             <ul class="product-tabs">
-                                <li rel="tab1"><a class="tablink">Product Details</a></li>
-                                <li rel="tab3"><a class="tablink">Size Chart</a></li>
+                                <li rel="tab1"><a class="tablink">Description</a></li>
+                                <li rel="tab2"><a class="tablink">Detail</a></li>
+                                <li rel="tab3"><a class="tablink">FABRICS & CARE</a></li>
                             </ul>
                             <div class="tab-container">
                                 <div id="tab1" class="tab-content">
@@ -129,38 +119,24 @@
                                             <li>Lorem Ipsum is not simply random text.</li>
                                             <li>Free theme updates</li>
                                         </ul>
-                                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
-                                        <p>You can change the position of any sections such as slider, banner, products, collection and so on by just dragging and dropping.&nbsp;</p>
-                                        <h3>Lorem Ipsum is not simply random text.</h3>
-                                        <p>
-                                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the
-                                            great explorer of the truth, the master-builder of human happiness.
-                                        </p>
-                                        <p>Change colors, fonts, banners, megamenus and more. Preview changes are live before saving them.</p>
-                                        <h3>1914 translation by H. Rackham</h3>
-                                        <p>
-                                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the
-                                            great explorer of the truth, the master-builder of human happiness.
-                                        </p>
-                                        <h3>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-                                        <p>
-                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-                                            provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                                        </p>
-                                        <h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-                                        <p>You can use variant style from colors, images or variant images. Also available differnt type of design styles and size.</p>
-                                        <h3>Lorem Ipsum is not simply random text.</h3>
-                                        <p>
-                                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the
-                                            great explorer of the truth, the master-builder of human happiness.
-                                        </p>
-                                        <h3>Proin ut lacus eget elit molestie posuere.</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                                            type and scrambled.
-                                        </p>
                                     </div>
                                 </div>
+                                <div id="tab2" class="tab-content">
+                                    <div class="product-description rte">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                                            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                        </p>
+                                        <ul>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                            <li>Sed ut perspiciatis unde omnis iste natus error sit</li>
+                                            <li>Neque porro quisquam est qui dolorem ipsum quia dolor</li>
+                                            <li>Lorem Ipsum is not simply random text.</li>
+                                            <li>Free theme updates</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <div id="tab3" class="tab-content">
                                     <h3>WOMEN'S BODY SIZING CHART</h3>
                                     <table>
@@ -270,8 +246,7 @@
             <!--Related Product Slider-->
             <div class="related-product grid-products">
                 <header class="section-header">
-                    <h2 class="section-header__title text-center h2"><span>Related Products</span></h2>
-                    <p class="sub-heading">You can stop autoplay, increase/decrease aniamtion speed and number of grid to show and products from store admin.</p>
+                    <h2 class="section-header__title h2"><span>Related Products</span></h2>
                 </header>
                 <!--Featured Column-->
                 <div class="productList">
@@ -281,29 +256,34 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image1.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image1-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image1-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
-                                        <!-- End product label -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
@@ -312,7 +292,6 @@
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="old-price">$500.00</span>
                                         <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
@@ -323,35 +302,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image2.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image2.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image2-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image2-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Elastic Waist Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$748.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -361,39 +348,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image3.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image3.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image3-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image3-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels rectangular"><span class="lbl pr-label2">Hot</span></div>
-                                        <!-- End product label -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">3/4 Sleeve Kimono Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$550.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -403,40 +394,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image4.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image4.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image4-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image4-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
-                                        <!-- End product label -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Cape Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="old-price">$900.00</span>
-                                        <span class="price">$788.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -446,39 +440,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image5.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image5.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image5-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image5-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
-                                        <!-- End product label -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Paper Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$550.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -488,39 +486,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image17.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image17.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image17-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image17-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
-                                        <!-- End product label -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Buttercup Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$420.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -530,36 +532,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image18.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image18.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image18-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image18-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Lima Shirt</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$698.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -569,36 +578,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image19.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image19.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image19-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image19-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Romary Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$348.60</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -608,39 +624,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image20.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image20.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image20-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image20-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                        <!-- product label -->
-                                        <div class="product-labels"><span class="lbl pr-label3">Popular</span></div>
-                                        <!-- End product label -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Floral Sleeveless Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$380.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -650,36 +670,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image21.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image21.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image21-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image21-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Button Up Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$400.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -689,36 +716,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image22.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image22.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image22-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image22-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Lexie Shirt</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$200.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -728,36 +762,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image23.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image23.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image23-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image23-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">One Shoulder Dress in Navy</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$1,048.60</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -767,36 +808,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image24.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image24.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image24-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image24-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Triangle Sleeveless Dress in Multi</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$684.60</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -806,36 +854,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image25.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image25.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image25-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image25-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">ACB Top</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$280.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -845,88 +900,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image26.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image26.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image26-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image26-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">A-Line Jacket</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$698.60</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item--sold-out">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img
-                                            class="grid-view-item__image primary blur-up lazyload"
-                                            data-src="{{asset('assets/app/page/user/images/product-images/product-image27.jpg')}}"
-                                            src="{{asset('assets/app/page/user/images/product-images/product-image27.jpg')}}"
-                                            alt="image"
-                                            title="product"
-                                        />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img
-                                            class="grid-view-item__image hover blur-up lazyload"
-                                            data-src="{{asset('assets/app/page/user/images/product-images/product-image27-1.jpg')}}"
-                                            src="{{asset('assets/app/page/user/images/product-images/product-image27-1.jpg')}}"
-                                            alt="image"
-                                            title="product"
-                                        />
-                                        <!-- End hover image -->
-                                        <span class="sold-out"><span>Sold out</span></span>
-                                    </a>
-                                    <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Camelia Reversible Jacket in Navy/Blue</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$488.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -936,36 +946,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image28.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image28.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image28-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image28-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Wrinkled Tux Shirt in Navy</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$158.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -975,36 +992,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image29.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image29.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image29-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image29-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">A-Line Mini Dress in Blue</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$348.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -1014,36 +1038,43 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image30.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image30.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image30-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image30-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Asymmetric Dress in Black</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$578.00</span>
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>
@@ -1053,36 +1084,89 @@
                                 <!-- start product image -->
                                 <div class="product-image">
                                     <!-- start product image -->
-                                    <a href="#">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image31.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image31.jpg')}}" alt="image" title="product" />
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="{{asset('assets/app/page/user/images/product-images/product-image31-1.jpg')}}" src="{{asset('assets/app/page/user/images/product-images/product-image31-1.jpg')}}" alt="image" title="product" />
-                                        <!-- End hover image -->
-                                    </a>
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
                                     <!-- end product image -->
-
-                                    <!-- Start product button -->
-                                    <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
-                                        <button class="btn btn-addto-cart" type="button">Select Options</button>
-                                    </form>
-
-                                    <!-- end product button -->
                                 </div>
                                 <!-- end product image -->
 
                                 <!--start product details -->
-                                <div class="product-details text-center">
+                                <div class="product-details">
                                     <!-- product name -->
                                     <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
                                     <div class="product-name">
-                                        <a href="#">Babydoll Bow Dress</a>
+                                        <a href="#">Edna Dress</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
                                     <div class="product-price">
-                                        <span class="price">$313.60</span>
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
                                     </div>
                                     <!-- End product price -->
                                 </div>

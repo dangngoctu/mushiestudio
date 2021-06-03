@@ -1,0 +1,40 @@
+.category_1 .grid_item-title label{
+    margin-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.category_1 .product-single__meta{
+    padding-left: 88px;
+}
+
+.product-list .col-small img{
+    height: 390px;
+}
+
+.view-option{
+    text-transform: uppercase;
+}
+
+.category-item{
+    margin-top: 0 25px;
+}
+
+@media (max-width: 575px) {
+    .product-list .col-small img , .product-list .col-large img{
+        height: 290px;
+    }
+    .view-option{
+        display: none;
+    }
+}
+
+.product-list .lSAction{
+    display: none !important;
+}
+
+.product-list .lSSlideWrapper:hover .lSAction{
+    display: block !important;
+}
+.product-list .lSPager{
+    display: none;
+}
