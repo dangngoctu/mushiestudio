@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "CaviarDreams";
+    src: url("./../fonts/CaviarDreams.ttf");
+}
+
+body {
+    font-family: CaviarDreams ;
+    font-size: 14px;
+    text-transform: none;
+    color: #000;
+    font-weight: 600;
+}
+
 .main-img-seaction{
     height: 500px;
 }
@@ -11,4 +24,17 @@
     background-repeat: no-repeat !important;
     background-position: 50% 50% !important;
     background-size: cover;
+}
+
+#siteNav > li .megamenu li.lvl-1 li .site-nav:hover{
+    border-bottom: 1px solid #000;
+}
+
+#siteNav li{
+    padding: 5px 20px;
+    border-bottom: 1px solid #fff;
+}
+
+#siteNav li a:hover{
+    border-bottom: 1px solid #000;
 }
