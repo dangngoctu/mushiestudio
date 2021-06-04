@@ -29,7 +29,8 @@ class Menu extends Model
 
 	protected $fillable = [
 		'name',
-		'url'
+		'url',
+		'url_img'
 	];
 
 	public function categorys()

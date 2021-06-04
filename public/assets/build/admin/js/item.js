@@ -502,7 +502,7 @@ var fileuploader = function (element, number, size, array_type, type) {
                     if (api.getFiles().length - 1 < api.getOptions().limit) plusInput.show()
                 } else {
                     if(type == 1){
-                        type_delete = 'delete_tem';
+                        type_delete = 'deleteitem';
                     } else {
                         type_delete = 'deletethumb';
                     }

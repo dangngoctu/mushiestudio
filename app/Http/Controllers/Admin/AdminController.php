@@ -137,7 +137,7 @@ class AdminController extends Controller
 		if ($validator->fails()) {
 			self::JsonExport(403, $validator->errors()->first());
 		} else {
-			try{
+			// try{
 				DB::begintransaction();
 				if($request->action == 'deletecategory'){
 					$img = Models\CategoryImage::find($request->id);
@@ -185,10 +185,26 @@ class AdminController extends Controller
 						@unlink(public_path($img_thumb));
 						return self::JsonExport(200, 'Delete success');
 					}
+				} else if($request->action == 'deletemenu'){
+					$menu = Models\Menu::where('id', $request->id)->first();
+					if(!$menu){
+						DB::rollback();
+						return self::JsonExport(404, 'Data wrong');
+					}
+					$img_menu = $menu->url_img;
+					$menu->update(['url_img' => null]);
+					if(!$menu){
+						DB::rollback();
+						return self::JsonExport(500, 'Error');
+					} else {
+						DB::commit();
+						@unlink(public_path($img_menu));
+						return self::JsonExport(200, 'Delete success');
+					}
 				}
-			} catch (\Exception $e) {
-				return self::JsonExport(500, 'Error');
-			}
+			// } catch (\Exception $e) {
+			// 	return self::JsonExport(500, 'Error');
+			// }
 		}
 	}
 
@@ -820,9 +836,14 @@ class AdminController extends Controller
 				}
 
 				if($request->has('url') && !empty($request->url)) {
+					
 					$data['url'] = $request->url;
 				}
 
+				if($request->has('url_img') && !empty($request->url_img)) {
+					$name_image_menu = 'img_menu_'.time().'.'.$request->url_img->getClientOriginalExtension();
+					$data['url_img'] = 'img/item/'.$name_image_menu;
+				}
 				if($request->action == 'update') {
 					$query->update($data);
 					if (!$query) {
@@ -843,6 +864,16 @@ class AdminController extends Controller
 					}
 				}
 				DB::commit();
+
+				if($request->has('url_img') && !empty($request->url_img)) {
+					$dir = public_path('img/item');
+					if (!File::exists($dir)) {
+						File::makeDirectory($dir, 0777, true, true);
+					}
+
+					Uploader::uploadFile($request->url_img, 'img/item', 'item', false, $name_image_menu);
+				}
+
 				switch ($request->action) {
 					case 'update':
 						return self::JsonExport(200, 'Update success');
@@ -1342,7 +1373,7 @@ class AdminController extends Controller
 		if ($validator->fails()) {
 			return self::JsonExport(403, $validator->errors());
 		} else {
-			// try {
+			try {
 				DB::beginTransaction();
 				if($request->action == 'update' || $request->action == 'delete') {
 					$query = Models\Item::where('id', $request->id)->first();
@@ -1471,10 +1502,10 @@ class AdminController extends Controller
 					default:
 						return self::JsonExport(200, 'Delete success');
 				}
-			// } catch (\Exception $e) {
-			// 	DB::rollback();
-			// 	return self::JsonExport(500, 'Error');
-			// }	
+			} catch (\Exception $e) {
+				DB::rollback();
+				return self::JsonExport(500, 'Error');
+			}	
 		}
 	}
 }

@@ -26,6 +26,12 @@
                             maxlength="128" required data-parsley-required-message="Insert url.">
                         </div>
                     </div>
+                    <div class="row mg-t-30">
+                        <label class="col-sm-2 form-control-label">Image</label>
+                        <div class="col-sm-10 mg-t-10 mg-sm-t-0">
+                            <input type="file"  accept=".jpg, .jpeg, .png" class="picupload" id="url_img" name="url_img"/>
+                        </div>
+                    </div>
                 </form>
             </div>
             
