@@ -44,3 +44,7 @@ a.rte-setting{
     max-width: 280px;
     padding: 0;
 }
+
+.feature-row__text--left.text-left{
+    padding: 0 20px;
+}

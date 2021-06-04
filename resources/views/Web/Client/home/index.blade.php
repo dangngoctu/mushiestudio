@@ -79,8 +79,8 @@
                     <p>
                         <a href="{{route('main.product.detail.get')}}">
                             <img
-                                data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                                src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                                data-src="{{asset('assets/app/page/user/images/166417816_267171011717785_2572433124935197008_n.jpg')}}"
+                                src="{{asset('assets/app/page/user/images/176312783_504321847413318_7572664573035965416_n.jpg')}}"
                                 alt="New in !"
                                 class="blur-up lazyload main-img-seaction"
                             />

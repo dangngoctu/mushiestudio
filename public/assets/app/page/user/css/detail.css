@@ -28,11 +28,12 @@
 }
 
 #lightgallery a img{
+    max-width: 80%;
     cursor: zoom-in;
 }
 
 #lightgallery a:not(:first-child) img{
-    margin-top: 10px;
+    margin-top: 35px;
 }
 .related-product .section-header__title span{
     border-bottom: 1px solid #000;
@@ -68,4 +69,10 @@
 }
 .productList .lSPager{
     display: none;
+}
+
+@media (max-width: 575px) {
+    #lightgallery a img{
+        max-width: 100%;
+    }
 }

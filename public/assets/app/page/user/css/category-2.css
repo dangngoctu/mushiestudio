@@ -1,0 +1,25 @@
+.title_sm {
+    opacity: 0;
+    text-transform: uppercase;
+}
+.category_2 .category_2_item:hover .title_sm{
+    opacity: 1;
+}
+
+@media (max-width: 575px) {
+    .title_sm {
+        opacity: 1;
+    }
+}
+
+.category_2_item{
+    margin-bottom: 30px;
+}
+.section-3{
+    padding-top: 0;
+}
+
+.section-3 .section-header__title span{
+    margin-bottom:  5px;
+    border-bottom: 1px solid #000;
+}

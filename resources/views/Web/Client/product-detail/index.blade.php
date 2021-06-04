@@ -5,41 +5,41 @@
         <div class="product-single">
             <div class="row">
                 <!--Featured Item-->
-                <div id="lightgallery" class="col-12 col-sm-6 col-md-6 col-lg-6 text-center sc2-item">
-                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
+                <div id="lightgallery" class="col-12 col-sm-6 col-md-6 col-lg-6 sc2-item">
+                    <a href="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}">
                         <img
-                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
                             alt="New in !"
                             class="blur-up lazyload main-img-seaction"
                         />
                     </a>
 
-                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
+                    <a href="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}">
                         <img
-                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                            alt="New in !"
-                            class="blur-up lazyload main-img-seaction"
-                        />
-                    </a>
-
-
-                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
-                        <img
-                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
                             alt="New in !"
                             class="blur-up lazyload main-img-seaction"
                         />
                     </a>
 
 
-
-                    <a href="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}">
+                    <a href="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}">
                         <img
-                            data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                            src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
+                            data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
+                            alt="New in !"
+                            class="blur-up lazyload main-img-seaction"
+                        />
+                    </a>
+
+
+
+                    <a href="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}">
+                        <img
+                            data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
+                            src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}"
                             alt="New in !"
                             class="blur-up lazyload main-img-seaction"
                         />
@@ -259,68 +259,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -351,68 +305,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -443,68 +351,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -535,68 +397,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -627,68 +443,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -719,68 +489,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -811,68 +535,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -903,68 +581,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -995,68 +627,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details">
-                                    <!-- product name -->
-                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
-                                    <div class="product-name">
-                                        <a href="#">Edna Dress</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$600.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <ul class="content-slider">
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -1087,22 +673,22 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>
@@ -1133,22 +719,436 @@
                                     <ul class="content-slider">
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                         <li>
                                             <a href="{{route('main.product.detail.get')}}">
-                                                <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- end product image -->
+                                </div>
+                                <!-- end product image -->
+
+                                <!--start product details -->
+                                <div class="product-details">
+                                    <!-- product name -->
+                                    <h3 class="h4"><a href="#">STANDOUT SEQUINS</a></h3>
+                                    <div class="product-name">
+                                        <a href="#">Edna Dress</a>
+                                    </div>
+                                    <!-- End product name -->
+                                    <!-- product price -->
+                                    <div class="product-price">
+                                        <span class="price">$600.00</span>
+                                    </div>
+                                    <!-- End product price -->
+                                </div>
+                                <!-- End product details -->
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-4 item">
+                                <!-- start product image -->
+                                <div class="product-image">
+                                    <!-- start product image -->
+                                    <ul class="content-slider">
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" src="{{asset('assets/app/page/user/images/FW21_Lemaire_look01__NicolasSisto_2000x.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     </ul>

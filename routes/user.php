@@ -13,3 +13,7 @@ Route::get('/detail',function(){
 Route::get('/category-1',function(){
     return view('Web.Client.category-1.main');
 })->name('main.product.category.get');
+
+Route::get('/category-2',function(){
+    return view('Web.Client.category-2.main');
+})->name('main.product.category2.get');

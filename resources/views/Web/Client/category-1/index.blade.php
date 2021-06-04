@@ -53,55 +53,27 @@
                         <ul class="content-slider">
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                         </ul>
@@ -119,55 +91,27 @@
                         <ul class="content-slider">
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                         </ul>
@@ -179,28 +123,33 @@
                     </div>
                 </div>
                 <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                 <!--Featured Item-->
+                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
                     <p>
                         <ul class="content-slider">
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                         </ul>
@@ -212,28 +161,33 @@
                     </div>
                 </div>
                 <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                 <!--Featured Item-->
+                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
                     <p>
                         <ul class="content-slider">
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                         </ul>
@@ -245,28 +199,33 @@
                     </div>
                 </div>
                 <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                 <!--Featured Item-->
+                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
                     <p>
                         <ul class="content-slider">
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                         </ul>
@@ -278,28 +237,33 @@
                     </div>
                 </div>
                 <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                 <!--Featured Item-->
+                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
                     <p>
                         <ul class="content-slider">
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                         </ul>
@@ -311,28 +275,71 @@
                     </div>
                 </div>
                 <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                 <!--Featured Item-->
+                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
                     <p>
                         <ul class="content-slider">
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                             <li>
                                 <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                        </ul>
+                    </p>
+                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
+                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
+                    <div class="product-price">
+                        <span class="price">$600.00</span>
+                    </div>
+                </div>
+                <!--End Featured Item-->
+                 <!--Featured Item-->
+                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                    <p>
+                        <ul class="content-slider">
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                 </a>
                             </li>
                         </ul>

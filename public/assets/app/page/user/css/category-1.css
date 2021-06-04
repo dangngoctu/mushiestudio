@@ -20,11 +20,14 @@
 }
 
 @media (max-width: 575px) {
-    .product-list .col-small img , .product-list .col-large img{
-        height: 290px;
-    }
     .view-option{
         display: none;
+    }
+    .display-table{
+        margin: 0;
+    }
+    .category_1 .product-single__meta{
+        padding-left: 10px;
     }
 }
 
@@ -38,3 +41,4 @@
 .product-list .lSPager{
     display: none;
 }
+
