@@ -17,6 +17,7 @@ class CreateMenu extends Migration
             $table->bigInteger('id', true)->unsigned();
             $table->string('name');
             $table->string('url');
+            $table->string('url_img')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
