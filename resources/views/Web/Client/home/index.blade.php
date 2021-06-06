@@ -1,180 +1,111 @@
-
-    <!--Image Banners-->
-    <div class="section imgBanners">
-        <div class="imgBnrOuter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="inner">
-                            <a href="#">
-                                <img data-src="{{asset('assets/app/page/user/images/153143551_149794660297892_1368277022498166510_n.jpg')}}" src="{{asset('assets/app/page/user/images/153143551_149794660297892_1368277022498166510_n.jpg')}}" alt="" title="" class="blur-up lazyload" />
-                            </a>
-                        </div>
-                        <div class="custom-text text-center">
-                            <h4 class="h3"><a href="#"> Discover the latest bag collections and a constantly growing assortment at BELLE</a></h4>
-                            <div class="rte-setting">
-                                <p>
-                                    You know best what makes your perfect bag, so BELLE offers a wide selection for every taste! Choose your favourite <a href="https://www.wardow.com/en/leather-bags">leather bag</a> with matching purse from
-                                    over 120 brands!
-                                </p>
+    @if(!empty($latest_category))
+        <!--Image Banners-->
+        <div class="section imgBanners">
+            <div class="imgBnrOuter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="inner">
+                                <a href="#">
+                                    <img data-src="{{asset($latest_category->img)}}" src="{{asset($latest_category->img)}}" alt="" title="" class="blur-up lazyload" />
+                                </a>
                             </div>
-                            <br />
-                            <a class="btn" href="#">Discover Now</a>
+                            <div class="custom-text text-center">
+                                <h4 class="h3"><a href="#"> {{$latest_category->name}}</a></h4>
+                                <div class="rte-setting">
+                                    <p>
+                                        {!! $latest_category->description!!}
+                                    </p>
+                                </div>
+                                <br />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--End Image Banners-->
-
-    <!--Featured Column-->
-    <div class="section featured-column  section-2">
-        <div class="container">
-            <div class="row">
-                <!--Featured Item-->
-                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center sc2-item">
-                    <p>
-                        <a href="{{route('main.product.detail.get')}}">
-                            <img
-                                data-src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                                src="{{asset('assets/app/page/user/images/184185177_767742527225070_2934240267124222297_n.jpg')}}"
-                                alt="New in !"
-                                class="blur-up lazyload main-img-seaction"
-                            />
-                        </a>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Discover</p></a></div>
+        <!--End Image Banners-->
+    @endif
+    
+    @if(!empty($near_latest_category))
+        <!--Featured Column-->
+        <div class="section featured-column  section-2">
+            <div class="container">
+                <div class="row">
+                    @foreach($near_latest_category as $key => $val)
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center sc2-item">
+                            <p>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img
+                                        data-src="{{asset($val->img)}}"
+                                        src="{{asset($val->img)}}"
+                                        alt="New in !"
+                                        class="blur-up lazyload main-img-seaction"
+                                    />
+                                </a>
+                            </p>
+                            <h3 class="h4"><a href="{{route('main.product.detail.get')}}">{{$val->name}}</a></h3>
+                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Discover</p></a></div>
+                        </div>
+                    @endforeach
                 </div>
-                <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center sc2-item">
-                    <p>
-                        <a href="{{route('main.product.detail.get')}}">
-                            <img
-                                data-src="{{asset('assets/app/page/user/images/166417816_267171011717785_2572433124935197008_n.jpg')}}"
-                                src="{{asset('assets/app/page/user/images/176312783_504321847413318_7572664573035965416_n.jpg')}}"
-                                alt="My Valentine"
-                                class="blur-up lazyload main-img-seaction"
-                            />
-                        </a>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">My Valentine</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Discover</p></a></div>
-                </div>
-                <!--End Featured Item-->
             </div>
         </div>
-    </div>
+    @endif
     <!--End Featured Column-->
 
+    @if(!empty($third_lasted_item))
+        <!--Featured Column-->
+        <div class="section featured-column  section-3">
+            <div class="container">
+                <div class="row">
+                    @foreach($third_lasted_item as $key => $val)
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center sc2-item">
+                            <p>
+                                <a href="{{route('main.product.detail.get')}}">
+                                    <img
+                                        data-src="{{asset($val->img_thumb)}}"
+                                        src="{{asset($val->img_thumb)}}"
+                                        alt="New in !"
+                                        class="blur-up lazyload main-img-seaction"
+                                    />
+                                </a>
+                            </p>
+                            <h3 class="h4"><a href="{{route('main.product.detail.get')}}">{{$val->name}}</a></h3>
+                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">{{$val->sub_name}}</p></a></div>
+                        </div>
+                    @endforeach
 
-    <!--Featured Column-->
-    <div class="section featured-column  section-3">
-        <div class="container">
-            <div class="row">
-                <!--Featured Item-->
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center sc2-item">
-                    <p>
-                        <a href="{{route('main.product.detail.get')}}">
-                            <img
-                                data-src="{{asset('assets/app/page/user/images/166417816_267171011717785_2572433124935197008_n.jpg')}}"
-                                src="{{asset('assets/app/page/user/images/176312783_504321847413318_7572664573035965416_n.jpg')}}"
-                                alt="New in !"
-                                class="blur-up lazyload main-img-seaction"
-                            />
-                        </a>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</p></a></div>
+                    
                 </div>
-                <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center sc2-item">
-                    <p>
-                        <a href="{{route('main.product.detail.get')}}">
-                            <img
-                                data-src="{{asset('assets/app/page/user/images/166417816_267171011717785_2572433124935197008_n.jpg')}}"
-                                src="{{asset('assets/app/page/user/images/176312783_504321847413318_7572664573035965416_n.jpg')}}"
-                                alt="My Valentine"
-                                class="blur-up lazyload main-img-seaction"
-                            />
-                        </a>
-                    </p>
-                    <h3 class="h4"><a href="{route('main.product.detail.get')}}">My Valentine</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Gift ideas for him to personalize</p></a></div>
-                </div>
-                <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center sc2-item">
-                    <p>
-                        <a href="{{route('main.product.detail.get')}}">
-                            <img
-                                data-src="{{asset('assets/app/page/user/images/166417816_267171011717785_2572433124935197008_n.jpg')}}"
-                                src="{{asset('assets/app/page/user/images/176312783_504321847413318_7572664573035965416_n.jpg')}}"
-                                alt="My Valentine"
-                                class="blur-up lazyload main-img-seaction"
-                            />
-                        </a>
-                    </p>
-                    <h3 class="h4"><a href="#">My Valentine</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">LIGHT COTTON DENIM</p></a></div>
-                </div>
-                <!--End Featured Item-->
             </div>
         </div>
-    </div>
+    @endif
     <!--End Featured Column-->
 
     <!--Image Banners-->
-    <div class="section imgBanners section-banner">
-        <div class="imgBnrOuter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="inner">
-                            <a href="#">
-                                <img data-src="{{asset('assets/app/page/user/images/153143551_149794660297892_1368277022498166510_n.jpg')}}" src="{{asset('assets/app/page/user/images/153143551_149794660297892_1368277022498166510_n.jpg')}}" alt="" title="" class="blur-up lazyload" />
-                            </a>
-                        </div>
-                        <div class="custom-text text-center">
-                            <h4 class="h3"><a href="{{route('main.product.detail.get')}}"> THE WOOD PEARL BAGS</a></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--End Image Banners-->
-
-    <!--Image Banners-->
-    <div class="section imgBanners section-banner">
-        <div class="imgBnrOuter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="inner">
-                            <a href="#">
-                                <img data-src="{{asset('assets/app/page/user/images/153143551_149794660297892_1368277022498166510_n.jpg')}}" src="{{asset('assets/app/page/user/images/153143551_149794660297892_1368277022498166510_n.jpg')}}" alt="" title="" class="blur-up lazyload" />
-                            </a>
-                        </div>
-                        <div class="custom-text text-center">
-                            <h4 class="h3"><a href="#"> Discover the latest bag collections and a constantly growing assortment at BELLE</a></h4>
-                            <div class="rte-setting">
-                                <p>
-                                    You know best what makes your perfect bag, so BELLE offers a wide selection for every taste! Choose your favourite <a href="https://www.wardow.com/en/leather-bags">leather bag</a> with matching purse from
-                                    over 120 brands!
-                                </p>
+    @if(!empty($latest_album))
+        <div class="section imgBanners section-banner">
+            <div class="imgBnrOuter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="inner">
+                            @if(count($latest_album->categoryImages) > 0)
+                                <a href="#">
+                                    <img data-src="{{asset($latest_album->categoryImages[0]->url)}}" src="{{asset($latest_album->categoryImages[0]->url)}}" alt="" title="" class="blur-up lazyload" />
+                                </a>
+                            @endif
                             </div>
-                            <br />
-                            <a class="rte-setting" href="#">Discover Now</a>
+                            <div class="custom-text text-center">
+                                <h4 class="h3"><a href="{{route('main.product.detail.get')}}"> {{$latest_album->name}}</a></h4>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
     <!--End Image Banners-->
 
     <!--Feature Content-->

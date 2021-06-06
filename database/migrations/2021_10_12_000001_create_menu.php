@@ -26,6 +26,8 @@ class CreateMenu extends Migration
             $table->bigInteger('id', true)->unsigned();
             $table->string('name');
             $table->string('url');
+            $table->string('img')->nullable();
+            $table->longtext('description')->nullable();
             $table->bigInteger('menu_id');
             $table->tinyInteger('type')->comment('1:item, 2:blog');
             $table->string('video')->nullable();

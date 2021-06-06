@@ -12,6 +12,7 @@
                 <form class="form-layout" id="CategoryForm">
                     <input type="hidden" id="action" name="action" value="">
                     <input type="hidden" id="id" name="id" value="">
+                    <input type="hidden" id="description_save" name="description_save" />
                     <div class="row">
                         <label class="col-sm-2 form-control-label">Menu<span class="tx-danger">*</span></label>
                         <div class="col-sm-10 mg-t-10 mg-sm-t-0">
@@ -71,6 +72,22 @@
                                 <input type="file"  accept=".jpg, .jpeg, .png" class="picupload" id="img" name="img"/>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="block_item">
+                        <div class="row mg-t-30">
+                            <label class="col-sm-2 form-control-label">Images</label>
+                            <div class="col-sm-10 mg-t-10 mg-sm-t-0">
+                                <input type="file"  accept=".jpg, .jpeg, .png" class="picupload" id="img_item" name="img_item"/>
+                            </div>
+                        </div>
+
+                        <div class="row mg-t-30">
+                        <label class="col-sm-2 form-control-label">Description</label>
+                        <div class="col-sm-10 mg-t-10 mg-sm-t-0">
+                            <textarea class="mytextarea" id="description" name="description"></textarea>
+                        </div>
+                    </div>
                     </div>
                     
                 </form>

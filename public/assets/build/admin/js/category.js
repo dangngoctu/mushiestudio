@@ -1,3 +1,4 @@
+var api_fileimg_url;
 var api_fileuploader_url;
 $(function(){
     'use strict';
@@ -7,7 +8,12 @@ $(function(){
         api_fileimg_url.reset();
         api_fileimg_url.destroy();
     }
-    fileuploader1('input#img', 20, 10, ['jpg','jpeg','png']);
+    if(typeof api_fileuploader_url !== 'undefined') {
+        api_fileuploader_url.reset();
+        api_fileuploader_url.destroy();
+    }
+    fileuploader1('input#img', 20, 10, ['jpg','jpeg','png'], 1);
+    fileuploader1('input#img_item', 1, 10, ['jpg','jpeg','png'], 2);
     $('#menu_id, #type').select2({
         allowClear: true,
         minimumResultsForSearch: Infinity
@@ -16,8 +22,10 @@ $(function(){
     $("#type").on("change", function($e) {
         if($(this).val() == 1){
             $('.block_album').addClass('d-none');
+            $('.block_item').removeClass('d-none');
         } else {
             $('.block_album').removeClass('d-none');
+            $('.block_item').addClass('d-none');
         }
     });
     var table_dynamic_category = $('.table-dynamic-category').DataTable({
@@ -56,6 +64,68 @@ $(function(){
 		]
     });
 
+    tinymce.init({
+        selector: '.mytextarea',
+        plugins: 'print preview fullpage paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
+        imagetools_cors_hosts: ['picsum.photos'],
+        menubar: 'file edit view insert format tools table help',
+        toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+        toolbar_sticky: true,
+        autosave_ask_before_unload: true,
+        autosave_interval: "30s",
+        autosave_prefix: "{path}{query}-{id}-",
+        autosave_restore_when_empty: false,
+        autosave_retention: "2m",
+        image_advtab: true,
+        content_css: [
+          '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+          '//www.tiny.cloud/css/codepen.min.css'
+        ],
+        link_list: [
+          { title: 'My page 1', value: 'http://www.tinymce.com' },
+          { title: 'My page 2', value: 'http://www.moxiecode.com' }
+        ],
+        image_list: [
+          { title: 'My page 1', value: 'http://www.tinymce.com' },
+          { title: 'My page 2', value: 'http://www.moxiecode.com' }
+        ],
+        image_class_list: [
+          { title: 'None', value: '' },
+          { title: 'Some class', value: 'class-name' }
+        ],
+        importcss_append: true,
+        height: 400,
+        file_picker_callback: function (callback, value, meta) {
+          /* Provide file and text for the link dialog */
+          if (meta.filetype === 'file') {
+            callback('https://www.google.com/logos/google.jpg', { text: 'My text' });
+          }
+      
+          /* Provide image and alt text for the image dialog */
+          if (meta.filetype === 'image') {
+            callback('https://www.google.com/logos/google.jpg', { alt: 'My alt text' });
+          }
+      
+          /* Provide alternative source and posted for the media dialog */
+          if (meta.filetype === 'media') {
+            callback('movie.mp4', { source2: 'alt.ogg', poster: 'https://www.google.com/logos/google.jpg' });
+          }
+        },
+        templates: [
+              { title: 'New Table', description: 'creates a new table', content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>' },
+          { title: 'Starting my story', description: 'A cure for writers block', content: 'Once upon a time...' },
+          { title: 'New list with dates', description: 'New List with dates', content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>' }
+        ],
+        template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+        template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+        height: 450,
+        image_caption: true,
+        quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+        noneditable_noneditable_class: "mceNonEditable",
+        toolbar_drawer: 'sliding',
+        contextmenu: "link image imagetools table",
+    });
+
     $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
     $(document).on('click', '.table-dynamic-category .table-action-delete', function (e) {
         e.preventDefault();
@@ -83,6 +153,7 @@ $(function(){
     });
     $(document).on('click', '#btnCategory', function (e) {
         e.preventDefault();
+        $('#description_save').val(tinyMCE.get('description').getContent());
         $('#CategoryForm').submit();
     });
     $("#CategoryForm").on('submit', function(e){
@@ -101,7 +172,7 @@ $(function(){
     });
 });
 
-var fileuploader1 = function (element, number, size, array_type) {
+var fileuploader1 = function (element, number, size, array_type, type) {
     if($(element).length > 0) {
         $(element).fileuploader({
             limit: number,
@@ -175,8 +246,13 @@ var fileuploader1 = function (element, number, size, array_type) {
                         api = $.fileuploader.getInstance(inputEl);
                     if (api.getFiles().length - 1 < api.getOptions().limit) plusInput.show()
                 } else {
+                    if(type == 1){
+                        type_delete = 'deletecategory';
+                    } else {
+                        type_delete = 'deletecategoryitem';
+                    }
                     $.ajax({
-                        url: base_admin + "/admin/ajax/fileuploader?id=" + item.data.image_id + '&action=deletecategory',
+                        url: base_admin + "/admin/ajax/fileuploader?id=" + item.data.image_id + '&action='+type_delete,
                         type: "post",
                         success: function(response) {
                             if (response.code == '200') {
@@ -208,7 +284,12 @@ var fileuploader1 = function (element, number, size, array_type) {
                 }
             }
         });
-        api_fileimg_url = $.fileuploader.getInstance(element);
+        if(type == 1){
+            api_fileimg_url = $.fileuploader.getInstance(element);
+        } else {
+            api_fileuploader_url =  $.fileuploader.getInstance(element);
+        }
+        
     } 
 }
 
@@ -277,6 +358,20 @@ var UpdateCategory = function(id) {
                 $('#CategoryForm #type').val(response.data.type).trigger('change.select2');
                 $('#CategoryForm #menu_id').val(response.data.menu_id).trigger('change.select2');
                 $('#CategoryForm #video').val(response.data.video);
+                tinyMCE.get('description').setContent(response.data.description);
+                if(response.data.img != null) {
+                    api_fileuploader_url.append([{
+                        name: (response.data.img).substring((response.data.img).lastIndexOf('/')+1),
+                        type: 'image\/jpeg',
+                        file: base_admin+'/'+response.data.img,
+                        data: {
+                            url: base_admin+'/'+response.data.img,
+                            thumbnail: base_admin+'/'+response.data.img,
+                            image_id: response.data.id
+                        }
+                    }]);
+                    api_fileuploader_url.updateFileList();
+                }
                 $.each(response.data.category_images, function(i, item) {
                     dataImg.push(item.url);
                     dataID.push(item.id);
@@ -296,8 +391,10 @@ var UpdateCategory = function(id) {
                 });	
                 if(response.data.type == 1){
                     $('.block_album').addClass('d-none');
+                    $('.block_item').removeClass('d-none');
                 } else {
                     $('.block_album').removeClass('d-none');
+                    $('.block_item').addClass('d-none');
                 }
                 $('#modal-category').modal('show');
             } else {
@@ -376,12 +473,19 @@ var ClearFormCategory = function(type) {
     $('#CategoryForm #type').val([]).trigger('change.select2');
     $('#CategoryForm #menu_id').val([]).trigger('change.select2');
     $('.block_album').addClass('d-none');
-
+    $('.block_item').addClass('d-none');
     if(typeof api_fileimg_url !== 'undefined') {
         api_fileimg_url.reset();
         api_fileimg_url.destroy();
     }
-    fileuploader1('input#img', 20, 10, ['jpg','jpeg','png']);
+    fileuploader1('input#img', 20, 10, ['jpg','jpeg','png'], 1);
+
+    if(typeof api_fileuploader_url !== 'undefined') {
+        api_fileuploader_url.reset();
+        api_fileuploader_url.destroy();
+    }
+    fileuploader1('input#img_item', 1, 10, ['jpg','jpeg','png'], 2);
+    
     if (type == "add") {
         $('#modal-category #ttlModal').html('Add category');
         $('#modal-category #action').val('insert');

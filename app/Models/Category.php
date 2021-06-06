@@ -40,7 +40,9 @@ class Category extends Model
 		'url',
 		'menu_id',
 		'type',
-		'video'
+		'video',
+		'img',
+		'description',
 	];
 
 	public function menu()

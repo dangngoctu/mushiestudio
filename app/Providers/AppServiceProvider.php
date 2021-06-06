@@ -34,7 +34,23 @@ class AppServiceProvider extends ServiceProvider
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         Schema::defaultStringLength(191);
         view()->composer('*', function ($view){
-            $menu = Models\Menu::all();
+            $menu = Models\Menu::with('categorys')->get();
+            $address = Models\Setting::where('key', 'ADDRESS')->first();
+            $phone = Models\Setting::where('key', 'PHONE')->first();
+            $time = Models\Setting::where('key', 'TIME')->first();
+            $email = Models\Setting::where('key', 'EMAIL')->first();
+            $website = Models\Setting::where('key', 'WEBSITE')->first();
+            $facebook = Models\Setting::where('key', 'URL_FACEBOOK')->first();
+            $instagram = Models\Setting::where('key', 'URL_INSTAGRAM')->first();
+
+            View::share('menu', $menu);
+            View::share('address', $address);
+            View::share('phone', $phone);
+            View::share('time', $time);
+            View::share('email', $email);
+            View::share('website', $website);
+            View::share('facebook', $facebook);
+            View::share('instagram', $instagram);
         });
     }
 }

@@ -137,7 +137,7 @@ class AdminController extends Controller
 		if ($validator->fails()) {
 			self::JsonExport(403, $validator->errors()->first());
 		} else {
-			// try{
+			try{
 				DB::begintransaction();
 				if($request->action == 'deletecategory'){
 					$img = Models\CategoryImage::find($request->id);
@@ -201,10 +201,26 @@ class AdminController extends Controller
 						@unlink(public_path($img_menu));
 						return self::JsonExport(200, 'Delete success');
 					}
+				} else if($request->action == 'deletecategoryitem'){
+					$category = Models\Category::where('id', $request->id)->first();
+					if(!$category){
+						DB::rollback();
+						return self::JsonExport(404, 'Data wrong');
+					}
+					$img_category = $category->img;
+					$category->update(['img' => null]);
+					if(!$category){
+						DB::rollback();
+						return self::JsonExport(500, 'Error');
+					} else {
+						DB::commit();
+						@unlink(public_path($img_category));
+						return self::JsonExport(200, 'Delete success');
+					}
 				}
-			// } catch (\Exception $e) {
-			// 	return self::JsonExport(500, 'Error');
-			// }
+			} catch (\Exception $e) {
+				return self::JsonExport(500, 'Error');
+			}
 		}
 	}
 
@@ -1181,6 +1197,17 @@ class AdminController extends Controller
 					$data['type'] = $request->type;
 				}
 
+				if($request->has('description_save') && !empty($request->description_save)) {
+					$text_description = str_replace("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>", "", $request->description_save);
+					$text_description = str_replace("</body>\r\n</html>", "", $text_description);
+					$data['description'] = $text_description;
+				}
+
+				if($request->has('img_item') && !empty($request->img_item)) {
+					$name_img = 'img_categoty_'.time().'.'.$request->img_item->getClientOriginalExtension();
+					$data['img'] = 'img/item/'.$name_img;
+				}
+
 				if($request->has('menu_id') && !empty($request->menu_id)) {
 					$data['menu_id'] = $request->menu_id;
 				}
@@ -1216,7 +1243,7 @@ class AdminController extends Controller
 					if (!File::exists($dir)) {
 						File::makeDirectory($dir, 0777, true, true);
 					}
-					
+
 					foreach($request->img as $key => $val){
 						$name_image_img = 'img_'.$key.'_'.time().'.'.$val->getClientOriginalExtension();
 						if($request->action == 'update') {
@@ -1233,6 +1260,15 @@ class AdminController extends Controller
 						
 						Uploader::uploadFile($val, 'img/item', 'item', false, $name_image_img);
 					}
+				}
+
+				if($request->has('img_item') && !empty($request->img_item)) {
+					$dir = public_path('img/item');
+					if (!File::exists($dir)) {
+						File::makeDirectory($dir, 0777, true, true);
+					}
+
+					Uploader::uploadFile($request->img_item, 'img/item', 'item', false, $name_img);
 				}
 
 				switch ($request->action) {
