@@ -70,6 +70,22 @@ class ClientController extends Controller
         } else {
             return route('main.home.get');
         }
-        return $category;
+    }
+
+    public function item_detail($category, $item){
+        $item = Models\Item::with('itemImages')->where('slug', $item)->first();
+        $color = Models\Color::whereIn('id', explode(',',$item->color))->get();
+        $size = Models\Size::whereIn('id', explode(',',$item->size))->get();
+        $related_item = Models\Item::where('id', '!=', $item->id)->where('category_id', $item->category_id)->where('material', 'LIKE', '%'.$item->material.'%')->take(6)->get();
+        if($item){
+            return view('Web.Client.product-detail.main',[
+                'item' => $item,
+                'color' => $color,
+                'size' => $size,
+                'related_item' => $related_item
+            ]);
+        } else {
+            return route('main.home.get');
+        }
     }
 }

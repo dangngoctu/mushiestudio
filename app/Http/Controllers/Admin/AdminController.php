@@ -861,6 +861,11 @@ class AdminController extends Controller
 					$data['url_img'] = 'img/item/'.$name_image_menu;
 				}
 				if($request->action == 'update') {
+					$check_data = Models\Menu::where('url', $request->url)->where('id', '!=', $request->id)->first();
+					if($check_data){
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
 					$query->update($data);
 					if (!$query) {
 						DB::rollback();
@@ -873,6 +878,11 @@ class AdminController extends Controller
 						return self::JsonExport(403, 'Error');
 					}
 				} else {
+					$check_data = Models\Menu::where('url', $request->url)->first();
+					if($check_data){
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
 					$insert = Models\Menu::insert($data);
 					if(!$insert) {
 						DB::rollback();
@@ -1219,6 +1229,11 @@ class AdminController extends Controller
 				}
 
 				if($request->action == 'update') {
+					$check_data = Models\Category::where('url', $request->url)->where('id', '!=', $request->id)->first();
+					if($check_data){
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
 					$query->update($data);
 					if (!$query) {
 						DB::rollback();
@@ -1231,6 +1246,11 @@ class AdminController extends Controller
 						return self::JsonExport(403, 'Error');
 					}
 				} else {
+					$check_data = Models\Category::where('url', $request->url)->first();
+					if($check_data){
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
 					$insert = Models\Category::create($data);
 					if(!$insert) {
 						DB::rollback();
@@ -1477,6 +1497,11 @@ class AdminController extends Controller
 				}
 
 				if($request->action == 'update') {
+					$check_data = Models\Item::where('slug', $request->slug)->where('id', '!=', $request->id)->first();
+					if($check_data){
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
 					$query->update($data);
 					if (!$query) {
 						DB::rollback();
@@ -1489,6 +1514,11 @@ class AdminController extends Controller
 						return self::JsonExport(403, 'Error');
 					}
 				} else {
+					$check_data = Models\Item::where('slug', $request->slug)->first();
+					if($check_data){
+						DB::rollback();
+						return self::JsonExport(403, 'Error');
+					}
 					$insert = Models\Item::create($data);
 					if(!$insert) {
 						DB::rollback();

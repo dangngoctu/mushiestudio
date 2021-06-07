@@ -71,22 +71,22 @@
                                     @if(count($val->itemImages) > 0)
                                         @foreach($val->itemImages as $key1 => $val1)
                                             <li>
-                                                <a href="{{route('main.product.detail.get')}}">
+                                                <a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">
                                                     <img data-src="{{asset($val1->url)}}" src="{{asset($val1->url)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                                 </a>
                                             </li>
                                         @endforeach
                                     @else 
                                         <li>
-                                            <a href="{{route('main.product.detail.get')}}">
+                                            <a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">
                                                 <img data-src="{{asset($val->img_thumb)}}" src="{{asset($val->img_thumb)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     @endif
                                 </ul>
                             </p>
-                            <h3 class="h4"><a href="{{route('main.product.detail.get')}}">{{$val->name}}</a></h3>
-                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">{{$val->sub_name}}</a></p></div>
+                            <h3 class="h4"><a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">{{$val->name}}</a></h3>
+                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">{{$val->sub_name}}</a></p></div>
                             <div class="product-price">
                                 <span class="price">{{$val->price}}</span>
                             </div>

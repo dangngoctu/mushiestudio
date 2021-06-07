@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="inner">
-                                <a href="#">
+                                <a href="{{route('main.product.category.get',['category' => $latest_category->url])}}">
                                     <img data-src="{{asset($latest_category->img)}}" src="{{asset($latest_category->img)}}" alt="" title="" class="blur-up lazyload" />
                                 </a>
                             </div>
@@ -35,7 +35,7 @@
                     @foreach($near_latest_category as $key => $val)
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-center sc2-item">
                             <p>
-                                <a href="{{route('main.product.detail.get')}}">
+                                <a href="{{route('main.product.category.get',['category' => $val->url])}}">
                                     <img
                                         data-src="{{asset($val->img)}}"
                                         src="{{asset($val->img)}}"
@@ -44,8 +44,8 @@
                                     />
                                 </a>
                             </p>
-                            <h3 class="h4"><a href="{{route('main.product.detail.get')}}">{{$val->name}}</a></h3>
-                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Discover</p></a></div>
+                            <h3 class="h4"><a href="{{route('main.product.category.get',['category' => $val->url])}}">{{$val->name}}</a></h3>
+                            <div class="rte-setting"><p><a href="{{route('main.product.category.get',['category' => $val->url])}}">Discover</p></a></div>
                         </div>
                     @endforeach
                 </div>
@@ -62,7 +62,7 @@
                     @foreach($third_lasted_item as $key => $val)
                         <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center sc2-item">
                             <p>
-                                <a href="{{route('main.product.detail.get')}}">
+                                <a href="{{route('main.product.detail.get', ['category'=> $val->category->url, 'item' => $val->slug])}}">
                                     <img
                                         data-src="{{asset($val->img_thumb)}}"
                                         src="{{asset($val->img_thumb)}}"
@@ -71,12 +71,10 @@
                                     />
                                 </a>
                             </p>
-                            <h3 class="h4"><a href="{{route('main.product.detail.get')}}">{{$val->name}}</a></h3>
-                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">{{$val->sub_name}}</p></a></div>
+                            <h3 class="h4"><a href="{{route('main.product.detail.get', ['category'=> $val->category->url, 'item' => $val->slug])}}">{{$val->name}}</a></h3>
+                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get', ['category'=> $val->category->url, 'item' => $val->slug])}}">{{$val->sub_name}}</p></a></div>
                         </div>
                     @endforeach
-
-                    
                 </div>
             </div>
         </div>
@@ -92,13 +90,13 @@
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="inner">
                             @if(count($latest_album->categoryImages) > 0)
-                                <a href="#">
+                                <a href="{{route('main.product.category.get',['category' => $latest_album->url])}}">
                                     <img data-src="{{asset($latest_album->categoryImages[0]->url)}}" src="{{asset($latest_album->categoryImages[0]->url)}}" alt="" title="" class="blur-up lazyload" />
                                 </a>
                             @endif
                             </div>
                             <div class="custom-text text-center">
-                                <h4 class="h3"><a href="{{route('main.product.detail.get')}}"> {{$latest_album->name}}</a></h4>
+                                <h4 class="h3"><a href="{{route('main.product.category.get',['category' => $latest_album->url])}}"> {{$latest_album->name}}</a></h4>
                             </div>
                         </div>
                     </div>
