@@ -43,4 +43,33 @@ class ClientController extends Controller
             'latest_album' => $latest_album,
         ]);
     }
+
+    public function category($category){
+        $category = Models\Category::with('categoryImages', 'items.itemImages')->where('url', $category)->first();
+        $material = Models\Material::all();
+        $size = Models\Size::all();
+        $color = Models\Color::all();
+        if($category){
+            if($category->type == 1){
+                //Item
+                return view('Web.Client.category-1.main', [
+                    'category' => $category,
+                    'material' => $material,
+                    'size' => $size,
+                    'color' => $color
+                ]);
+            } else {
+                //Album
+                return view('Web.Client.category-2.main', [
+                    'category' => $category,
+                    'material' => $material,
+                    'size' => $size,
+                    'color' => $color
+                ]);
+            }
+        } else {
+            return route('main.home.get');
+        }
+        return $category;
+    }
 }

@@ -3,12 +3,12 @@
         <div class="product-single-wrap">
             <div class="row display-table">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 display-table-cell">
-                    <img src="{{asset('assets/app/page/user/images/cosmetic-product/single-product.jpg')}}" alt="" class="product-featured-img">
+                    <img src="{{asset($category->img)}}" alt="" class="product-featured-img">
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 display-table-cell">
                     <div class="product-single__meta">
-                        <h2 class="grid_item-title h2"><label>Steal The Deal</label></h2>
-                        <div class="product-single__description rte">The perfect makeup bag for every personality! These fun makeup bags will hold all your cosmetic goodies! It can hold all your essentials including a full sized makeup palette &amp; brushes! Highlights:Zipper Closure</div>
+                        <h2 class="grid_item-title h2"><label>{{$category->name}}</label></h2>
+                        <div class="product-single__description rte">{!! $category->description !!}</div>
                     </div>
                 </div>
             </div>
@@ -21,337 +21,82 @@
     <div class="container">
         <div class="filters-toolbar-wrapper">
             <div class="row">
-                <div class="col-4 col-md-4 col-lg-4 filters-toolbar__item collection-view-as d-flex justify-content-start align-items-center">
+                <div class="col-3 col-md-3 col-lg-3 filters-toolbar__item collection-view-as d-flex justify-content-start align-items-center">
                         <div class="view-option">View <a href="#" class="view-small">  small  </a>/<a href="#" class="view-large">  large</a></div>
                 </div>
-                <div class="col-4 col-md-4 col-lg-4 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
-                    
-                </div>
-                <div class="col-4 col-md-4 col-lg-4 text-right">
+                <div class="col-6 col-md-6 col-lg-6 text-center filters-toolbar__item filters-toolbar__item--count d-flex justify-content-center align-items-center">
                     <div class="filters-toolbar__item">
                         <label for="SortBy" class="hidden">Sort</label>
-                        <select name="SortBy" id="SortBy" class="filters-toolbar__input filters-toolbar__input--sort">
-                            <option value="title-ascending" selected="selected">Sort</option>
-                            <option>Best Selling</option>
-                            <option>Alphabetically, A-Z</option>
-                            <option>Alphabetically, Z-A</option>
-                            <option>Price, low to high</option>
-                            <option>Price, high to low</option>
-                            <option>Date, new to old</option>
-                            <option>Date, old to new</option>
+                        <select style="width:100px" name="sort_material" id="sort_material" class="filters-toolbar__input filters-toolbar__input--sort">
+                            <option value="title-ascending" selected="selected">Material</option>
+                            @foreach($material as $key => $val)
+                                <option value="{{$val->id}}">{{$val->name}}</option>
+                            @endforeach
+                        </select>
+                        <input class="collection-header__default-sort" type="hidden" value="manual">
+                    </div>
+
+                    <div class="filters-toolbar__item">
+                        <label for="SortBy" class="hidden">Sort</label>
+                        <select style="width:100px" name="sort_size" id="sort_size" class="filters-toolbar__input filters-toolbar__input--sort">
+                            <option value="title-ascending" selected="selected">Size</option>
+                            @foreach($size as $key => $val)
+                                <option value="{{$val->id}}">{{$val->name}}</option>
+                            @endforeach
+                        </select>
+                        <input class="collection-header__default-sort" type="hidden" value="manual">
+                    </div>
+                </div>
+                <div class="col-3 col-md-3 col-lg-3 text-right">
+                <div class="filters-toolbar__item">
+                        <label for="SortBy" class="hidden">Sort</label>
+                        <select style="width:100px" name="sort" id="sort" class="filters-toolbar__input filters-toolbar__input--sort">
+                            <option value="title-ascending" selected="selected">Sort by</option>
+                            <option value="1">SORT BY RECENTLY ADDED</option>
+                            <option value="2">SORT BY PRICE(ASCENDING)</option>
+                            <option value="3">SORT BY PRICE(DESCENDING)</option>
                         </select>
                         <input class="collection-header__default-sort" type="hidden" value="manual">
                     </div>
                 </div>
             </div>
             <!--Featured Item-->
-
-            <div class="row product-list">
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
+            @if(count($category->items) > 0)
+                <div class="row product-list">
+                    @foreach($category->items as $key => $val)
+                        <!--Featured Item-->
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                            <p>
+                                <ul class="content-slider">
+                                    @if(count($val->itemImages) > 0)
+                                        @foreach($val->itemImages as $key1 => $val1)
+                                            <li>
+                                                <a href="{{route('main.product.detail.get')}}">
+                                                    <img data-src="{{asset($val1->url)}}" src="{{asset($val1->url)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    @else 
+                                        <li>
+                                            <a href="{{route('main.product.detail.get')}}">
+                                                <img data-src="{{asset($val->img_thumb)}}" src="{{asset($val->img_thumb)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                            </a>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </p>
+                            <h3 class="h4"><a href="{{route('main.product.detail.get')}}">{{$val->name}}</a></h3>
+                            <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">{{$val->sub_name}}</a></p></div>
+                            <div class="product-price">
+                                <span class="price">{{$val->price}}</span>
+                            </div>
+                        </div>
+                        <!--End Featured Item-->
+                    
+                    @endforeach
                 </div>
-                <!--End Featured Item-->
-                <!--Featured Item-->
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                 <!--Featured Item-->
-                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                 <!--Featured Item-->
-                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                 <!--Featured Item-->
-                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                 <!--Featured Item-->
-                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                 <!--Featured Item-->
-                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-                 <!--Featured Item-->
-                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
-                    <p>
-                        <ul class="content-slider">
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" src="{{asset('assets/app/page/user/images/detail/1.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" src="{{asset('assets/app/page/user/images/detail/2.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" src="{{asset('assets/app/page/user/images/detail/3.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" src="{{asset('assets/app/page/user/images/detail/4.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{route('main.product.detail.get')}}">
-                                    <img data-src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" src="{{asset('assets/app/page/user/images/detail/5.jpg')}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
-                                </a>
-                            </li>
-                        </ul>
-                    </p>
-                    <h3 class="h4"><a href="{{route('main.product.detail.get')}}">New in !</a></h3>
-                    <div class="rte-setting"><p><a href="{{route('main.product.detail.get')}}">Wallet and small leaather goods</a></p></div>
-                    <div class="product-price">
-                        <span class="price">$600.00</span>
-                    </div>
-                </div>
-                <!--End Featured Item-->
-            </div>
+            @endif
+            
         </div>
     </div>
 </div>
