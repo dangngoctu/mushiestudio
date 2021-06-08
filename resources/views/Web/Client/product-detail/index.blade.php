@@ -31,7 +31,7 @@
                         <form method="post" action="http://annimexweb.com/cart/add" id="product_form_10508262282" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
                             <div class="swatch clearfix swatch-0 option1" data-option-index="0">
                                 <div class="product-form__item">
-                                    <label class="header">Color: <span class="slColor" id="slColor">Red</span></label>
+                                    <!-- <label class="header">Color: <span class="slColor" id="slColor">Red</span></label> -->
                                     @foreach($color as $key => $val)
                                         <div data-value="{{$val->name}}" class="swatch-element color available">
                                             <input class="swatchInput" id="{{'swatch-'.$val->id.'-'.$val->name}}" type="radio" name="{{'option-'.$val->id}}" value="{{$val->name}}"><label class="swatchLbl color small rounded" for="swatch-0-black" style="{{'background-color:'.$val->color_code.';'}}" title="{{$val->name}}"></label>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                 <div class="product-form__item">
-                                    <label class="header">Size: <span class="slSize" id="slSize">XS</span></label>
+                                    <!-- <label class="header">Size: <span class="slSize" id="slSize">XS</span></label> -->
                                     @foreach($size as $key => $val)
                                         <div data-value="{{$val->name}}" class="swatch-element available">
                                             <input class="swatchInput" id="{{'swatch-'.$val->id.'-'.$val->name}}" type="radio" name="{{'option-'.$val->id}}" value="{{$val->name}}" />
