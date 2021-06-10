@@ -383,7 +383,20 @@ var DeleteItem = function(id, table) {
 var ClearFormItem = function(type) {
     $('#ItemForm')[0].reset();
     $('#ItemForm').parsley().reset();
-    
+    $('#modal-item #material').val([]).trigger('change');
+    $('#modal-item #size').val([]).trigger('change');
+    $('#modal-item #color').val([]).trigger('change');
+    if(typeof api_imgs_url !== 'undefined') {
+        api_imgs_url.reset();
+        api_imgs_url.destroy();
+    }
+
+    if(typeof api_thumb_url !== 'undefined') {
+        api_thumb_url.reset();
+        api_thumb_url.destroy();
+    }
+    fileuploader('input#img_thumb', 1, 10, ['jpg','jpeg','png'], 2);
+    fileuploader('input#imgs', 20, 10, ['jpg','jpeg','png'], 1);
     if (type == "add") {
         $('#modal-item #ttlModal').html('Add item');
         $('#modal-item #action').val('insert');

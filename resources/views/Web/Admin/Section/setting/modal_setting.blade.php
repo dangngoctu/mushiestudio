@@ -20,7 +20,8 @@
                     <div class="row mg-t-30">
                         <label class="col-sm-2 form-control-label">Value<span class="tx-danger">*</span></label>
                         <div class="col-sm-10 mg-t-10 mg-sm-t-0">
-                            <div class="sp-replacer sp-light"><div class="sp-preview"><div class="sp-preview-inner" style="background-color: rgb(23, 162, 184);"></div></div><div class="sp-dd">▼</div></div>
+                        <input type="text" class="form-control" name="value" id="value" value=""
+                            maxlength="128" required data-parsley-required-message="Insert value.">
                         </div>
                     </div>
                 </form>
