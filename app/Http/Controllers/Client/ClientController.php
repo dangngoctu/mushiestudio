@@ -37,7 +37,6 @@ class ClientController extends Controller
         } else {
             $near_latest_category = Models\Category::with('menu')->where('type', 1)->orderBy('id', 'desc')->take(2)->get();
         }
-        
         $third_lasted_item = Models\Item::take(3)->orderBy('id', 'desc')->get();
         $latest_album = Models\Category::with('categoryImages')->where('type', 2)->orderBy('id', 'desc')->first();
 
@@ -50,30 +49,35 @@ class ClientController extends Controller
     }
 
     public function category($category){
-        $category = Models\Category::with('categoryImages', 'items.itemImages')->where('url', $category)->first();
-        $material = Models\Material::all();
-        $size = Models\Size::all();
-        $color = Models\Color::all();
-        if($category){
-            if($category->type == 1){
-                //Item
-                return view('Web.Client.category-1.main', [
-                    'category' => $category,
-                    'material' => $material,
-                    'size' => $size,
-                    'color' => $color
-                ]);
+        try{
+            $category = Models\Category::with('categoryImages', 'items.itemImages')->where('url', $category)->first();
+            $material = Models\Material::all();
+            $size = Models\Size::all();
+            $color = Models\Color::all();
+            if($category){
+                if($category->type == 1){
+                    //Item
+                    return view('Web.Client.category-1.main', [
+                        'category' => $category,
+                        'material' => $material,
+                        'size' => $size,
+                        'color' => $color
+                    ]);
+                } else {
+                    //Album
+                    return view('Web.Client.category-2.main', [
+                        'category' => $category,
+                        'material' => $material,
+                        'size' => $size,
+                        'color' => $color
+                    ]);
+                }
             } else {
-                //Album
-                return view('Web.Client.category-2.main', [
-                    'category' => $category,
-                    'material' => $material,
-                    'size' => $size,
-                    'color' => $color
-                ]);
+                abort(404);
             }
-        } else {
-            return route('main.home.get');
+        }catch(\Exception $e){
+            return $e;
+            abort(404);
         }
     }
 
@@ -90,6 +94,16 @@ class ClientController extends Controller
                 'related_item' => $related_item
             ]);
         } else {
+            return route('main.home.get');
+        }
+    }
+
+    public function about_us(Request $request){
+        try{
+            return view('Web.Client.about-us.main',[
+                'title' => 'About Us'
+            ]);
+        }catch(\Exception $e){
             return route('main.home.get');
         }
     }
