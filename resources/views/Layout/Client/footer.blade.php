@@ -9,7 +9,16 @@
                         <h4 class="h4">Quick Shop</h4>
                         <ul>
                             @foreach($menu as $key => $val)
-                                <li><a href="#">{{$val->name}}</a></li>
+                                <li>
+                                    <p>{{$val->name}}</p>
+                                    <ul class="main-list">
+                                        @foreach($val->categorys as $v)
+                                            <li>
+                                                <a href="{{$v->url}}">{{$v->name}}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -24,25 +33,25 @@
                         <ul class="addressFooter">
                             <li>
                                 <i class="icon anm anm-map-marker-al"></i>
-                                <p>
+                                <p><a href="https://www.google.com/maps/place/{{urlencode($address->value)}}" target="_blank">
                                     {{$address->value}}
-                                </p>
+                                </a></p>
                             </li>
                             <li class="phone">
                                 <i class="icon anm anm-phone-s"></i>
-                                <p>{{$phone->value}}</p>
+                                <p><a href="tel:{{$phone->value}}">{{$phone->value}}</a></p>
                             </li>
                             <li class="email">
                                 <i class="icon anm anm-envelope-l"></i>
-                                <p>{{$email->value}}</p>
+                                <p><a href="mailto:{{$email->value}}">{{$email->value}}</a></p>
                             </li>
                             <li class="facebook">
                                 <i class="icon anm anm-facebook"></i>
-                                <p>{{$facebook->value}}</p>
+                                <p><a href="{{$facebook->value}}" target="_blank">{{$facebook->value}}</a></p>
                             </li>
                             <li class="instagram">
                                 <i class="icon anm anm-instagram"></i>
-                                <p>{{$instagram->value}}</p>
+                                <p><a href="{{$instagram->value}}" target="_blank">{{$instagram->value}}</a></p>
                             </li>
                         </ul>
                     </div>

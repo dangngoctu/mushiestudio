@@ -87,7 +87,7 @@
             </ul>
         </li>
         <li class="lvl1 parent megamenu">
-            <a href="blog-left-sidebar.html">About Us <i class="anm anm-plus-l"></i></a>
+            <a href="{{route('main.about_us.get')}}">About Us <i class="anm anm-plus-l"></i></a>
         </li>
     </ul>
 </div>

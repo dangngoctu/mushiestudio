@@ -70,6 +70,28 @@
                             <label class="col-sm-2 form-control-label">List Images</label>
                             <div class="col-sm-10 mg-t-10 mg-sm-t-0">
                                 <input type="file"  accept=".jpg, .jpeg, .png" class="picupload" id="img" name="img"/>
+                                <div class="alert alert-info" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <strong>Chú ý về kích thước ảnh(tỉ lệ ảnh chuẩn là 2:3)!</strong> </br>
+                                    *** Kích thước nên cần giống nhau cho tất cả các ảnh </br>
+                                    Kích thước tốt nhất: </br>
+                                    <ul>
+                                        <li>Chiều rộng: 2000px </li>
+                                        <li>Chiều cao: 3000px </li>
+                                    </ul>
+                                    Kích thước chuẩn: </br>
+                                    <ul>
+                                        <li>Chiều rộng: 1200px </li>
+                                        <li>Chiều cao: 1800px </li>
+                                    </ul>
+                                    Kích thước ổn: </br>
+                                    <ul>
+                                        <li>Chiều rộng: 600px </li>
+                                        <li>Chiều cao: 900px </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,15 +101,38 @@
                             <label class="col-sm-2 form-control-label">Images</label>
                             <div class="col-sm-10 mg-t-10 mg-sm-t-0">
                                 <input type="file"  accept=".jpg, .jpeg, .png" class="picupload" id="img_item" name="img_item"/>
+                                <div class="alert alert-info" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <strong>Chú ý về kích thước ảnh(tỉ lệ ảnh chuẩn là 2:3)!</strong> </br>
+                                    *** Kích thước nên cần giống nhau cho tất cả các ảnh </br>
+                                    Kích thước tốt nhất: </br>
+                                    <ul>
+                                        <li>Chiều rộng: 2000px </li>
+                                        <li>Chiều cao: 3000px </li>
+                                    </ul>
+                                    Kích thước chuẩn: </br>
+                                    <ul>
+                                        <li>Chiều rộng: 1200px </li>
+                                        <li>Chiều cao: 1800px </li>
+                                    </ul>
+                                    Kích thước ổn: </br>
+                                    <ul>
+                                        <li>Chiều rộng: 600px </li>
+                                        <li>Chiều cao: 900px </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
+
                         <div class="row mg-t-30">
-                        <label class="col-sm-2 form-control-label">Description</label>
-                        <div class="col-sm-10 mg-t-10 mg-sm-t-0">
-                            <textarea class="mytextarea" id="description" name="description"></textarea>
+                            <label class="col-sm-2 form-control-label">Description</label>
+                            <div class="col-sm-10 mg-t-10 mg-sm-t-0">
+                                <textarea class="mytextarea" id="description" name="description"></textarea>
+                            </div>
                         </div>
-                    </div>
                     </div>
                     
                 </form>

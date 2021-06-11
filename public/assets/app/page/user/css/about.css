@@ -1,0 +1,17 @@
+
+.custom-text{
+    max-width: 100% !important;
+}
+
+.custom-text h4{
+    padding: 5px 0 5px 0;
+}
+
+.custom-text h4 label{
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.custom-text .rte-setting{
+    padding: 5px 0 25px 0;
+}

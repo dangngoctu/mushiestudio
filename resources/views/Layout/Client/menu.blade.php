@@ -15,7 +15,7 @@
                                         <li class="grid__item lvl-1 col-md-8 col-lg-8">
                                             <ul class="subLinks">
                                                 @foreach($val->categorys as $key1 => $val1)
-                                                    <li class="lvl-2"><a href="{{route('main.product.category.get',['category' => $val1->url])}}" class="site-nav lvl-2">{{$val1->name}}</a></li>
+                                                    <li class="lvl-2"><a href="{{route('main.product.category.get',['category' => $val1->url])}}" class="site-nav lvl-2"><label>{{$val1->name}}</label></a></li>
                                                 @endforeach
                                             </ul>
                                         </li>
@@ -58,7 +58,7 @@
                 </li>
             @endforeach
             <li class="lvl1 parent dropdown">
-                <a href="#">About Us <i class="anm anm-angle-down-l"></i></a>
+                <a href="{{route('main.about_us.get')}}">About Us <i class="anm anm-angle-down-l"></i></a>
             </li>
         </ul>
     </nav>

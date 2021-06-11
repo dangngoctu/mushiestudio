@@ -18,7 +18,7 @@
                 @foreach($category->categoryImages as $key => $val)
                     <div class="col-6 col-sm-6 col-md-6 col-lg-4 category_2_item">
                         <p>
-                            <a href="{{route('main.product.detail.get')}}">
+                            <a href="{{route('main.product.detail.get',['category' => $val->category_id, 'item' => $val->id])}}">
                                 <img
                                     data-src="{{asset($val->url)}}"
                                     src="{{asset($val->url)}}"
@@ -27,7 +27,7 @@
                                 />
                             </a>
                         </p>
-                        <h3 class="h4 title_sm"><a href="{{route('main.product.detail.get')}}">{{$category->name}}</a></h3>
+                        <h3 class="h4 title_sm"><a href="{{route('main.product.detail.get',['category' => 1, 'item' => 2])}}">{{$category->name}}</a></h3>
                     </div>
                 @endforeach
             @endif
