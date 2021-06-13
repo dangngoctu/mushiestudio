@@ -1127,7 +1127,7 @@ class AdminController extends Controller
 			$result =  Datatables::of($data)
 			->addColumn('menu_id', function ($v) {
 				if(!empty($v->menu_id)){
-					return $v->menu->name;
+					return $v->menu->name ?? '';
 				} else {
 					return '';
 				}
