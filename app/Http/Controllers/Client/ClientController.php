@@ -31,21 +31,25 @@ class ClientController extends Controller
     }
 
     public function index(Request $request){
-        $latest_category = Models\Category::where('type', 1)->orderBy('id', 'desc')->first();
-        if($latest_category){
-            $near_latest_category = Models\Category::with('menu')->where('type', 1)->where('id', '!=', $latest_category->id)->orderBy('id', 'desc')->take(2)->get();
-        } else {
-            $near_latest_category = Models\Category::with('menu')->where('type', 1)->orderBy('id', 'desc')->take(2)->get();
+        try{
+            $latest_category = Models\Category::where('type', 1)->orderBy('id', 'desc')->first();
+            if($latest_category){
+                $near_latest_category = Models\Category::with('menu')->where('type', 1)->where('id', '!=', $latest_category->id)->orderBy('id', 'desc')->take(2)->get();
+            } else {
+                $near_latest_category = Models\Category::with('menu')->where('type', 1)->orderBy('id', 'desc')->take(2)->get();
+            }
+            $third_lasted_item = Models\Item::take(3)->orderBy('id', 'desc')->get();
+            $latest_album = Models\Category::with('categoryImages')->where('type', 2)->orderBy('id', 'desc')->first();
+    
+            return view('Web.Client.home.main', [
+                'latest_category' => $latest_category,
+                'near_latest_category' => $near_latest_category,
+                'third_lasted_item' => $third_lasted_item,
+                'latest_album' => $latest_album,
+            ]);
+        }catch(\Exception $e){
+            abort(404);
         }
-        $third_lasted_item = Models\Item::take(3)->orderBy('id', 'desc')->get();
-        $latest_album = Models\Category::with('categoryImages')->where('type', 2)->orderBy('id', 'desc')->first();
-
-        return view('Web.Client.home.main', [
-            'latest_category' => $latest_category,
-            'near_latest_category' => $near_latest_category,
-            'third_lasted_item' => $third_lasted_item,
-            'latest_album' => $latest_album,
-        ]);
     }
 
     public function category($category){
@@ -61,7 +65,8 @@ class ClientController extends Controller
                         'category' => $category,
                         'material' => $material,
                         'size' => $size,
-                        'color' => $color
+                        'color' => $color,
+                        'title' => $category->name
                     ]);
                 } else {
                     //Album
@@ -81,32 +86,36 @@ class ClientController extends Controller
                         'material' => $material,
                         'size' => $size,
                         'color' => $color,
-                        'video_check' => $video_check
+                        'video_check' => $video_check,
+                        'title' => $category->name
                     ]);
                 }
             } else {
                 abort(404);
             }
         }catch(\Exception $e){
-            return $e;
             abort(404);
         }
     }
 
     public function item_detail($category, $item){
-        $item = Models\Item::with('itemImages')->where('slug', $item)->first();
-        $color = Models\Color::whereIn('id', explode(',',$item->color))->get();
-        $size = Models\Size::whereIn('id', explode(',',$item->size))->get();
-        $related_item = Models\Item::where('id', '!=', $item->id)->where('category_id', $item->category_id)->where('material', 'LIKE', '%'.$item->material.'%')->take(6)->get();
-        if($item){
-            return view('Web.Client.product-detail.main',[
-                'item' => $item,
-                'color' => $color,
-                'size' => $size,
-                'related_item' => $related_item
-            ]);
-        } else {
-            return route('main.home.get');
+        try{
+            $item = Models\Item::with('itemImages')->where('slug', $item)->first();
+            $color = Models\Color::whereIn('id', explode(',',$item->color))->get();
+            $size = Models\Size::whereIn('id', explode(',',$item->size))->get();
+            $related_item = Models\Item::where('id', '!=', $item->id)->where('category_id', $item->category_id)->where('material', 'LIKE', '%'.$item->material.'%')->take(6)->get();
+            if($item){
+                return view('Web.Client.product-detail.main',[
+                    'item' => $item,
+                    'color' => $color,
+                    'size' => $size,
+                    'related_item' => $related_item
+                ]);
+            } else {
+                return route('main.home.get');
+            }
+        }catch(\Exception $e){
+            abort(404);
         }
     }
 
@@ -116,7 +125,7 @@ class ClientController extends Controller
                 'title' => 'About Us'
             ]);
         }catch(\Exception $e){
-            return route('main.home.get');
+            abort(404);
         }
     }
 }
