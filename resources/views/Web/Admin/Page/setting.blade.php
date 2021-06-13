@@ -22,5 +22,5 @@
     @include('Layout.Admin.modal_confirm_delete')
 @endsection
 @section('js')
-<script src="{{asset('assets/build/admin/js/setting.js')}}"></script>
+<script src="{{asset('public/assets/build/admin/js/setting.js')}}"></script>
 @endsection

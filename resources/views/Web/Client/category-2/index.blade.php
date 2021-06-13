@@ -20,10 +20,10 @@
                 @foreach($category->categoryImages as $key => $val)
                     <div class="col-6 col-sm-6 col-md-6 col-lg-4 category_2_item">
                             <div class="light_item"  id="lightItemGallery{{$key}}">
-                                <a href="{{asset($val->url)}}">
+                                <a href="{{asset('public/'.$val->url)}}">
                                     <img
-                                        data-src="{{asset($val->url)}}"
-                                        src="{{asset($val->url)}}"
+                                        data-src="{{asset('public/'.$val->url)}}"
+                                        src="{{asset('public/'.$val->url)}}"
                                         alt="{{$category->name}}"
                                         class="blur-up lazyload main-img-seaction"
                                     />

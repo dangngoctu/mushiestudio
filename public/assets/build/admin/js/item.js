@@ -283,10 +283,10 @@ var UpdateItem = function(id) {
                     api_thumb_url.append([{
                         name: (response.data.img_thumb).substring((response.data.img_thumb).lastIndexOf('/')+1),
                         type: 'image\/jpeg',
-                        file: base_admin+'/'+response.data.img_thumb,
+                        file: base_admin+'/public/'+response.data.img_thumb,
                         data: {
-                            url: base_admin+'/'+response.data.img_thumb,
-                            thumbnail: base_admin+'/'+response.data.img_thumb,
+                            url: base_admin+'/public/'+response.data.img_thumb,
+                            thumbnail: base_admin+'/public/'+response.data.img_thumb,
                             image_id: response.data.id
                         }
                     }]);
@@ -301,10 +301,10 @@ var UpdateItem = function(id) {
                         name: item,
                         type: 'image\/jpeg',
                         size: 71135,
-                        file: base_admin +'/'+ item,
+                        file: base_admin +'/public/'+ item,
                         data: {
-                            url: base_admin +'/'+ item,
-                            thumbnail: base_admin +'/'+ item,
+                            url: base_admin +'/public/'+ item,
+                            thumbnail: base_admin +'/public/'+ item,
                             image_id: dataID[i]
                         }
                     }]);

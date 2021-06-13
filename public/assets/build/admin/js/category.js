@@ -363,10 +363,10 @@ var UpdateCategory = function(id) {
                     api_fileuploader_url.append([{
                         name: (response.data.img).substring((response.data.img).lastIndexOf('/')+1),
                         type: 'image\/jpeg',
-                        file: base_admin+'/'+response.data.img,
+                        file: base_admin+'/public/'+response.data.img,
                         data: {
-                            url: base_admin+'/'+response.data.img,
-                            thumbnail: base_admin+'/'+response.data.img,
+                            url: base_admin+'/public/'+response.data.img,
+                            thumbnail: base_admin+'/public/'+response.data.img,
                             image_id: response.data.id
                         }
                     }]);
@@ -381,10 +381,10 @@ var UpdateCategory = function(id) {
                         name: item,
                         type: 'image\/jpeg',
                         size: 71135,
-                        file: base_admin +'/'+ item,
+                        file: base_admin +'/public/'+ item,
                         data: {
-                            url: base_admin +'/'+ item,
-                            thumbnail: base_admin +'/'+ item,
+                            url: base_admin +'/public/'+ item,
+                            thumbnail: base_admin +'/public/'+ item,
                             image_id: dataID[i]
                         }
                     }]);

@@ -157,10 +157,10 @@ var UpdateMenu = function(id) {
                     api_img_url.append([{
                         name: (response.data.url_img).substring((response.data.url_img).lastIndexOf('/')+1),
                         type: 'image\/jpeg',
-                        file: base_admin+'/'+response.data.url_img,
+                        file: base_admin+'/public/'+response.data.url_img,
                         data: {
-                            url: base_admin+'/'+response.data.url_img,
-                            thumbnail: base_admin+'/'+response.data.url_img,
+                            url: base_admin+'/public/'+response.data.url_img,
+                            thumbnail: base_admin+'/public/'+response.data.url_img,
                             image_id: response.data.id
                         }
                     }]);

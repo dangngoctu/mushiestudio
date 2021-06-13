@@ -6,7 +6,7 @@
     <div class="signin-wrapper">
         <div class="signin-box">
         <form id="loginForm">
-                <h2 class="slim-logo text-center"><img src="{{asset('/img/web/logo.png')}}" width="80%" alt="logo"></h2>
+                <h2 class="slim-logo text-center"><img src="{{asset('public/img/web/logo.png')}}" width="80%" alt="logo"></h2>
                 <div class="form-group">
                     <input type="text" class="form-control username" placeholder="Please enter your account" required
                     data-parsley-required-message="Account is required.">
@@ -23,5 +23,5 @@
 @endsection
 
 @section('js')
-<script src="{{asset('assets/build/admin/js/login.js')}}"></script>
+<script src="{{asset('public/assets/build/admin/js/login.js')}}"></script>
 @endsection

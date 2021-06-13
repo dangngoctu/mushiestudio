@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
 <!-- Favicon -->
-<link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}" />
+<link rel="shortcut icon" href="{{asset('public/assets/images/favicon.ico')}}" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>@yield('title')</title>
@@ -14,7 +14,7 @@
 
 <body class="template-index home14-bags">
     <div id="pre-loader">
-        <img src="{{asset('assets/app/page/user/images/loader.gif')}}" alt="Loading..." />
+        <img src="{{asset('public/assets/app/page/user/images/loader.gif')}}" alt="Loading..." />
     </div>
     <div class="pageWrapper">
       

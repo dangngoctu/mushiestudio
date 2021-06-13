@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="inner">
-                        <img data-src="{{asset('assets\app\page\user\images\about-us\about-1.jpg')}}" src="{{asset('assets\app\page\user\images\about-us\about-1.jpg')}}" alt="" title="" class="blur-up lazyloaded">
+                        <img data-src="{{asset('public\assets\app\page\user\images\about-us\about-1.jpg')}}" src="{{asset('public\assets\app\page\user\images\about-us\about-1.jpg')}}" alt="" title="" class="blur-up lazyloaded">
                     </div>
 
                     <div class="custom-text">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="inner">
-                        <img data-src="{{asset('assets\app\page\user\images\about-us\about-2.jpg')}}" src="{{asset('assets\app\page\user\images\about-us\about-2.jpg')}}" alt="" title="" class="blur-up lazyloaded">
+                        <img data-src="{{asset('public\assets\app\page\user\images\about-us\about-2.jpg')}}" src="{{asset('public\assets\app\page\user\images\about-us\about-2.jpg')}}" alt="" title="" class="blur-up lazyloaded">
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="inner">
-                        <img data-src="{{asset('assets\app\page\user\images\about-us\about-3.jpg')}}" src="{{asset('assets\app\page\user\images\about-us\about-3.jpg')}}" alt="" title="" class="blur-up lazyloaded">
+                        <img data-src="{{asset('public\assets\app\page\user\images\about-us\about-3.jpg')}}" src="{{asset('public\assets\app\page\user\images\about-us\about-3.jpg')}}" alt="" title="" class="blur-up lazyloaded">
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="inner">
                                 <a href="{{route('main.product.category.get',['category' => $latest_category->url])}}">
-                                    <img data-src="{{asset($latest_category->img)}}" src="{{asset($latest_category->img)}}" alt="" title="" class="blur-up lazyload" />
+                                    <img data-src="{{asset('public/'.$latest_category->img)}}" src="{{asset('public/'.$latest_category->img)}}" alt="" title="" class="blur-up lazyload" />
                                 </a>
                             </div>
                             <div class="custom-text text-center">
@@ -37,8 +37,8 @@
                             <p>
                                 <a href="{{route('main.product.category.get',['category' => $val->url])}}">
                                     <img
-                                        data-src="{{asset($val->img)}}"
-                                        src="{{asset($val->img)}}"
+                                        data-src="{{asset('public/'.$val->img)}}"
+                                        src="{{asset('public/'.$val->img)}}"
                                         alt="New in !"
                                         class="blur-up lazyload main-img-seaction"
                                     />
@@ -64,8 +64,8 @@
                             <p>
                                 <a href="{{route('main.product.detail.get', ['category'=> $val->category->url, 'item' => $val->slug])}}">
                                     <img
-                                        data-src="{{asset($val->img_thumb)}}"
-                                        src="{{asset($val->img_thumb)}}"
+                                        data-src="{{asset('public/'.$val->img_thumb)}}"
+                                        src="{{asset('public/'.$val->img_thumb)}}"
                                         alt="New in !"
                                         class="blur-up lazyload main-img-seaction"
                                     />
@@ -91,7 +91,7 @@
                             <div class="inner">
                             @if(count($latest_album->categoryImages) > 0)
                                 <a href="{{route('main.product.category.get',['category' => $latest_album->url])}}">
-                                    <img data-src="{{asset($latest_album->categoryImages[0]->url)}}" src="{{asset($latest_album->categoryImages[0]->url)}}" alt="" title="" class="blur-up lazyload" />
+                                    <img data-src="{{asset('public/'.$latest_album->categoryImages[0]->url)}}" src="{{asset('public/'.$latest_album->categoryImages[0]->url)}}" alt="" title="" class="blur-up lazyload" />
                                 </a>
                             @endif
                             </div>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                        <img src="{{asset('assets/app/page/user/images/184280271_467031527861915_2274740756541267454_n.jpg')}}" alt="Fast Fashion Only available at BElle" title="Fast Fashion Only available at BElle" />
+                        <img src="{{asset('public/assets/app/page/user/images/184280271_467031527861915_2274740756541267454_n.jpg')}}" alt="Fast Fashion Only available at BElle" title="Fast Fashion Only available at BElle" />
                     </div>
                 </div>
             </div>

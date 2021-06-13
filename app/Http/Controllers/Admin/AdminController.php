@@ -1370,7 +1370,7 @@ class AdminController extends Controller
 			})
 			->addColumn('image', function ($v) {
 				if(!empty($v->img_thumb)){
-					return  '<img href="'.asset($v->img_thumb).'" data-lightbox="image-'.$v->id.'" src="'.asset($v->img_thumb).'" width="60" height="60"/>';
+					return  '<img href="'.asset('public/'.$v->img_thumb).'" data-lightbox="image-'.$v->id.'" src="'.asset('public/'.$v->img_thumb).'" width="60" height="60"/>';
 				}
 			})
 			->addColumn('action', function ($v) {

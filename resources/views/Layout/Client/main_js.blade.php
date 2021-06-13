@@ -1,14 +1,14 @@
 <!-- Including Jquery -->
-<script src="{{asset('assets/app/page/user/js/vendor/jquery-3.3.1.min.js')}}"></script>
-<script src="{{asset('assets/app/page/user/js/vendor/modernizr-3.6.0.min.js')}}"></script>
-<script src="{{asset('assets/app/page/user/js/vendor/jquery.cookie.js')}}"></script>
-<script src="{{asset('assets/app/page/user/js/vendor/wow.min.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/vendor/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/vendor/modernizr-3.6.0.min.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/vendor/jquery.cookie.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/vendor/wow.min.js')}}"></script>
 <!-- Including Javascript -->
-<script src="{{asset('assets/app/page/user/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('assets/app/page/user/js/plugins.js')}}"></script>
-<script src="{{asset('assets/app/page/user/js/popper.min.js')}}"></script>
-<script src="{{asset('assets/app/page/user/js/lazysizes.js')}}"></script>
-<script src="{{asset('assets/app/page/user/js/main.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/plugins.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/popper.min.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/lazysizes.js')}}"></script>
+<script src="{{asset('public/assets/app/page/user/js/main.js')}}"></script>
 <!--For Newsletter Popup-->
 <script>
 

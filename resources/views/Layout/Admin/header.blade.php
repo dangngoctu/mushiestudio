@@ -1,7 +1,7 @@
 <div class="slim-header">
     <div class="container">
       <div class="slim-header-left">
-        <h2 class="slim-logo"><a href="{{route('admin.index')}}"><img src="{{asset('/img/web/logo.png')}}" width="135px" height="50px" alt="logo"><span></span></a></h2><h6 style="color:#6d1112;margin-left: -35px;margin-top: 22px;">Mushie</h6>
+        <h2 class="slim-logo"><a href="{{route('admin.index')}}"><img src="{{asset('public/img/web/logo.png')}}" width="135px" height="50px" alt="logo"><span></span></a></h2>
       </div><!-- slim-header-left -->
       <div class="slim-header-right">
         <div class="dropdown dropdown-c">

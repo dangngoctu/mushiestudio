@@ -318,10 +318,10 @@ var UpdateContent = function(id, lang) {
                     api_fileuploader_url.append([{
                         name: (response.data.news_content_translations.url).substring((response.data.news_content_translations.url).lastIndexOf('/')+1),
                         type: 'image/png',
-                        file: base_admin+'/'+response.data.news_content_translations.url,
+                        file: base_admin+'/public/'+response.data.news_content_translations.url,
                         data: {
                             url: base_admin+'/'+response.data.news_content_translations.url,
-                            thumbnail: base_admin+'/'+response.data.news_content_translations.url
+                            thumbnail: base_admin+'/public/'+response.data.news_content_translations.url
                         }
                     }]);
                     api_fileuploader_url.updateFileList();

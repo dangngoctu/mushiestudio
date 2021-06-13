@@ -3,7 +3,7 @@
         <div class="product-single-wrap">
             <div class="row display-table">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 display-table-cell">
-                    <img src="{{asset($category->img)}}" alt="" class="product-featured-img">
+                    <img src="{{asset('public/'.$category->img)}}" alt="" class="product-featured-img">
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 display-table-cell">
                     <div class="product-single__meta">
@@ -72,14 +72,14 @@
                                         @foreach($val->itemImages as $key1 => $val1)
                                             <li>
                                                 <a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">
-                                                    <img data-src="{{asset($val1->url)}}" src="{{asset($val1->url)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                    <img data-src="{{asset('public/'.$val1->url)}}" src="{{asset('public/'.$val1->url)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                                 </a>
                                             </li>
                                         @endforeach
                                     @else 
                                         <li>
                                             <a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">
-                                                <img data-src="{{asset($val->img_thumb)}}" src="{{asset($val->img_thumb)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img data-src="{{asset('public/'.$val->img_thumb)}}" src="{{asset('public/'.$val->img_thumb)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     @endif

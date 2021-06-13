@@ -7,10 +7,10 @@
                 <!--Featured Item-->
                 <div id="lightgallery" class="col-12 col-sm-6 col-md-6 col-lg-6 sc2-item">
                     @foreach($item->itemImages as $key => $val)
-                        <a href="{{asset($val->url)}}">
+                        <a href="{{asset('public/'.$val->url)}}">
                             <img
-                                data-src="{{asset($val->url)}}"
-                                src="{{asset($val->url)}}"
+                                data-src="{{asset('public/'.$val->url)}}"
+                                src="{{asset('public/'.$val->url)}}"
                                 alt="New in !"
                                 class="blur-up lazyload main-img-seaction"
                             />
@@ -97,14 +97,14 @@
                                                 @foreach($val->itemImages as $key1 => $val1)
                                                     <li>
                                                         <a href="{{route('main.product.detail.get',['category' => $val->category->url, 'item' => $val->slug])}}">
-                                                            <img data-src="{{asset($val1->url)}}" src="{{asset($val1->url)}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                            <img data-src="{{asset('public/'.$val1->url)}}" src="{{asset('public/'.$val1->url)}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                                         </a>
                                                     </li>
                                                 @endforeach
                                             @else
                                                 <li>
                                                     <a href="{{route('main.product.detail.get',['category' => $val->category->url ,'item' => $val->slug])}}">
-                                                        <img data-src="{{asset($val->img_thumb)}}" src="{{asset($val->img_thumb)}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                        <img data-src="{{asset('public/'.$val->img_thumb)}}" src="{{asset('public/'.$val->img_thumb)}}" alt="New in !" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                                     </a>
                                                 </li>
                                             @endif
