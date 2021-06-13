@@ -1,7 +1,17 @@
 @extends('Layout.Client.main')
 @section('title','Mushie Studio')
 @section('css')
-    <link rel="stylesheet" href="{{asset('public/assets/app/page/user/css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('public/assets/app/page/user/css/home.css')}}">  
+    <style>
+        .empty-page-content h1{
+            font-size: 55px;
+            font-weight: 600;
+        } 
+        .empty-page-content {
+            margin: 50px 0;
+        } 
+        
+    </style>
 @endsection
 @section('content')
     <div class="container">
