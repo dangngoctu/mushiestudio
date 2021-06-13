@@ -42,6 +42,8 @@ class AppServiceProvider extends ServiceProvider
             $website = Models\Setting::where('key', 'WEBSITE')->first();
             $facebook = Models\Setting::where('key', 'URL_FACEBOOK')->first();
             $instagram = Models\Setting::where('key', 'URL_INSTAGRAM')->first();
+            $content = Models\Setting::where('key', 'CONTENT')->first();
+            $title = Models\Setting::where('key', 'TITLE')->first();
 
             View::share('menu', $menu);
             View::share('address', $address);
@@ -51,6 +53,8 @@ class AppServiceProvider extends ServiceProvider
             View::share('website', $website);
             View::share('facebook', $facebook);
             View::share('instagram', $instagram);
+            View::share('title', $title);
+            View::share('content', $content);
         });
     }
 }
