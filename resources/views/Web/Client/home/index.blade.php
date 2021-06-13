@@ -113,7 +113,7 @@
                 <div class="feature-row">
                     <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
                         <div class="row-text">
-                            <h2 class="h2">{{$title->value}}</h2>
+                            <h2 class="h2">{{$title_content->value}}</h2>
                             <div class="rte-setting featured-row__subtext"><p>{{$content->value}}</p></div>
                         </div>
                     </div>

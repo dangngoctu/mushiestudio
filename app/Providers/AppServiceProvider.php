@@ -53,7 +53,7 @@ class AppServiceProvider extends ServiceProvider
             View::share('website', $website);
             View::share('facebook', $facebook);
             View::share('instagram', $instagram);
-            View::share('title', $title);
+            View::share('title_content', $title);
             View::share('content', $content);
         });
     }
