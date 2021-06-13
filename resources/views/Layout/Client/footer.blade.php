@@ -6,9 +6,9 @@
             <div class="footer-top">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 footer-links">
+                    @if(env('APP_DEBUG'))
                         <h4 class="h4">Quick Shop</h4>
                         <ul>
-                            @if(env('APP_DEBUG'))
                             @foreach($menu as $key => $val)
                                 <li>
                                     <p>{{$val->name}}</p>
@@ -21,8 +21,8 @@
                                     </ul>
                                 </li>
                             @endforeach
-                            @endif
                         </ul>
+                    @endif
                     </div>
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 footer-links">
                         <h4 class="h4">Informations</h4>
@@ -49,11 +49,11 @@
                             </li>
                             <li class="facebook">
                                 <i class="icon anm anm-facebook"></i>
-                                <p><a href="{{$facebook->value}}" target="_blank">{{$facebook->value}}</a></p>
+                                <p><a href="{{$facebook->value}}" target="_blank">Mushie Studio</a></p>
                             </li>
                             <li class="instagram">
                                 <i class="icon anm anm-instagram"></i>
-                                <p><a href="{{$instagram->value}}" target="_blank">{{$instagram->value}}</a></p>
+                                <p><a href="{{$instagram->value}}" target="_blank">mushie.studio</a></p>
                             </li>
                         </ul>
                     </div>

@@ -62,8 +62,18 @@
                         <div class="row mg-t-30">
                             <label class="col-sm-2 form-control-label">Video</label>
                             <div class="col-sm-10 mg-t-10 mg-sm-t-0">
-                            <input type="text" class="form-control" name="video" id="video" value=""
+                                <input type="text" class="form-control" name="video" id="video" value=""
                                 maxlength="255" data-parsley-required-message="Insert url youtube video.">
+                                <div class="alert alert-info mg-t-20" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <strong>Hướng dẫn lấy URL từ Youtube!</strong> </br>
+                                    *** Chỉ áp dụng video từ youtube. Vui lòng upload hoặc chọn video mong muốn từ Youtube. </br>
+                                    Vào video từ youtube và nhấn nút Share. Copy chuỗi kí tự đằng sau <span style="color: red">https://youtu.be/<b>link_can_copy</b></span></br>
+                                    Sau đó dán vào phần video này. </br>
+                                    <b><i>Ví dụ: </i></b> https://youtu.be/kXwuBZZux9c thì sẽ copy và dán kí tự này: <b>kXwuBZZux9c</b>
+                                </div>
                             </div>
                         </div>
                         <div class="row mg-t-30">
