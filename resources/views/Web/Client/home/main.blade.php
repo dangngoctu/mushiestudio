@@ -1,5 +1,5 @@
 @extends('Layout.Client.main')
-@section('title','Mushie Studio')
+@section('title',$title ??  'Home')
 @section('css')
     <link rel="stylesheet" href="{{asset('public/assets/app/page/user/css/home.css')}}">
 @endsection
