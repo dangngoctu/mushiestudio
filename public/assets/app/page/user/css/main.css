@@ -12,8 +12,9 @@ body {
 }
 
 .main-img-seaction{
-    height: auto;
+    height: 600px;
     max-height: 600px;
+    object-fit: cover;
 }
 .product-details .h4{
     font-weight: 600;
