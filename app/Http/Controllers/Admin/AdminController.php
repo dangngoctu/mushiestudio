@@ -321,12 +321,27 @@ class AdminController extends Controller
 				DB::beginTransaction();
 				$check = Models\Setting::where('key', $request->key)->first();
 				if($check){
-					$check->update(['value' => $request->value]);
+					if($request->key == "FILE"){
+						if($request->has('url_img') && !empty($request->url_img)) {
+							$name_image_menu = 'img_setting_'.time().'.'.$request->url_img->getClientOriginalExtension();
+							$check->update(['value' => 'img/item/'.$name_image_menu]);
+						}
+					} else {
+						$check->update(['value' => $request->value]);
+					}
+					
 				} else {
 					return self::JsonExport(404, 'Data wrong');
 				}
-				
 				DB::commit();
+				if($request->has('url_img') && !empty($request->url_img)) {
+					$dir = public_path('img/item');
+					if (!File::exists($dir)) {
+						File::makeDirectory($dir, 0777, true, true);
+					}
+
+					Uploader::uploadFile($request->url_img, 'img/item', 'item', false, $name_image_menu);
+				}
 				return self::JsonExport(200, 'Update success');
 			} catch (\Exception $e) {
 				DB::rollback();

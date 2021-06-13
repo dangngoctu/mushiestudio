@@ -1,4 +1,11 @@
+var api_img_url;
 $(function(){
+    if(typeof api_img_url !== 'undefined') {
+        api_img_url.reset();
+        api_img_url.destroy();
+    }
+
+    fileuploader('input#url_img', 1, 10, ['jpg','jpeg','png']);
     'use strict';
     var table_dynamic_setting = $('.table-dynamic-setting').DataTable({
 		"processing": true,
@@ -113,6 +120,118 @@ var SettingFormSubmit = function(table) {
     });
 };
 
+var fileuploader = function (element, number, size, array_type) {
+    if($(element).length > 0) {
+        $(element).fileuploader({
+            limit: number,
+            fileMaxSize: size,
+            extensions: array_type,
+            changeInput: ' ',
+            theme: 'thumbnails',
+            enableApi: true,
+            addMore: true,
+            thumbnails: {
+                box: '<div class="fileuploader-items">' + '<ul class="fileuploader-items-list">' + '<li class="fileuploader-thumbnails-input"><div class="fileuploader-thumbnails-input-inner"><i>+</i></div></li>' + '</ul>' + '</div>',
+                item: '<li class="fileuploader-item file-has-popup">' + '<div class="fileuploader-item-inner">' + '<div class="type-holder">${extension}</div>' + '<div class="actions-holder">' + '<a class="fileuploader-action fileuploader-action-remove" title="${captions.remove}"><i></i></a>' + '</div>' + '<div class="thumbnail-holder">' + '${image}' + '<span class="fileuploader-action-popup"></span>' + '</div>' + '<div class="content-holder"><h5>${name}</h5></div>' + '<div class="progress-holder">${progressBar}</div>' + '</div>' + '</li>',
+                item2: '<li class="fileuploader-item file-has-popup">' + '<div class="fileuploader-item-inner">' + '<div class="type-holder">${extension}</div>' + '<div class="actions-holder">' + '<a href="${file}" class="fileuploader-action fileuploader-action-download" title="${captions.download}" download><i></i></a>' + '<a class="fileuploader-action fileuploader-action-remove" title="${captions.remove}"><i></i></a>' + '</div>' + '<div class="thumbnail-holder">' + '${image}' + '<span class="fileuploader-action-popup"></span>' + '</div>' + '<div class="content-holder"><h5>${name}</h5></div>' + '<div class="progress-holder">${progressBar}</div>' + '</div>' + '</li>',
+                startImageRenderer: true,
+                canvasImage: true,
+                _selectors: {
+                    list: '.fileuploader-items-list',
+                    item: '.fileuploader-item',
+                    start: '.fileuploader-action-start',
+                    retry: '.fileuploader-action-retry',
+                    remove: '.fileuploader-action-remove'
+                },
+                onImageLoaded: function(item) {
+
+                },
+                onItemShow: function(item, listEl, parentEl, newInputEl, inputEl) {
+                    var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                        api = $.fileuploader.getInstance(inputEl.get(0));
+                    plusInput.insertAfter(item.html)[((api.getOptions().limit && api.getAppendedFiles().length) || (api.getOptions().limit && api.getChoosedFiles().length)) >= api.getOptions().limit ? 'hide' : 'show']();
+                    if (item.format == 'image') {
+                        item.html.find('.fileuploader-item-icon').hide();
+                    }
+                },
+                onItemRemove: function(html, listEl, parentEl, newInputEl, inputEl) {
+                    var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                        api = $.fileuploader.getInstance(inputEl.get(0));
+                    html.children().animate({
+                        'opacity': 0
+                    }, 200, function() {
+                        setTimeout(function() {
+                            html.remove();
+                            if (api.getFiles().length - 1 < api.getOptions().limit) {
+                                plusInput.show()
+                            }
+                        }, 100)
+                    });
+                    $('#ItemForm').find('button:button').prop('disabled', $(this).serialize() == $(this).data('serialized'));
+                }
+            },
+            dragDrop: {
+                container: '.fileuploader-thumbnails-input'
+            },
+            editor: {
+                cropper: {
+                    ratio: '1:1',
+                    minWidth: 128,
+                    minHeight: 128,
+                    showGrid: true
+                }
+            },
+            afterRender: function(listEl, parentEl, newInputEl, inputEl) {
+                var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                    api = $.fileuploader.getInstance(inputEl.get(0));
+                plusInput.on('click', function() {
+                    api.open()
+                })
+            },
+            onRemove: function(item, listEl, parentEl, newInputEl, inputEl) {
+                if (item.data.image_id === undefined || item.data.image_id === null) {
+                    var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                        api = $.fileuploader.getInstance(inputEl);
+                    if (api.getFiles().length - 1 < api.getOptions().limit) plusInput.show()
+                } else {
+                    type_delete = 'deletesetting';
+                    $.ajax({
+                        url: base_admin + "/admin/ajax/fileuploader?id=" + item.data.image_id + '&action='+type_delete,
+                        type: "post",
+                        success: function(response) {
+                            if (response.code == '200') {
+                                var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+                                    api = $.fileuploader.getInstance(inputEl);
+                                if (api.getFiles().length < api.getOptions().limit) plusInput.show()
+                            } else {
+                                Lobibox.notify("warning", {
+                                    title: 'Thông báo',
+                                    pauseDelayOnHover: true,
+                                    continueDelayOnInactiveTab: false,
+                                    icon: false,
+                                    sound: false,
+                                    msg: response.msg
+                                });
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            Lobibox.notify("warning", {
+                                title: 'Thông báo',
+                                pauseDelayOnHover: true,
+                                continueDelayOnInactiveTab: false,
+                                icon: false,
+                                sound: false,
+                                msg: response.msg
+                            });
+                        }
+                    });
+                }
+            }
+        });
+        api_img_url = $.fileuploader.getInstance(element);
+    } 
+}
+
 var UpdateSetting = function(id) {
     $.ajax({
         url: base_admin + "/admin/ajax/ajax_setting?key=" + id,
@@ -121,7 +240,26 @@ var UpdateSetting = function(id) {
             if (response.code == '200') {
                 $('#modal-setting #key').val(response.data.key);
                 $('#modal-setting #value').val(response.data.value);
-                
+                if(response.data.key == 'FILE'){
+                    $('#modal-setting .block_img').removeClass('d-none');
+                    $('#modal-setting #value').prop('readonly', true);
+                    if(response.data.value != null) {
+                        api_img_url.append([{
+                            name: (response.data.value).substring((response.data.value).lastIndexOf('/')+1),
+                            type: 'image\/jpeg',
+                            file: base_admin+'/public/'+response.data.value,
+                            data: {
+                                url: base_admin+'/public/'+response.data.value,
+                                thumbnail: base_admin+'/public/'+response.data.value,
+                                image_id: response.data.id
+                            }
+                        }]);
+                        api_img_url.updateFileList();
+                    }
+                } else {
+                    $('#modal-setting .block_img').addClass('d-none');
+                    $('#modal-setting #value').prop('readonly', false);
+                }
                 $('#modal-setting').modal('show');
             } else {
                 Lobibox.notify("warning", {
@@ -153,6 +291,12 @@ var UpdateSetting = function(id) {
 var ClearFormSetting = function() {
     $('#SettingForm')[0].reset();
     $('#SettingForm').parsley().reset();
+    if(typeof api_img_url !== 'undefined') {
+        api_img_url.reset();
+        api_img_url.destroy();
+    }
+
+    fileuploader('input#url_img', 1, 10, ['jpg','jpeg','png']);
     $('#modal-setting #ttlModal').html('Setting');
     $('#modal-setting').find('button.btn-primary').prop('disabled', true);
 };

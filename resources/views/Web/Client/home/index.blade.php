@@ -113,12 +113,12 @@
                 <div class="feature-row">
                     <div class="col-12 col-sm-12 col-md-6 feature-row__item feature-row__text feature-row__text--left text-left">
                         <div class="row-text">
-                            <h2 class="h2">{{$title->value}}</h2>
-                            <div class="rte-setting featured-row__subtext"><p>{{$content->value}}</p></div>
+                            <h2 class="h2">{{$title_setting->value}}</h2>
+                            <div class="rte-setting featured-row__subtext"><p>{{$content_setting->value}}</p></div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 feature-row__item">
-                        <img src="{{asset('public/assets/app/page/user/images/184280271_467031527861915_2274740756541267454_n.jpg')}}" alt="Fast Fashion Only available at BElle" title="Fast Fashion Only available at BElle" />
+                        <img src="{{asset('public/'.$file_setting->value)}}" alt="Fast Fashion Only available at BElle" title="Fast Fashion Only available at BElle" />
                     </div>
                 </div>
             </div>
