@@ -38,7 +38,7 @@ class ClientController extends Controller
             } else {
                 $near_latest_category = Models\Category::with('menu')->where('type', 1)->orderBy('id', 'desc')->take(2)->get();
             }
-            $third_lasted_item = Models\Item::take(3)->orderBy('id', 'desc')->get();
+            $third_lasted_item = Models\Item::take(3)->whereHas('category')->orderBy('id', 'desc')->get();
             $latest_album = Models\Category::with('categoryImages')->where('type', 2)->orderBy('id', 'desc')->first();
     
             return view('Web.Client.home.main', [
