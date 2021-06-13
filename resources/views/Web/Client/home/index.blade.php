@@ -54,7 +54,7 @@
     @endif
     <!--End Featured Column-->
 
-    @if(!empty($third_lasted_item))
+    @if(count($third_lasted_item) > 0)
         <!--Featured Column-->
         <div class="section featured-column  section-3">
             <div class="container">
