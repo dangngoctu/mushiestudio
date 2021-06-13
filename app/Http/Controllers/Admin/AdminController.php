@@ -1249,7 +1249,7 @@ class AdminController extends Controller
 					$check_data = Models\Category::where('url', $request->url)->first();
 					if($check_data){
 						DB::rollback();
-						return self::JsonExport(403, 'Error');
+						return self::JsonExport(403, 'Url exits in another category');
 					}
 					$insert = Models\Category::create($data);
 					if(!$insert) {

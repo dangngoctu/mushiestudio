@@ -17,17 +17,17 @@
             @if(count($category->categoryImages) > 0)
                 @foreach($category->categoryImages as $key => $val)
                     <div class="col-6 col-sm-6 col-md-6 col-lg-4 category_2_item">
-                        <p>
-                            <a href="{{route('main.product.detail.get',['category' => $val->category_id, 'item' => $val->id])}}">
-                                <img
-                                    data-src="{{asset($val->url)}}"
-                                    src="{{asset($val->url)}}"
-                                    alt="{{$category->name}}"
-                                    class="blur-up lazyload main-img-seaction"
-                                />
-                            </a>
-                        </p>
-                        <h3 class="h4 title_sm"><a href="{{route('main.product.detail.get',['category' => 1, 'item' => 2])}}">{{$category->name}}</a></h3>
+                            <div class="light_item"  id="lightItemGallery{{$key}}">
+                                <a href="{{asset($val->url)}}">
+                                    <img
+                                        data-src="{{asset($val->url)}}"
+                                        src="{{asset($val->url)}}"
+                                        alt="{{$category->name}}"
+                                        class="blur-up lazyload main-img-seaction"
+                                    />
+                                </a>
+                            </div>    
+                        <h3 class="h4 title_sm" style="margin-top:10px"><a href="#">{{$category->name}}</a></h3>
                     </div>
                 @endforeach
             @endif
