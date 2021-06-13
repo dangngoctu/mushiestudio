@@ -65,11 +65,23 @@ class ClientController extends Controller
                     ]);
                 } else {
                     //Album
+                    $video_check = false;
+                    if($category->video != '' && !empty($category->video)){
+                        $file = 'https://www.youtube.com/embed/'.$category->video;
+                        $file_headers = @get_headers($file);
+                        if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found'){
+                            $video_check = true;
+                        }else{
+                            $video_check = true;
+                        }
+                    }
+                    
                     return view('Web.Client.category-2.main', [
                         'category' => $category,
                         'material' => $material,
                         'size' => $size,
-                        'color' => $color
+                        'color' => $color,
+                        'video_check' => $video_check
                     ]);
                 }
             } else {

@@ -1,12 +1,14 @@
 <div class="section video-section">
     <div class="container">
+        @if($video_check)
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="video-wrapper">
-                <iframe width="560" height="315" src="{{$category->video.'?autoplay=1'}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{$category->video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
+        @endif
     </div>
 </div>
  <!--Featured Column-->
