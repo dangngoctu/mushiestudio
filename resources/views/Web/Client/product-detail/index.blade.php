@@ -34,7 +34,7 @@
                                     <!-- <label class="header">Color: <span class="slColor" id="slColor">Red</span></label> -->
                                     @foreach($color as $key => $val)
                                         <div data-value="{{$val->name}}" class="swatch-element color available">
-                                            <input class="swatchInput" id="{{'swatch-'.$val->id.'-'.$val->name}}" type="radio" name="{{'option-'.$val->id}}" value="{{$val->name}}"><label class="swatchLbl color small rounded" for="swatch-0-black" style="{{'background-color:'.$val->color_code.';'}}" title="{{$val->name}}"></label>
+                                            <input class="swatchInput" id="{{'swatch-'.$val->id.'-'.$val->name}}" type="radio" name="{{'option-'.$val->id}}" value="{{$val->name}}"><label class="swatchLbl color small rounded" for="swatch-0-black" style="background-color:{{$val->color_code}}" title="{{$val->name}}"></label>
                                         </div>
                                     @endforeach
                                    
