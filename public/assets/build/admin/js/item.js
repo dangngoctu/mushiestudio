@@ -253,6 +253,11 @@ var UpdateItem = function(id) {
                 } else {
                     $('#modal-item #is_hot').prop( "checked", false );
                 }
+                if(response.data.price_setting == 1) {
+                    $('#modal-item #price_setting').prop( "checked", true );
+                } else {
+                    $('#modal-item #price_setting').prop( "checked", false );
+                }
                 $.each(response.data.material.split(","), function(i, item) {
                     dataMaterial.push(item);
                 });

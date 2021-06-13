@@ -124,6 +124,16 @@
                     </div>
 
                     <div class="row mg-t-30">
+                        <label class="col-sm-2 form-control-label">Price show</label>
+                        <div class="col-sm-01 mg-t-10 mg-sm-t-0">
+                            <label class="ckbox">
+                                <input type="checkbox" name="price_setting" id="price_setting">
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row mg-t-30">
                         <label class="col-sm-2 form-control-label">Thumb</label>
                         <div class="col-sm-10 mg-t-10 mg-sm-t-0">
                             <input type="file"  accept=".jpg, .jpeg, .png" class="picupload" id="img_thumb" name="img_thumb"/>

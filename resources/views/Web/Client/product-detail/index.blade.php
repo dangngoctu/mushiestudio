@@ -25,7 +25,7 @@
                         <h1 class="product-single__title">{{$item->name.'('.$item->sub_name.')'}}</h1>
                         <p class="product-single__price product-single__price-product-template">
                             <span class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
-                                <span id="ProductPrice-product-template"><span class="money">{{$item->price}}</span></span>
+                                <span id="ProductPrice-product-template"><span class="money"><span class="price">{{($item->price_setting == 1 )? $item->price :''}}</span></span></span>
                             </span>
                         </p>
                         <form method="post" action="http://annimexweb.com/cart/add" id="product_form_10508262282" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
@@ -123,7 +123,7 @@
                                         <!-- End product name -->
                                         <!-- product price -->
                                         <div class="product-price">
-                                            <span class="price">{{$val->price}}</span>
+                                            <span class="price"><span class="price">{{($item->price_setting == 1)?($item->price):''}}</span></span>
                                         </div>
                                         <!-- End product price -->
                                     </div>

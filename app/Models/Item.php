@@ -48,6 +48,7 @@ class Item extends Model
 		'farbrics',
 		'detail',
 		'is_hot',
+		'price_setting',
 		'img_thumb',
 		'material',
 		'color',

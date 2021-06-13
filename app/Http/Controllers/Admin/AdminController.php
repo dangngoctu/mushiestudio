@@ -1456,6 +1456,18 @@ class AdminController extends Controller
 					$data['price'] = $request->price;
 				}
 
+				if($request->is_hot == 'on') {
+					$data['is_hot'] = 1;
+				} else {
+					$data['is_hot'] = 0;
+				}
+
+				if($request->price_setting == 'on') {
+					$data['price_setting'] = 1;
+				} else {
+					$data['price_setting'] = 0;
+				}
+
 
 				if($request->has('description_save') && !empty($request->description_save)) {
 					$text_description = str_replace("<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>", "", $request->description_save);
