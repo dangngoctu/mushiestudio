@@ -66,5 +66,6 @@ ul.main-list{
 @media (max-width: 575px) {
     .main-img-seaction{
         max-height: 260px;
+        width: 100%;
     }
 }

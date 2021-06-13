@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="{{asset('public/assets/app/lib/fileuploader/css/jquery.modal.css')}}">
 <link rel="stylesheet" href="{{asset('public/assets/app/lib/fileuploader/css/jquery.slick.css')}}">
 <link rel="stylesheet" href="{{asset('public/assets/app/lib/fileuploader/css/main.css')}}">
-<link rel="stylesheet" href="{{asset('public/assets/app/lib/summernote/dist/summernote-lite.css')}}">
+<link rel="stylesheet" href="{{asset('public/assets/app/lib/summernote/css/summernote-lite.css')}}">
 @yield('css')
 <!-- Slim CSS -->
 <link rel="stylesheet" href="{{asset('public/assets/app/css/slim.css')}}">
