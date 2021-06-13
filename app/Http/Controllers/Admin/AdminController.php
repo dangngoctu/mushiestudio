@@ -872,6 +872,11 @@ class AdminController extends Controller
 						return self::JsonExport(403, 'Error');
 					}
 				} else if($request->action == 'delete') {
+					$check_category = Models\Category::where('menu_id', $request->id)->count();
+					if($check_category){
+						DB::rollback();
+						return self::JsonExport(403, 'Menu still have category');
+					}
 					$query->delete();
 					if(!$query) {
 						DB::rollback();
@@ -1240,6 +1245,11 @@ class AdminController extends Controller
 						return self::JsonExport(403, 'Error');
 					}
 				} else if($request->action == 'delete') {
+					$check_item = Models\Item::where('category_id', $request->id)->count();
+					if($check_item){
+						DB::rollback();
+						return self::JsonExport(403, 'Category still have item');
+					}
 					$query->delete();
 					if(!$query) {
 						DB::rollback();
