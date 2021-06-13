@@ -60,3 +60,11 @@ ul.main-list{
 ul.main-list{
     padding-left: 30px;
 }
+
+
+
+@media (max-width: 575px) {
+    .main-img-seaction{
+        max-height: 260px;
+    }
+}

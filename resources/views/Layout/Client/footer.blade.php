@@ -8,6 +8,7 @@
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 footer-links">
                         <h4 class="h4">Quick Shop</h4>
                         <ul>
+                            @if(env('APP_DEBUG'))
                             @foreach($menu as $key => $val)
                                 <li>
                                     <p>{{$val->name}}</p>
@@ -20,12 +21,13 @@
                                     </ul>
                                 </li>
                             @endforeach
+                            @endif
                         </ul>
                     </div>
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 footer-links">
                         <h4 class="h4">Informations</h4>
                         <ul>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="{{route('main.about_us.get')}}">About us</a></li>
                         </ul>
                     </div>
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 contact-box">

@@ -4,6 +4,7 @@
             <li class="lvl1 parent megamenu">
                 <a href="{{route('main.home.get')}}">Home <i class="anm anm-angle-down-l"></i></a>
             </li>
+            @if(env('APP_DEBUG'))
             @foreach($menu as $key => $val)
                 <li class="lvl1 parent megamenu" >
                     <a href="#">{{$val->name}}<i class="anm anm-angle-down-l"></i></a>
@@ -57,6 +58,7 @@
                     
                 </li>
             @endforeach
+            @endif
             <li class="lvl1 parent dropdown">
                 <a href="{{route('main.about_us.get')}}">About Us <i class="anm anm-angle-down-l"></i></a>
             </li>
