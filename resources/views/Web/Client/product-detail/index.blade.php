@@ -5,7 +5,7 @@
         <div class="product-single">
             <div class="row">
                 <!--Featured Item-->
-                <div id="lightgallery" class="col-12 col-sm-6 col-md-6 col-lg-6 sc2-item">
+                <div id="lightgallery" class="col-12 col-sm-12 col-md-6 col-lg-6 sc2-item">
                     @foreach($item->itemImages as $key => $val)
                         <a href="{{asset('public/'.$val->url)}}">
                             <img
