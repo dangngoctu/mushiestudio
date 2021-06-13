@@ -105,7 +105,7 @@
         </div>
     @endif
     <!--End Image Banners-->
-
+    @if(env('APP_DEBUG'))
     <!--Feature Content-->
     <div class="section feature-content">
         <div class="container">
@@ -125,4 +125,4 @@
         </div>
     </div>
     <!--Feature Content-->
-
+    @endif
