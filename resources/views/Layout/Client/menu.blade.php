@@ -50,7 +50,7 @@
                                 @endif
                                 @if(!empty($val->url_img))
                                     <li class="grid__item lvl-1 col-md-4 col-lg-4">
-                                        <a href="#"><img src="{{asset($val->url_img)}}" alt="" title="" /></a>
+                                        <a href="#"><img src="{{asset('public/'.$val->url_img)}}" alt="" title="" /></a>
                                     </li>
                                 @endif
                             </ul>
