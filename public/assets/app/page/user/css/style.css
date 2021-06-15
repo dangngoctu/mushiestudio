@@ -307,7 +307,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { opacity:1; -ms-fil
 	#siteNav > li > a:hover:hover,
 	#siteNav > li > a:hover { color:#339498; }
 	
-	#siteNav > li .megamenu { opacity:0; visibility:hidden; padding:25px 25px 0; width:100%; position:absolute; top:59px; left:0; z-index:999; background-color:#fff;  pointer-events:none; -ms-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;  max-height:600px; overflow:auto; }
+	#siteNav > li .megamenu { opacity:0; visibility:hidden; padding:25px 25px 0; width:100%; position:absolute; top:59px; left:0; z-index:999; background-color:#fff;  pointer-events:none; -ms-transition:all 0.3s ease; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;  max-height:600px; }
 	#siteNav > li .megamenu ul { padding:0; list-style:none; }
 	#siteNav > li:hover > .megamenu { top:74px; opacity:1; visibility:visible; pointer-events:visible; }
 	#siteNav > li .megamenu li.lvl-1 { margin-bottom:25px; }
