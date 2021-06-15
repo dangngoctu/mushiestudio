@@ -128,4 +128,24 @@ class ClientController extends Controller
             abort(404);
         }
     }
+
+    public function search(Request $request){
+        try{
+            $keyword = '';
+            if($request->has('keyword') && $request->keyword != ''){
+                $keyword = $request->keyword;
+            }
+            $category_search = Models\Category::where('name','like','%'.$keyword.'%')->get();
+            $item_search = Models\Item::where('name','like','%'.$keyword.'%')->get();
+            
+            $data =  [
+                'categorys' => $category_search,
+                'items'     => $item_search
+            ];
+         
+            return view('Web.Client.search.main',$data);
+        }catch(\Exception $e){
+            abort(404);
+        }
+    }
 }
