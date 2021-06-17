@@ -148,4 +148,29 @@ class ClientController extends Controller
             abort(404);
         }
     }
+
+    public function get_product_sort(Request $request){
+        try{
+            $items = Models\Item::with('category','itemImages')
+            ->whereCategoryId($request->id);
+            if($request->has('material') && $request->material != '' && !empty($request->material)){
+                $items = $items->where('material','like','%'.$request->material.'%');
+            }
+            if($request->has('size') && $request->size != '' && !empty($request->size)){
+                $items = $items->where('size','like','%'.$request->size.'%');
+            }
+            if($request->has('type') && $request->type != ''){
+                if($request->type == 1){
+                    $items = $items->orderBy('updated_at','desc');
+                }else if($request->type == 2){
+                    $items = $items->orderBy('price','asc');
+                }else{
+                    $items = $items->orderBy('price','desc');
+                }
+            }
+            return $items->get();
+        }catch(\Exception $e){
+
+        }
+    }
 }

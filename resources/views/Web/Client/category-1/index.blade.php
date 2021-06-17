@@ -8,6 +8,7 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 display-table-cell">
                     <div class="product-single__meta">
                         <h2 class="grid_item-title h2"><label>{{$category->name}}</label></h2>
+                        <input type="hidden" value="{{$category->id}}" id="category_id" >
                         <div class="product-single__description rte">{!! $category->description !!}</div>
                     </div>
                 </div>
@@ -28,7 +29,7 @@
                     <div class="filters-toolbar__item">
                         <label for="SortBy" class="hidden">Sort</label>
                         <select style="width:100px" name="sort_material" id="sort_material" class="filters-toolbar__input filters-toolbar__input--sort">
-                            <option value="title-ascending" selected="selected">Material</option>
+                            <option value="0" selected="selected">Material</option>
                             @foreach($material as $key => $val)
                                 <option value="{{$val->id}}">{{$val->name}}</option>
                             @endforeach
@@ -39,7 +40,7 @@
                     <div class="filters-toolbar__item">
                         <label for="SortBy" class="hidden">Sort</label>
                         <select style="width:100px" name="sort_size" id="sort_size" class="filters-toolbar__input filters-toolbar__input--sort">
-                            <option value="title-ascending" selected="selected">Size</option>
+                            <option value="0" selected="selected">Size</option>
                             @foreach($size as $key => $val)
                                 <option value="{{$val->id}}">{{$val->name}}</option>
                             @endforeach
@@ -50,7 +51,7 @@
                 <div class="col-3 col-md-3 col-lg-3 text-right">
                 <div class="filters-toolbar__item">
                         <label for="SortBy" class="hidden">Sort</label>
-                        <select style="width:100px" name="sort" id="sort" class="filters-toolbar__input filters-toolbar__input--sort">
+                        <select style="width:100px" name="sort" id="sort_type" class="filters-toolbar__input filters-toolbar__input--sort">
                             <option value="title-ascending" selected="selected">Sort by</option>
                             <option value="1">SORT BY RECENTLY ADDED</option>
                             <option value="2">SORT BY PRICE(ASCENDING)</option>
@@ -65,7 +66,7 @@
                 <div class="row product-list">
                     @foreach($category->items as $key => $val)
                         <!--Featured Item-->
-                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 category-item col-large category-item">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-large category-item">
                             <p>
                                 <ul class="content-slider">
                                     @if(count($val->itemImages) > 0)

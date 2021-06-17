@@ -78,8 +78,9 @@
             </div>
             <!--End-product-single-->
             <!--Related Product Slider-->
-            @if(count($related_item) > 0)
+          
             <div class="related-product grid-products">
+            @if(count($related_item) > 0)
                 <header class="section-header">
                     <h2 class="section-header__title h2"><span>Related Products</span></h2>
                 </header>
@@ -134,8 +135,8 @@
                     </div>
                 </div>
                 <!--End Featured Column-->
+                @endif
             </div>
-            @endif
             <!--End Related Product Slider-->
         </div>
         <!--#ProductSection-product-template-->

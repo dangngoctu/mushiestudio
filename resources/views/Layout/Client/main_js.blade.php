@@ -11,7 +11,7 @@
 <script src="{{asset('public/assets/app/page/user/js/main.js')}}"></script>
 <!--For Newsletter Popup-->
 <script>
-
+    var base_url = "{{url('')}}";
     /*--------------------------------------
         Promotion / Notification Cookie Bar 
         -------------------------------------- */

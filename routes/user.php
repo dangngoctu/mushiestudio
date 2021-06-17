@@ -8,14 +8,6 @@ Route::get('/category/{category}', 'Client\ClientController@category')->name('ma
 Route::get('/product/{category}/{item}', 'Client\ClientController@item_detail')->name('main.product.detail.get');
 Route::get('/search', 'Client\ClientController@search')->name('main.search.get');
 
-// Route::get('/detail',function(){
-//     return view('Web.Client.product-detail.main');
-// })->name('main.product.detail.get');
-
-// Route::get('/category-1',function(){
-//     return view('Web.Client.category-1.main');
-// })->name('main.product.category.get');
-
-// Route::get('/category-2',function(){
-//     return view('Web.Client.category-2.main');
-// })->name('main.product.category2.get');
+Route::group(['prefix' => 'ajax'], function () {
+    Route::get('/products/sort', 'Client\ClientController@get_product_sort')->name('main.product.ajax.product.sort.get');
+});
