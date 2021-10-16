@@ -137,6 +137,7 @@ var UpdateColor = function(id) {
                 $('#modal-color #color_code').val(response.data.color_code);
                 $("#colorpicker").spectrum({
                     preferredFormat: "hex",
+                    showInput: true,
                     color: response.data.color_code
                 });
                 $('#modal-color').modal('show');
@@ -215,6 +216,7 @@ var ClearFormColor = function(type) {
     $('#ColorForm').parsley().reset();
     $("#colorpicker").spectrum({
         preferredFormat: "hex",
+        showInput: true,
         color: '#000000'
     });
     if (type == "add") {
