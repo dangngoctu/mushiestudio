@@ -3,8 +3,40 @@
     src: url("./../fonts/Lusitana-Regular.ttf");
 }
 
+@font-face {
+    font-family: "BrownStd";
+    src: url("./../fonts/BrownStdRegular.otf");
+}
+
+@font-face {
+    font-family: "BrownStdLight";
+    src: url("./../fonts/BrownStdLight.otf");
+}
+
+@font-face {
+    font-family: "GaramondPremrPro";
+    src: url("./../fonts/GaramondPremrPro.otf");
+}
+
+.container-fluid.top-main{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+p{
+    font-family: GaramondPremrPro,sans-serif; 
+}
+
+p, p a{
+    color: #797777; 
+}
+
+.rte-setting p a{
+    font-family: BrownStdLight,sans-serif; 
+}
+
 body {
-    font-family: CaviarDreams ;
+    font-family: BrownStd !important;
     font-size: 14px;
     text-transform: none;
     color: #000;

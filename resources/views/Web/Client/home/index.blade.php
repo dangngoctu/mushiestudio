@@ -2,7 +2,7 @@
         <!--Image Banners-->
         <div class="section imgBanners">
             <div class="imgBnrOuter">
-                <div class="container">
+                <div class="container-fluid top-main">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="inner">

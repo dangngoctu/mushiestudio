@@ -110,7 +110,7 @@ ol, ul { padding:0; margin:0; }
 ========================================================================*/
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a { color:inherit; text-decoration:none; font-weight:inherit; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, address, p, pre, blockquote, dl, dd, menu, ol, ul, table, caption, hr { margin:0; margin-bottom:15px; }
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { color:#000; margin:0 0 10px; font-family:"Roboto Slab",Helvetica,Tahoma,Arial,serif; font-weight:400; line-height:1.2; overflow-wrap: break-word; word-wrap: break-word; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { color:#000; margin:0 0 10px; font-family:"BrownStd",serif; font-weight:400; line-height:1.2; overflow-wrap: break-word; word-wrap: break-word; }
 h1, .h1 { font-size:24px; }
 h2, .h2 { font-size:19px; letter-spacing:0.03em; text-transform:uppercase; }
 h3, .h3 { font-size:16px; }
@@ -150,7 +150,7 @@ hr { margin:20px 0; border:0; border-bottom:1px solid #e8e9eb; }
 .clearfix:before, .clearfix:after { content: " "; /* 1 */ display: table;/* 2 */ }
 .clearfix:after { clear: both; }
 
-th { font-family:"Roboto Slab",Helvetica,Tahoma,Arial,serif; font-weight:700; }
+th { font-family:"BrownStd",serif; font-weight:700; }
 
 /* Text specialized */
 .text-italic { font-style: italic; }
@@ -170,8 +170,7 @@ th { font-family:"Roboto Slab",Helvetica,Tahoma,Arial,serif; font-weight:700; }
 /*======================================================================
   5. Container
 ========================================================================*/
-.container { max-width:1300px; padding-left:30px; padding-right:30px; }
-.container-fluid { padding:0 55px; }
+.container { max-width:1300px;  padding-left:30px; padding-right:30px; }
 .container-fluid:before,
 .container-fluid:after { content:''; clear:both; display:block; }
 
@@ -183,7 +182,7 @@ th { font-family:"Roboto Slab",Helvetica,Tahoma,Arial,serif; font-weight:700; }
   6. Button
 ========================================================================*/
 .btn, .shopify-payment-button__button--unbranded { -moz-user-select:none; -ms-user-select:none; -webkit-user-select:none; user-select:none; -webkit-appearance:none; -moz-appearance:none; appearance:none; display:inline-block; width:auto; height:auto; 
-	text-decoration:none; text-align:center; vertical-align:middle; cursor:pointer; border:1px solid transparent; border-radius:0; padding:8px 15px 8px; background-color:#000; color:#fff; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; 
+	text-decoration:none; text-align:center; vertical-align:middle; cursor:pointer; border:1px solid transparent; border-radius:0; padding:8px 15px 8px; background-color:#000; color:#fff; font-family:BrownStd,sans-serif; 
 	font-weight:400; text-transform:uppercase; letter-spacing:1px; line-height:normal; white-space:normal; font-size:13px; -ms-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out; }
 .btn:hover, .btn:focus, .shopify-payment-button__button--unbranded:hover, .shopify-payment-button__button--unbranded:focus { background-color:#1a1a1a; opacity:0.8; color:#fff; text-decoration:none; }
 .btn--small { padding:8px 10px; font-size:0.92308em; line-height:1; }
@@ -576,7 +575,7 @@ a.quick-view { margin-bottom:5px !important; }
   16. Latest Blog Post
 ========================================================================*/
 .latest-blog .wrap-blog { display:table; }
-.latest-blog .article__title.h3 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.latest-blog .article__title.h3 { font-family:BrownStd,sans-serif; }
 .latest-blog .wrap-blog .article__grid-image,
 .latest-blog .wrap-blog .article__grid-meta { display:table-cell; vertical-align:middle; float:none; }
 .latest-blog .wrap-blog .article__grid-meta { width:55%; }
@@ -589,7 +588,7 @@ a.quick-view { margin-bottom:5px !important; }
 /*======================================================================
   17. Store Feature
 ========================================================================*/
-.store-info h5, .store-info .h5 { margin-bottom:5px; text-transform:uppercase; letter-spacing:0.08em; font-size:13px; font-weight:600; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.store-info h5, .store-info .h5 { margin-bottom:5px; text-transform:uppercase; letter-spacing:0.08em; font-size:13px; font-weight:600; font-family:BrownStd,sans-serif; }
 .store-info li { padding:0 20px; text-align:center; }
 .store-info li + li { border-left:1px dotted #ddd; }
 .store-info .icon { color:#a9a9a9; font-size:40px; vertical-align:middle; display:block; margin-bottom:20px; }
@@ -887,7 +886,7 @@ table { margin-bottom:15px; width:100%; border-collapse:collapse; border-spacing
 .template-product .tabs-listing .product-tabs a { border-bottom:1px solid transparent; margin-bottom:-1px; letter-spacing:1px; display:block; border:none; padding:15px 25px; background:none !important; text-transform:uppercase; font-weight:600; border-radius:0; outline:none; color:#2e2d2d; text-decoration:none; }
 .template-product .product-tabs li.active a, .template-product .product-tabs li.active a:focus { text-decoration:none; border:0; color:#000; border-bottom:1px solid #000; opacity:1; }
 .acor-ttl.active { border-bottom:1px solid #000; }
-.acor-ttl { display:block; padding:15px 0; position:relative; font-weight:600; letter-spacing:1px; border-bottom:1px solid #e8e9eb; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; margin:0; font-size:12px; cursor:pointer; }
+.acor-ttl { display:block; padding:15px 0; position:relative; font-weight:600; letter-spacing:1px; border-bottom:1px solid #e8e9eb; font-family:BrownStd,sans-serif; margin:0; font-size:12px; cursor:pointer; }
 .template-product .tabs-listing .tab-container { padding:30px 0; text-align:left; }
 .tab-container .tab-content { display:none; }
 .product-template__container .product-single-1 .tab-container .tab-content { padding-top:20px; }
@@ -976,7 +975,7 @@ table { margin-bottom:15px; width:100%; border-collapse:collapse; border-spacing
 .categories-item ul { list-style:none; padding:0; margin:0; }
 .categories-item ul li { list-style:disc; margin-left:15px; }
 .categories-item .thumb { margin-bottom:15px; display:block; }
-.categories-item h4 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:14px; text-transform:uppercase; margin:0 0 10px; }
+.categories-item h4 { font-family:BrownStd,sans-serif; font-size:14px; text-transform:uppercase; margin:0 0 10px; }
 .categories-item .rte-setting { margin-bottom:20px; }
 .categories-list-items .row { margin-bottom:40px; }
 
@@ -1000,7 +999,7 @@ table { margin-bottom:15px; width:100%; border-collapse:collapse; border-spacing
 .contact-form textarea { height:120px; }
 
 #accordionExample .title { margin:35px 0 20px; }
-#accordionExample .panel-title { cursor:pointer; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:14px; text-transform:none; margin:0; background:none; padding:15px; border-top:2px solid #eee; display:block; color:#555; padding-left:30px; position:relative; }
+#accordionExample .panel-title { cursor:pointer; font-family:BrownStd,sans-serif; font-size:14px; text-transform:none; margin:0; background:none; padding:15px; border-top:2px solid #eee; display:block; color:#555; padding-left:30px; position:relative; }
 #accordionExample .panel-title.active { color:#000; }
 #accordionExample .panel-content { padding:1px 5px 15px 30px; }
 #accordionExample .panel-title[aria-expanded="true"] { color:#000; }
@@ -1148,7 +1147,7 @@ table { margin-bottom:15px; width:100%; border-collapse:collapse; border-spacing
 .cart table tfoot .icon { vertical-align:middle; }
 .style2 .cart__footer .cart-note { margin-bottom:30px; }
 .cart__footer .solid-border { border:1px solid #e8e9eb; padding:20px; margin-bottom:20px; }
-.cart__footer h5, .cart__footer .h5, .cart__footer h5 label, .cart__footer .h5 label, .cart__footer .cart__subtotal-title { color:#000; text-transform:uppercase; font-size:14px;font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; letter-spacing:0.02em; }
+.cart__footer h5, .cart__footer .h5, .cart__footer h5 label, .cart__footer .h5 label, .cart__footer .cart__subtotal-title { color:#000; text-transform:uppercase; font-size:14px;font-family:BrownStd,sans-serif; letter-spacing:0.02em; }
 .cart-note__input { min-height:50px; width:100%; height:178px; }
 .cart-note__label, .cart-note__input { display:block; }
 .cart__subtotal { font-weight:700; padding-left:15px; display:inline-block; }
@@ -1191,8 +1190,8 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
 .imgBnrOuter .inner a, .imgBnrOuter .inner a:hover { opacity:1; }
 .imgBnrOuter .inner .ttl { line-height:25px; color:#000000; font-size:17px; display:inline-block; padding:10px 20px; max-width:80%; position:absolute; background-color:rgba(255,255,255,0.8); }
 .imgBnrOuter .inner:hover .ttl { background-color:#fff; }
-.imgBnrOuter .inner .ttl h3 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:700; font-size:21px; }
-.imgBnrOuter .inner .ttl h5 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:700; font-size:16px; }
+.imgBnrOuter .inner .ttl h3 { font-family:BrownStd,sans-serif; font-weight:700; font-size:21px; }
+.imgBnrOuter .inner .ttl h5 { font-family:BrownStd,sans-serif; font-weight:700; font-size:16px; }
 .imgBnrOuter .inner.center .ttl { left:50%; top:50%; -ms-transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%); }
 .imgBnrOuter .inner.btmright .ttl { right:20px; bottom:20px; text-align:right; }
 .imgBnrOuter .inner.topleft .ttl { left:20px; top:20px; text-align:left; }
@@ -1215,10 +1214,10 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
 .home2-default .top-header { background:#f5f5f5; }
 .home2-default .top-header .user-menu .anm { color:#000; }
 .home2-default .top-header p, .home2-default .top-header a, .home2-default .top-header select, .home2-default .top-header .ad, .home2-default .top-header span.selected-currency, .home2-default .top-header .language-dd { color:#000; }
-.home2-default .slideshow .slideshow__title { color:#000; font-size:55px; font-weight:700; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; text-transform:none; }
+.home2-default .slideshow .slideshow__title { color:#000; font-size:55px; font-weight:700; font-family:BrownStd,sans-serif; text-transform:none; }
 .home2-default .slideshow .slideshow__subtitle { color:#000; font-size:26px; text-transform:none; line-height:1.2; text-shadow:1px 1px 4px rgba(0,0,0,0); }
 
-.home2-default .section-header h2, .home2-default .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:1.92308em; text-transform:none; letter-spacing:0.03em; }
+.home2-default .section-header h2, .home2-default .section-header .h2 { font-family:BrownStd,sans-serif; font-size:1.92308em; text-transform:none; letter-spacing:0.03em; }
 
 .home2-default .hero--large { background-attachment:fixed; }
 
@@ -1239,7 +1238,7 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
 .layout-boxed #siteNav.medium > li a { font-weight:400; }
 .layout-boxed #siteNav > li > a { padding:0 15px; } 
 .layout-boxed .slideshow__text-content { margin:0; }
-.layout-boxed .slideshow .slideshow__title { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; color:#000000; font-weight:700; font-size:40px; text-transform:uppercase; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
+.layout-boxed .slideshow .slideshow__title { font-family:BrownStd,sans-serif; color:#000000; font-weight:700; font-size:40px; text-transform:uppercase; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
 .layout-boxed .slideshow .slideshow__subtitle { color:#000000; font-weight:300; font-size:20px; text-transform:none; margin-bottom:20px;line-height:1.2; text-shadow:1px 1px 4px rgba(0,0,0,0); }
 
 .layout-boxed .imgBnrOuter .inner .ttl h5 { font-weight:400; text-transform:uppercase; }
@@ -1253,7 +1252,7 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
 .feature-row__text--right .row-text { margin-right:-100px; z-index:222; position:relative; }
 .feature-row__text { padding-top:20px; padding-bottom:20px; }
 .row-text { background:#fff; padding:50px; }
-.row-text h2, .row-text .h2 { font-size:17px; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; text-transform:uppercase; letter-spacing:1px; }
+.row-text h2, .row-text .h2 { font-size:17px; font-family:BrownStd,sans-serif; text-transform:uppercase; letter-spacing:1px; }
 
 /*---------------------------------------
   28.3 Home 4 - Fulwidth  ---------------
@@ -1261,10 +1260,10 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
 .home4-fullwidth .top-header { background:#5d5e5e; }
 .home4-fullwidth #siteNav.medium > li a { font-weight:400; }
 .home4-fullwidth .slideshow__overlay.bottom:before { background:#fff; }
-.home4-fullwidth .slideshow .slideshow__title { color:#0c0101; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:700; font-size:81px; text-transform:uppercase; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
+.home4-fullwidth .slideshow .slideshow__title { color:#0c0101; font-family:BrownStd,sans-serif; font-weight:700; font-size:81px; text-transform:uppercase; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
 .home4-fullwidth .slideshow .slideshow__subtitle { color:#0c0101; font-weight:400; font-size:18px; text-transform:uppercase; margin-bottom:20px; line-height:1.2; text-shadow:1px 1px 4px rgba(0,0,0,0); }
-.home4-fullwidth .section-header h2, .home4-fullwidth .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:1.69231em; font-weight:400;letter-spacing:0.03em; }
-.home4-fullwidth .footer-top h4, .home4-fullwidth .footer-top .h4 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.home4-fullwidth .section-header h2, .home4-fullwidth .section-header .h2 { font-family:BrownStd,sans-serif; font-size:1.69231em; font-weight:400;letter-spacing:0.03em; }
+.home4-fullwidth .footer-top h4, .home4-fullwidth .footer-top .h4 { font-family:BrownStd,sans-serif; }
 
 /*---------------------------------------
   28.4 Home 5 - Cosmetic  ---------------
@@ -1291,13 +1290,13 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
 /*---------------------------------------
   28.5 Home 6 - Modern  -----------------
   ---------------------------------------*/
-.home6-modern .section-header h2, .home6-modern .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:22px; font-weight:400; letter-spacing:0.03em; }
+.home6-modern .section-header h2, .home6-modern .section-header .h2 { font-family:BrownStd,sans-serif; font-size:22px; font-weight:400; letter-spacing:0.03em; }
 .home6-modern .top-header { background:#f58f93; }
 .home6-modern #siteNav.medium > li a { font-weight:400; }
 .home6-modern .section.imgBanners { padding-bottom:0; }
 .home6-modern .imgBnrOuter .inner { margin-bottom:30px; }
 .home6-modern .imgBnrOuter .img-bnr { padding:0; }
-.home6-modern .featured-column .h4 { font-size:16px; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:600; }
+.home6-modern .featured-column .h4 { font-size:16px; font-family:BrownStd,sans-serif; font-weight:600; }
 .home6-modern .btn { background-color:#f58f93; }
 .home6-modern .footer-5 .site-footer { border-top:0; }
 
@@ -1319,7 +1318,7 @@ input.checkbox { height:auto; vertical-align:middle; padding:0; box-shadow:none;
   28.7 Home8 - Jewellery  ---------------
   ---------------------------------------*/
 body.home8-jewellery { font-size:14px; }
-.home8-jewellery .section-header h2, .home8-jewellery .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:20px; font-weight:400;letter-spacing:0.03em; }
+.home8-jewellery .section-header h2, .home8-jewellery .section-header .h2 { font-family:BrownStd,sans-serif; font-size:20px; font-weight:400;letter-spacing:0.03em; }
 .home8-jewellery-top { background:#141414; color:#fff; }
 .home8-jewellery-top p, .home8-jewellery-top a, .home8-jewellery-top select, .home8-jewellery-top .fa, .home8-jewellery-top span.selected-currency { color:#fff; }
 .home8-jewellery-header .site-header__search { float:none; }
@@ -1328,7 +1327,7 @@ body.home8-jewellery { font-size:14px; }
 .home8-jewellery #siteNav.medium > li a { font-weight:400; }
 
 .home8-jewellery .slideshow__text-content { margin-top:0; }
-.home8-jewellery .slideshow .slideshow__title { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; color:#000; font-size:40px; }
+.home8-jewellery .slideshow .slideshow__title { font-family:BrownStd,sans-serif; color:#000; font-size:40px; }
 .home8-jewellery .slideshow .slideshow__subtitle { color:#000; font-size:16px; line-height:normal; text-transform:none; }
 
 .home8-jewellery .variants.add button, .home8-jewellery a.quick-view, .home8-jewellery a.wishlist, .home8-jewellery .cartIcon,
@@ -1340,7 +1339,7 @@ body.home8-jewellery { font-size:14px; }
 
 .home8-jewellery .imgBnrOuter .inner .ttl { font-size:16px; background-color:rgba(255,255,255,0.8); }
 .home8-jewellery .collection-box-style1 a img { width:100%; }
-.home8-jewellery .hero .text-medium .mega-title { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:600; }
+.home8-jewellery .hero .text-medium .mega-title { font-family:BrownStd,sans-serif; font-weight:600; }
 .home8-jewellery .hero { margin:35px 0; }
 .home8-jewellery #instafeed.imlow_resolution .insta-img { width:12.5%; }
 
@@ -1382,19 +1381,19 @@ body.home8-jewellery { font-size:14px; }
 .home10-minimal #siteNav > li > a { font-weight:400; }
 .home10-minimal .top-header { background:#333333; text-transform:uppercase; }
 
-.home10-minimal .section-header h2, .home10-minimal .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:20px; font-weight:400;letter-spacing:0.03em; }
+.home10-minimal .section-header h2, .home10-minimal .section-header .h2 { font-family:BrownStd,sans-serif; font-size:20px; font-weight:400;letter-spacing:0.03em; }
 .home10-minimal h1, .home10-minimal .h1, .home10-minimal h2, .home10-minimal .h2, .home10-minimal h3, .home10-minimal .h3, .home10-minimal h4, .home10-minimal .h4, .home10-minimal h5,
-.home10-minimal .h5, .home10-minimal h6, .home10-minimal .h6 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:600; }
+.home10-minimal .h5, .home10-minimal h6, .home10-minimal .h6 { font-family:BrownStd,sans-serif; font-weight:600; }
   
 /*---------------------------------------
   28.10 Home11 - Grid  ------------------
   ---------------------------------------*/
 .home11-grid .section-header h2, .home11-grid .section-header .h2 { font-size:23px; font-weight:700; }
-.home11-grid .slideshow .slideshow__title { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; color:#111111; font-weight:700; font-size:60px; text-transform:uppercase; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
+.home11-grid .slideshow .slideshow__title { font-family:BrownStd,sans-serif; color:#111111; font-weight:700; font-size:60px; text-transform:uppercase; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
 .home11-grid .slideshow .wrap-caption { display:inline-block; max-width:750px; padding:25px; }
-.home11-grid .slideshow .slideshow__subtitle { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; color:#111111; font-weight:600; font-size:19px; text-transform:none; margin-bottom:20px; line-height:1.2; text-shadow:1px 1px 4px rgba(0,0,0,0); }
+.home11-grid .slideshow .slideshow__subtitle { font-family:BrownStd,sans-serif; color:#111111; font-weight:600; font-size:19px; text-transform:none; margin-bottom:20px; line-height:1.2; text-shadow:1px 1px 4px rgba(0,0,0,0); }
 
-.home11-grid .section-header h2, .home11-grid .section-header .h2 { font-weight:700; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.home11-grid .section-header h2, .home11-grid .section-header .h2 { font-weight:700; font-family:BrownStd,sans-serif; }
 .home11-grid .imgBnrOuter .inner .ttl { background-color:transparent; }
 .home11-grid .imgBnrOuter .inner .ttl h5 { font-weight:normal; }
 .img-grid-banner1 { margin-bottom:30px; }
@@ -1408,10 +1407,10 @@ body.home8-jewellery { font-size:14px; }
   28.11 Home 12 - Category  -------------
   ---------------------------------------*/
 .home12-category #siteNav.medium > li a { font-weight:normal; }
-.home12-category .section-header h2, .home12-category .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:20px; font-weight:700;letter-spacing:0.03em; }
-.home12-category .slideshow .slideshow__title { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; color:#111111; font-weight:600; font-size:50px; text-transform:capitalize; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
+.home12-category .section-header h2, .home12-category .section-header .h2 { font-family:BrownStd,sans-serif; font-size:20px; font-weight:700;letter-spacing:0.03em; }
+.home12-category .slideshow .slideshow__title { font-family:BrownStd,sans-serif; color:#111111; font-weight:600; font-size:50px; text-transform:capitalize; line-height:1.1; text-shadow:1px 1px 7px rgba(0,0,0,0); }
 .home12-category .slideshow .wrap-caption { display:inline-block; max-width:750px; padding:25px; }
-.home12-category .slideshow .slideshow__subtitle { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; color:#111111; font-weight:400; font-size:19px; text-transform:capitalize; margin-bottom:20px; line-height:1.2; text-shadow:1px 1px 4px rgba(0,0,0,0); }
+.home12-category .slideshow .slideshow__subtitle { font-family:BrownStd,sans-serif; color:#111111; font-weight:400; font-size:19px; text-transform:capitalize; margin-bottom:20px; line-height:1.2; text-shadow:1px 1px 4px rgba(0,0,0,0); }
 
 .home12-category .feature-row .btn { padding:8px 18px 8px; background-color:#bb5864; }
 .home12-category .feature-row h2 { font-weight:600; }
@@ -1420,7 +1419,7 @@ body.home8-jewellery { font-size:14px; }
 
 .home12-category .three-column-pro .section-header h2, .home12-category .three-column-pro .section-header .h2 { font-size:22px; font-weight:600; }
 .home12-category .three-column-pro .mini-list-item .mini-view_image img { width:100%; max-width:100%; }
-.home12-category .footer-5 .footer-top h4, .home12-category .footer-5 .footer-top .h4 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.home12-category .footer-5 .footer-top h4, .home12-category .footer-5 .footer-top .h4 { font-family:BrownStd,sans-serif; }
 .home12-category .footer-5 .site-footer { border:0; }
 .home12-category .footer-5 .footer-top { padding-top:0; }
 .home12-category .footer-5 .addressFooter .icon { margin-top:4px; }
@@ -1435,16 +1434,16 @@ body.home8-jewellery { font-size:14px; }
 
 .home13-auto-parts { font-size:14px; }
 .home13-auto-parts .top-header { background-color:#d41618; }
-.home13-auto-parts .slideshow .slideshow__title { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:700; font-size:35px; }
+.home13-auto-parts .slideshow .slideshow__title { font-family:BrownStd,sans-serif; font-weight:700; font-size:35px; }
 .home13-auto-parts .slideshow .slideshow__subtitle { font-size:16px; }
 .slideshow .mobile-show { display:none; }
 
-.home13-auto-parts .section-header h2, .home13-auto-parts .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:20px; font-weight:400;letter-spacing:0.03em; }
+.home13-auto-parts .section-header h2, .home13-auto-parts .section-header .h2 { font-family:BrownStd,sans-serif; font-size:20px; font-weight:400;letter-spacing:0.03em; }
 .home13-auto-parts .section-header p { font-size:14px; }
 
 .featured-content .list-items .col-12 { margin-bottom:35px; }
 .featured-content .list-items img { display:block; vertical-align:middle; margin:0 auto 20px; }
-.featured-content .list-items .h4 { font-size:16px; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; text-transform:uppercase; }
+.featured-content .list-items .h4 { font-size:16px; font-family:BrownStd,sans-serif; text-transform:uppercase; }
 .featured-content .list-items p { max-width:300px; margin:0 auto 20px; }
 
 .home13-auto-parts .btn { background-color:#d41618; }
@@ -1469,12 +1468,12 @@ body.home8-jewellery { font-size:14px; }
 .home14-bags .imgBnrOuter .custom-text .h3 a:hover { text-decoration:none; }
 
 .home14-bags .hero__overlay.hero { background-attachment:fixed; }
-.home14-bags .hero .text-small .mega-title { font-weight:400; font-family: "Roboto Slab",Helvetica,Tahoma,Arial,serif; }
+.home14-bags .hero .text-small .mega-title { font-weight:400; font-family: "BrownStd",serif; }
 .home14-bags .hero__inner h2, .home14-bags .hero__inner .h2, .home14-bags .hero__inner p, .home14-bags .mega-subtitle { color:#ffffff; }
 .home14-bags .hero__overlay:before { content: ''; position:absolute; top:0; right:0; bottom:0; left:0; background-color:#000; opacity:0.2; z-index:1; }
 
 .home14-bags .section-header h2, .home14-bags .section-header .h2 { font-size:26px; }
-.home14-bags .footer-2 .site-footer { background:#141414; }
+.home14-bags .footer-2 .site-footer { background:#797777; }
 .home14-bags .footer-2 .footer-top h4, .home14-bags .footer-2 .footer-top .h4, .home14-bags .footer-2 .footer-top, .home14-bags .footer-2 .footer-links a, .home14-bags .footer-2 .footer-top p, 
 .home14-bags .footer-2 .footer-bottom, .home14-bags .footer-2 .footer-bottom a { color:#ffffff; }
 .home14-bags .footer-2 .site-footer hr { border-color:#454545; }
@@ -1487,7 +1486,7 @@ body.home8-jewellery { font-size:14px; }
   28.14 Home 15 - Furniture  ------------
   ---------------------------------------*/
 body.home15-funiture-template { font-size:14px; }
-.home15-funiture-template .section-header h2, .home15-funiture-template .section-header .h2 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-size:20px; font-weight:700;letter-spacing:0.03em; }
+.home15-funiture-template .section-header h2, .home15-funiture-template .section-header .h2 { font-family:BrownStd,sans-serif; font-size:20px; font-weight:700;letter-spacing:0.03em; }
 .home15-funiture-top { background:#141414; color:#fff; }
 .home15-funiture-top .container-fluid, .home15-funiture-header .container-fluid { padding:0 35px; }
 .home15-funiture-top p, .home15-funiture-top a, .home15-funiture-top select, .home15-funiture-top .fa, .home15-funiture-top span.selected-currency { color:#fff; }
@@ -1506,7 +1505,7 @@ body.home15-funiture-template { font-size:14px; }
 .home-lookbook img { width:100%; }
 
 .footer-3 .footer-top { padding:40px 0 30px; }
-.footer-3 .h4 { font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.footer-3 .h4 { font-family:BrownStd,sans-serif; }
 @media only screen and (min-width:1199px) {
 .footer-3 .col-md-3.col-lg-3 { -ms-flex:0 0 20%; flex:0 0 20%; max-width:20% }
 }
@@ -1539,7 +1538,7 @@ body.home15-funiture-template { font-size:14px; }
 .hero { position:relative; height:475px; display:table; width:100%; background-size:cover; background-repeat:no-repeat; background-position:50% 50%; background-attachment:scroll; }
 .hero__inner { position:relative; display:table-cell; vertical-align:middle; padding:35px 0; color:#000; z-index:2; text-align:center; }
 .hero[data-stellar-background-ratio] { background-attachment:fixed; }
-.hero .text-small .mega-title { font-size:25px; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; font-weight:700; }
+.hero .text-small .mega-title { font-size:25px; font-family:BrownStd,sans-serif; font-weight:700; }
 .hero .text-small .mega-subtitle { font-size:16px; margin-bottom:25px; }
 @media only screen and (min-width:990px) {
 .hero__inner .wrap-text { max-width:500px; }
@@ -1583,15 +1582,15 @@ body.home15-funiture-template { font-size:14px; }
 ========================================================================*/  
 #footer { margin-top:35px; }
 .footer-2 .site-footer { background-color:#fff; }
-.footer-2 .footer-top h4, .footer-2 .footer-top .h4 { color:#000000; font-size:15px; font-weight:400; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; margin-bottom:15px; }
+.footer-2 .footer-top h4, .footer-2 .footer-top .h4 { color:#000000; font-size:15px; font-weight:400; font-family:BrownStd,sans-serif; margin-bottom:15px; }
 .footer-2 .footer-top, .footer-2 .footer-links a, .footer-2 .footer-top p, .footer-2 .footer-bottom, .footer-2 .footer-bottom a { color:#333333; }
 .footer-2 .site-footer .addressFooter .icon { color:#888888 !important; margin-top:2px; }
 .footer-2 .site-footer hr { border-color:#e8e8e8; }
 
 .footer-4 .site-footer { background-color:#fff; }
-.footer-4 .footer-top h4, .footer-4 .footer-top .h4 { color:#000000; font-size:15px; font-weight:400; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; margin-bottom:15px; }
+.footer-4 .footer-top h4, .footer-4 .footer-top .h4 { color:#000000; font-size:15px; font-weight:400; font-family:BrownStd,sans-serif; margin-bottom:15px; }
 .footer-4 .newsletter-section { background-color:#000; border:1px solid #000; }
-.footer-4 .newsletter-section .section-header label, .footer-4 .newsletter-section .section-header span { color:#fff; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.footer-4 .newsletter-section .section-header label, .footer-4 .newsletter-section .section-header span { color:#fff; font-family:BrownStd,sans-serif; }
 .footer-4 .newsletter-section .btn { background-color:#1cb5b5; }
 .footer-4 .newsletter-section .btn:hover { background-color:#31a3a3; }
 .footer-4 .footer-top, .footer-4 .footer-links a, .footer-4 .footer-top p, .footer-4 .footer-bottom, .footer-4 .footer-bottom a { color:#000; }
@@ -1602,7 +1601,7 @@ body.home15-funiture-template { font-size:14px; }
 .footer-5 .site-footer { background-color:#fff; border-top: 1px solid #eeeeee; }
 .footer-5 .footer-top h4, .footer-5 .footer-top .h4 { color:#000000; font-size:15px; font-weight:400; margin-bottom:15px; }
 .footer-5 .newsletter-section { background-color:#000; border:1px solid #000; }
-.footer-5 .newsletter-section .section-header label, .footer-5 .newsletter-section .section-header span { color:#fff; font-family:Poppins,Helvetica,Tahoma,Arial,sans-serif; }
+.footer-5 .newsletter-section .section-header label, .footer-5 .newsletter-section .section-header span { color:#fff; font-family:BrownStd,sans-serif; }
 .footer-5 .footer-top, .footer-5 .footer-links a, .footer-5 .footer-top p, .footer-5 .footer-bottom, .footer-5 .footer-bottom a { color:#000; }
 .footer-5 .addressFooter .icon { color:#000 !important; }
 .footer-5 .footer-logo { margin-bottom:20px; }
