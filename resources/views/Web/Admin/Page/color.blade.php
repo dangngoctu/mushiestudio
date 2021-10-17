@@ -4,7 +4,7 @@
   Color
 @endsection
 @section('css')
-    <link href="http://themepixels.me/demo/slim1.1/lib/spectrum/css/spectrum.css" rel="stylesheet">
+    <link href="https://themepixels.me/demo/slim1.1/lib/spectrum/css/spectrum.css" rel="stylesheet">
     <style>
         .sp-container{
             z-index: 999999 !important;
@@ -38,6 +38,6 @@
     @include('Layout.Admin.modal_confirm_delete')
 @endsection
 @section('js')
-<script defer src="http://themepixels.me/demo/slim1.1/lib/spectrum/js/spectrum.js"></script>
+<script src="{{asset('public/assets/app/page/admin/js/spectrum.js')}}"></script>
 <script src="{{asset('public/assets/build/admin/js/color.js')}}"></script>
 @endsection
