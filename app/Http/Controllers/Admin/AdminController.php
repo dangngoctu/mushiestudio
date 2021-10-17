@@ -228,6 +228,7 @@ class AdminController extends Controller
 	public function admin_setting(Request $request)
 	{
 		try {
+			// test push
 			if(Auth::user()) {
 				return view('Web.Admin.Page.setting');
 			} else {
