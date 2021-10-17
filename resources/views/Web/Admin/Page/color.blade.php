@@ -38,8 +38,6 @@
     @include('Layout.Admin.modal_confirm_delete')
 @endsection
 @section('js')
-<script src="http://themepixels.me/demo/slim1.1/lib/spectrum/js/spectrum.js"></script>
+<script defer src="http://themepixels.me/demo/slim1.1/lib/spectrum/js/spectrum.js"></script>
 <script src="{{asset('public/assets/build/admin/js/color.js')}}"></script>
-
-
 @endsection
