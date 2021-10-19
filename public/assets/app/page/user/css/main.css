@@ -27,6 +27,10 @@ p{
     font-family: GaramondPremrPro,sans-serif; 
 }
 
+.money .price{
+    font-family: BrownStd !important;
+}
+
 p, p a{
     color: #797777; 
 }
