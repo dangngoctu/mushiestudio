@@ -73,14 +73,14 @@
                                         @foreach($val->itemImages as $key1 => $val1)
                                             <li>
                                                 <a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">
-                                                    <img data-src="{{asset('public/'.$val1->url)}}" src="{{asset('public/'.$val1->url)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                    <img width="100%" data-src="{{asset('public/'.$val1->url)}}" src="{{asset('public/'.$val1->url)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                                 </a>
                                             </li>
                                         @endforeach
                                     @else 
                                         <li>
                                             <a href="{{route('main.product.detail.get', ['category' => $category->url, 'item' => $val->slug])}}">
-                                                <img data-src="{{asset('public/'.$val->img_thumb)}}" src="{{asset('public/'.$val->img_thumb)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
+                                                <img width="100%" data-src="{{asset('public/'.$val->img_thumb)}}" src="{{asset('public/'.$val->img_thumb)}}" alt="{{$val->name}}" class="blur-up main-img-seaction ls-is-cached lazyloaded">
                                             </a>
                                         </li>
                                     @endif

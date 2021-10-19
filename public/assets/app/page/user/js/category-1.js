@@ -83,7 +83,7 @@ var showItemSort = function(){
                 img_items.forEach(function(v){
                     html +=  '<li>\
                         <a href="'+base_url+'/product/'+value.category.url+'/'+ value.slug+'">\
-                            <img data-src="'+base_url+'/public/'+v.url+'" src="'+base_url+'/public/'+v.url+'" alt="'+value.name+'" class="blur-up main-img-seaction ls-is-cached lazyloaded">\
+                            <img width="100%" data-src="'+base_url+'/public/'+v.url+'" src="'+base_url+'/public/'+v.url+'" alt="'+value.name+'" class="blur-up main-img-seaction ls-is-cached lazyloaded">\
                         </a>\
                      </li>';
                 });
