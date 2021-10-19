@@ -4,7 +4,7 @@
   Color
 @endsection
 @section('css')
-    <link href="https://themepixels.me/demo/slim1.1/lib/spectrum/css/spectrum.css" rel="stylesheet">
+    <link href="{{asset('public/assets/app/page/admin/css/spectrum.css')}}" rel="stylesheet">
     <style>
         .sp-container{
             z-index: 999999 !important;

@@ -80,3 +80,8 @@
         margin-top: 20px;
     }
 }
+
+
+.product-form__item label{
+    padding-left: 0px !important;
+}

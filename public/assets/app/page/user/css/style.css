@@ -1473,11 +1473,11 @@ body.home8-jewellery { font-size:14px; }
 .home14-bags .hero__overlay:before { content: ''; position:absolute; top:0; right:0; bottom:0; left:0; background-color:#000; opacity:0.2; z-index:1; }
 
 .home14-bags .section-header h2, .home14-bags .section-header .h2 { font-size:26px; }
-.home14-bags .footer-2 .site-footer { background:#797777; }
+.home14-bags .footer-2 .site-footer { background:#f8f9f8; }
 .home14-bags .footer-2 .footer-top h4, .home14-bags .footer-2 .footer-top .h4, .home14-bags .footer-2 .footer-top, .home14-bags .footer-2 .footer-links a, .home14-bags .footer-2 .footer-top p, 
-.home14-bags .footer-2 .footer-bottom, .home14-bags .footer-2 .footer-bottom a { color:#ffffff; }
+.home14-bags .footer-2 .footer-bottom, .home14-bags .footer-2 .footer-bottom a { color:#797777; }
 .home14-bags .footer-2 .site-footer hr { border-color:#454545; }
-.home14-bags .footer-2 .site-footer .addressFooter .icon { color:#ffffff !important; }
+.home14-bags .footer-2 .site-footer .addressFooter .icon { color:#797777 !important; }
 
 .video-wrapper { position:relative; overflow:hidden; max-width:100%; padding-bottom:56.25%; height:0; }
 .video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
