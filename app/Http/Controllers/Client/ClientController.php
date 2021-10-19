@@ -318,9 +318,28 @@ class ClientController extends Controller
                     $items = $items->orderBy('price','desc');
                 }
             }
-            return $items->get();
+         
+            $items = $items->get();
+            foreach($items as $values){
+                foreach($values->itemImages as $value){
+                    if($value->url != ''){
+                        $exp_file = explode('.',$value->url);
+                        $size_thumnail_home = config('config-size.category.item-image');
+                        $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                        if(!file_exists(public_path($name_file))){
+                            $img = Image::make(public_path($value->url));
+                            $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                            $img->save(public_path($name_file));
+                        }
+                  
+                        $value->url = $name_file;
+                    
+                    }
+                }
+            }
+            return $items;
         }catch(\Exception $e){
-
+            return [];
         }
     }
 }
