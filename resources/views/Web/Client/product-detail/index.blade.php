@@ -7,7 +7,7 @@
                 <!--Featured Item-->
                 <div id="lightgallery" class="col-12 col-sm-12 col-md-6 col-lg-6 sc2-item">
                     @foreach($item->itemImages as $key => $val)
-                        <a href="{{asset('public/'.$val->url)}}">
+                        <a href="{{asset('public/'.$val->url_view)}}">
                             <img
                                 data-src="{{asset('public/'.$val->url)}}"
                                 src="{{asset('public/'.$val->url)}}"

@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-
+use Image;
 
 class ClientController extends Controller
 {
@@ -34,12 +34,61 @@ class ClientController extends Controller
         try{
             $latest_category = Models\Category::where('type', 1)->orderBy('id', 'desc')->first();
             if($latest_category){
-                $near_latest_category = Models\Category::with('menu')->where('type', 1)->where('id', '!=', $latest_category->id)->orderBy('id', 'desc')->take(2)->get();
+                $near_latest_category = Models\Category::with('menu')
+                ->where('type', 1)
+                ->where('id', '!=', $latest_category->id)
+                ->orderBy('id', 'desc')
+                ->take(2)
+                ->get();
             } else {
-                $near_latest_category = Models\Category::with('menu')->where('type', 1)->orderBy('id', 'desc')->take(2)->get();
+                $near_latest_category = Models\Category::with('menu')
+                ->where('type', 1)
+                ->orderBy('id', 'desc')
+                ->take(2)
+                ->get();
             }
-            $third_lasted_item = Models\Item::take(3)->whereHas('category')->orderBy('id', 'desc')->get();
-            $latest_album = Models\Category::with('categoryImages')->where('type', 2)->orderBy('id', 'desc')->first();
+
+            foreach($near_latest_category as $value){
+                // $link = ;
+               if($value->img != ''){
+                   $exp_file = explode('.',$value->img);
+                   $size_thumnail_home = config('config-size.home.category_img');
+                   $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                   if(!file_exists(public_path($name_file))){
+                     
+                       $img = Image::make(public_path($value->img));
+                       $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                       $img->save(public_path($name_file));
+                   }
+                   $value->img = $name_file;
+               }
+           }
+           
+            $third_lasted_item = Models\Item::take(3)->whereHas('category')
+            ->orderBy('id', 'desc')
+            ->get();
+
+            foreach($third_lasted_item as $value){
+                // $link = ;
+               if($value->img_thumb != ''){
+                   $exp_file = explode('.',$value->img_thumb);
+                   $size_thumnail_home = config('config-size.home.item-thumnail');
+                   $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                   if(!file_exists(public_path($name_file))){
+                     
+                       $img = Image::make(public_path($value->img_thumb));
+                       $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                       $img->save(public_path($name_file));
+                   }
+                   $value->img_thumb = $name_file;
+               }
+           }
+          
+
+            $latest_album = Models\Category::with('categoryImages')
+            ->where('type', 2)
+            ->orderBy('id', 'desc')
+            ->first();
     
             return view('Web.Client.home.main', [
                 'latest_category' => $latest_category,
@@ -58,7 +107,44 @@ class ClientController extends Controller
             $material = Models\Material::all();
             $size = Models\Size::all();
             $color = Models\Color::all();
+            
+
             if($category){
+                if($category->img != ''){
+                    $exp_file = explode('.',$category->img);
+                    $size_thumnail_home = config('config-size.category.category_img');
+                    $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                    if(!file_exists(public_path($name_file))){
+                        $img = Image::make(public_path($category->img));
+                        $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                        $img->save(public_path($name_file));
+                    }
+              
+                    $category->img = $name_file;
+                
+                }
+
+
+                if(count($category->items) > 0){
+                    foreach($category->items as $values){
+                        foreach($values->itemImages as $value){
+                            if($value->url != ''){
+                                $exp_file = explode('.',$value->url);
+                                $size_thumnail_home = config('config-size.category.item-image');
+                                $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                                if(!file_exists(public_path($name_file))){
+                                    $img = Image::make(public_path($value->url));
+                                    $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                                    $img->save(public_path($name_file));
+                                }
+                          
+                                $value->url = $name_file;
+                            
+                            }
+                        }
+                    }
+                }
+               
                 if($category->type == 1){
                     //Item
                     return view('Web.Client.category-1.main', [
@@ -69,6 +155,23 @@ class ClientController extends Controller
                         'title' => $category->name
                     ]);
                 } else {
+                    if(count($category->categoryImages) > 0){
+                        foreach($category->categoryImages as $value){
+                            if($value->url != ''){
+                                $exp_file = explode('.',$value->url);
+                                $size_thumnail_home = config('config-size.category.category-image');
+                                $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                                if(!file_exists(public_path($name_file))){
+                                    $img = Image::make(public_path($value->url));
+                                    $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                                    $img->save(public_path($name_file));
+                                }
+                            
+                                $value->url = $name_file;
+                            }
+                        }
+                    }
+
                     //Album
                     $video_check = false;
                     if($category->video != '' && !empty($category->video)){
@@ -104,6 +207,45 @@ class ClientController extends Controller
             $color = Models\Color::whereIn('id', explode(',',$item->color))->get();
             $size = Models\Size::whereIn('id', explode(',',$item->size))->get();
             $related_item = Models\Item::where('id', '!=', $item->id)->where('category_id', $item->category_id)->where('material', 'LIKE', '%'.$item->material.'%')->take(6)->get();
+           
+           
+            if(count($item->itemImages) > 0){
+                foreach($item->itemImages as $value){
+                    if($value->url != ''){
+                        $exp_file = explode('.',$value->url);
+                        $size_thumnail_home = config('config-size.detail.item-images');
+                        $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                        if(!file_exists(public_path($name_file))){
+                            $img = Image::make(public_path($value->url));
+                            $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                            $img->save(public_path($name_file));
+                        }
+                        $value->url_view = $value->url;
+                        $value->url = $name_file;
+                    
+                    }
+                }
+            }
+
+            if(count($related_item) > 0){
+                foreach($related_item as $values){
+                    foreach($values->itemImages as $value){
+                        if($value->url != ''){
+                            $exp_file = explode('.',$value->url);
+                            $size_thumnail_home = config('config-size.detail.item-related');
+                            $name_file = $exp_file[0] .'-'.$size_thumnail_home['width'].'-'.$size_thumnail_home['height'].'.'.$exp_file[1];
+                            if(!file_exists(public_path($name_file))){
+                                $img = Image::make(public_path($value->url));
+                                $img->resize($size_thumnail_home['width'], $size_thumnail_home['height']);
+                                $img->save(public_path($name_file));
+                            }
+                            $value->url = $name_file;
+                        }
+                    }
+                }
+            }
+           
+            
             if($item){
                 return view('Web.Client.product-detail.main',[
                     'item' => $item,
@@ -121,8 +263,16 @@ class ClientController extends Controller
 
     public function about_us(Request $request){
         try{
+           
+            
+        
             return view('Web.Client.about-us.main',[
-                'title' => 'About Us'
+                'title' => 'About Us',
+                'images'     => [
+                    asset('public\assets\app\page\user\images\about-us\about-1-1240-827.jpg'),
+                    asset('public\assets\app\page\user\images\about-us\about-2-1240-1858.jpg'),
+                    asset('public\assets\app\page\user\images\about-us\about-3-1240-1858.jpg')
+                ]
             ]);
         }catch(\Exception $e){
             abort(404);
