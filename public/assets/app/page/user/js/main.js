@@ -179,7 +179,7 @@
       	navLinks: '#siteNav .lvl1 > a',
       	menuToggle: '.js-mobile-nav-toggle',
       	mobilenav: '.mobile-nav-wrapper',
-      	menuLinks: '#MobileNav .anm',
+		menuLinks: '#MobileNav .parent-anm',
       	closemenu: '.closemobileMenu'
 	};
      

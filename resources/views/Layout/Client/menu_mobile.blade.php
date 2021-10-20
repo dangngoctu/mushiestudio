@@ -7,7 +7,7 @@
         @if(env('APP_DEBUG'))
             @foreach($menu as $key => $val)
                 <li class="lvl1 parent megamenu">
-                    <a href="#">{{$val->name}} <i class="anm anm-plus-l"></i></a>
+                    <a href="#" class="parent-anm">{{$val->name}} <i class="anm anm-plus-l"></i></a>
                     <ul>
                         @foreach($val->categorys as $key1 => $val1)
                             <li><a href="{{route('main.product.category.get',['category' => $val1->url])}}" class="site-nav">{{$val1->name}}</a></li>
