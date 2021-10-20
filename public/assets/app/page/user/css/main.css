@@ -108,3 +108,7 @@ ul.main-list{
         max-height: 520px;
     }
 }
+
+img.main-img-seaction{
+    width: 100%;
+}
