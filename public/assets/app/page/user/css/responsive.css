@@ -141,7 +141,7 @@
 	
 	.product-details-img { margin-bottom:20px; }
 	h1.product-single__title, .product-single__title.h1 { font-size:16px; }
-	.template-product .tabs-listing .product-tabs a { padding:15px 10px; }
+	.template-product .tabs-listing .product-tabs a { padding:15px 5px; }
 	
 	.left-content-product { width:100%; padding-right:0; }
 	.sidebar-product { width:100%; padding-left:0; }
