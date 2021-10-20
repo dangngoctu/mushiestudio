@@ -210,7 +210,7 @@
     });
 	$(selectors.menuLinks).on('click', function(e) {
 		e.preventDefault();
-		$(this).toggleClass('anm-plus-l anm-minus-l');
+		$(this).find('.anm').toggleClass('anm-plus-l anm-minus-l');
 		$(this).next().slideToggle();
     });
 	
