@@ -211,7 +211,7 @@
 	$(selectors.menuLinks).on('click', function(e) {
 		e.preventDefault();
 		$(this).toggleClass('anm-plus-l anm-minus-l');
-		$(this).parent().next().slideToggle();
+		$(this).next().slideToggle();
     });
 	
 	
