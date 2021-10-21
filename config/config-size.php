@@ -7,7 +7,7 @@ return [
         ],
         'item-thumnail' => [
             'width' => 400,
-            'height' => 700
+            'height' => 600
         ]
     ],
     'detail' => [
