@@ -674,7 +674,7 @@
 			$(".footer-links ul").show();
 		}
 		else {
-			$(".footer-links ul").hide();
+			//$(".footer-links ul").hide();
 		}
 	});
 	

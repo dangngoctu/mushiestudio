@@ -12,7 +12,7 @@
                             @foreach($menu as $key => $val)
                                 <li>
                                     <p>{{$val->name}}</p>
-                                    <ul class="main-list" style="display:block !important">
+                                    <ul class="main-list">
                                         @foreach($val->categorys as $v)
                                             <li>
                                                 <a href="{{$v->url}}">{{$v->name}}</a>
