@@ -262,7 +262,7 @@
 	.footer-links .h4 { cursor:pointer; border-bottom:solid 1px #454545; padding-bottom:20px; }
 	.footer-links .h4:after { content: "\e64b"; font-family:'themify'; font-size:10px; display:block; position:absolute; right:10px; top:5px; }
 	.footer-links .h4.active:after { content: "\e648"; }
-	.footer-links ul { display:none; }
+	.footer-links ul { display:block !important; }
 	
 	.footer-bottom .text-md-center { text-align:center !important; margin-bottom:10px; }
 	

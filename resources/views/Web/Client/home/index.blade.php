@@ -12,7 +12,7 @@
                             </div>
                             <div class="custom-text text-center">
                                 <h4 class="h3"><a href="#"> {{$latest_category->name}}</a></h4>
-                                <div class="rte-setting">
+                                <div class="rte-setting" style="padding: 0 15px">
                                     <p>
                                         {!! $latest_category->description!!}
                                     </p>

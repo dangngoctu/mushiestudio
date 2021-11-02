@@ -124,7 +124,7 @@
                                         <!-- End product name -->
                                         <!-- product price -->
                                         <div class="product-price">
-                                            <span class="price"><span class="price">{{($item->price_setting == 1)?($item->price):''}}</span></span>
+                                            <span class="price"><span class="price">{{($val->price_setting == 1)?($val->price):''}}</span></span>
                                         </div>
                                         <!-- End product price -->
                                     </div>

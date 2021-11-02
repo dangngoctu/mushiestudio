@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         Schema::defaultStringLength(191);
         view()->composer('*', function ($view){
-            $menu = Models\Menu::with('categorys')->get();
+            $menu = Models\Menu::with(['categorys' => function($query){ $query->orderBy('id','asc'); }])->get();
             $address = Models\Setting::where('key', 'ADDRESS')->first();
             $phone = Models\Setting::where('key', 'PHONE')->first();
             $time = Models\Setting::where('key', 'TIME')->first();
